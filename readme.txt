@@ -2,8 +2,4 @@ Handcrafted, homemade, unthemed random deck, heavily based on frustration during
 
 ! Currently in alpha status !
 
-TODO:
-    - remove known duplicates with other common packs
-    - test gameplay
-    - check spelling of bar mizwah
-    - remove weak elements
+TODO: Keep testing gameplay and remove weak elements

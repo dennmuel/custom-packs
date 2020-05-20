@@ -3,3 +3,4 @@ Handcrafted, homemade, unthemed random deck, heavily based on frustration during
 ! Currently in alpha status !
 
 TODO: Keep testing gameplay and remove weak elements
+Maybe remove "Bachmannaids"

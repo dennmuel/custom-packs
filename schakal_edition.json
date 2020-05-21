@@ -295,6 +295,11 @@
       "draw": 1
     },
     {
+      "content": "Planet Earth now has the highest concentration of ______ since 1932.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "Playing with ______ is the fondest memory of my childhood.",
       "pick": 1,
       "draw": 1
@@ -338,6 +343,11 @@
       "content": "The reason why the Dalai Lama is always smiling: ______.",
       "pick": 1,
       "draw": 1
+    },
+    {
+      "content": "The sound of ______ always reminds me of ______.",
+      "pick": 2,
+      "draw": 2
     },
     {
       "content": "There's nothing like ______ to refresh on a hot summer day.",
@@ -442,6 +452,7 @@
     "A stroke",
     "A suprising amount of nails",
     "A teaspoon full of jizz",
+    "A very low frustration tolerance",
     "A voice controlled anal vibrator",
     "A wild grizzly bear",
     "A woman that looks like Danny Trejo",
@@ -454,6 +465,7 @@
     "Alf",
     "Aluminum foil",
     "Amazon",
+    "An absent father",
     "An HIV infected needle placed in a cinema chair",
     "An STD and depts",
     "An actual vampire",
@@ -854,8 +866,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 80,
-    "white": 446,
+    "black": 82,
+    "white": 448,
     "total": 526
   }
 }

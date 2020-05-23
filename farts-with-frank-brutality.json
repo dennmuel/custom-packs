@@ -1,0 +1,30 @@
+{
+    "pack": {
+      "pack": {
+        "name": "Farts with frank brutality",
+        "id": "farts-with-frank-brutality"
+      },
+      "black": [
+        {
+          "content": "Fuck _!",
+          "pick": 1,
+          "draw": 1
+        },
+        {
+          "content": "Fuck, _!",
+          "pick": 1,
+          "draw": 1
+        }
+      ],
+      "white": [
+          "Granny midget porn"
+      ],
+      "quantity": {
+        "black": 2,
+        "white": 1,
+        "total": 3
+      }
+    },
+    "buildVersion": 1
+}
+

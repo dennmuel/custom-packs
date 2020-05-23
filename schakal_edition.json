@@ -757,6 +757,7 @@
         "Sitting in an office forever",
         "Sitting in the back of the bus",
         "Sitting on a bicycle and going \"Wwwrroooooommm!\"",
+        "Slapping each other in a windowless room",
         "Slavery",
         "Slayer",
         "Sleeping",
@@ -868,8 +869,8 @@
       ],
       "quantity": {
         "black": 82,
-        "white": 448,
-        "total": 526
+        "white": 449,
+        "total": 527
       }
     },
     "buildVersion": 2

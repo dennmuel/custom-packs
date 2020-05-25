@@ -1,8 +1,14 @@
 # Custom card packs for "Cards Against Humanity" / "AllBadCards".
 
 TODO:
-- Create script to insert cards, automatically sort the json file and update the numbers
 - Keep testing gameplay and remove weak elements
+- Create helper script to
+  - create a new deck (from file? also needs to escape double quotes!)
+  - insert/add cards
+  - sort the cards
+  - update the card count
+  - validate the deck file against the json schema
+  - update the build version
 
 ## Schakal Edition
 A handmade, quality over quantity, allround deck carefully crafted by yours truly, Der Schakal.
@@ -15,7 +21,7 @@ TODO:
 - Re-add duplicates to official CAH packs (since official packs were removed from ABC)?
 
 ## Farts with frank brutality
-Basin deck for random ideas from friends.
+Raw, uncurated collecting pond deck for random ideas from friends.
 
 ABC pack code: tba
 

@@ -8,7 +8,6 @@ TODO:
   - sort the cards
   - update the card count
   - validate the deck file against the json schema
-  - update the build version
 
 ## Schakal Edition
 A handmade, quality over quantity, allround deck carefully crafted by yours truly, Der Schakal.
@@ -23,12 +22,12 @@ TODO:
 ## Farts with frank brutality
 Raw, uncurated collecting pond deck for random ideas from friends.
 
-ABC pack code: tba
+ABC pack code: Yk1skE31V
 
 ## Bearded Pack
 Raw, uncurated beard-themed pack made by some friends and lovers of facial hair.
 
-ABC pack code: tba
+ABC pack code: 1nMOZB6wn
 
 TODO:
 - Show Fabian how bad his stupid cards work.

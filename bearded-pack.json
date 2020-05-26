@@ -1,104 +1,101 @@
 {
-    "pack": {
-      "pack": {
-        "name": "Bearded Pack",
-        "id": "bearded-pack"
-      },
-      "black": [
-        {
-          "content": "_ ruined _ forever!",
-          "pick": 2,
-          "draw": 2
-        },
-        {
-          "content": "_ separates men from _!",
-          "pick": 2,
-          "draw": 2
-        },
-        {
-          "content": "Everyday I’m _ my_.",
-          "pick": 2,
-          "draw": 2
-        },
-        {
-          "content": "Having a _ is the new _.",
-          "pick": 2,
-          "draw": 2
-        },
-        {
-          "content": "Hey, you, the _ called, they want their _ back!",
-          "pick": 2,
-          "draw": 2
-        },
-        {
-          "content": "I discovered that I had _ in my beard for two years.",
-          "pick": 1,
-          "draw": 1
-        },
-        {
-          "content": "I looked like _ until I started _.",
-          "pick": 2,
-          "draw": 2
-        },
-        {
-          "content": "If I am _ put a gun to my _.",
-          "pick": 2,
-          "draw": 2
-        },
-        {
-          "content": "If your _ doesn’t have a _ you’ve got two _.",
-          "pick": 3,
-          "draw": 2
-        },
-        {
-          "content": "It starts with a little shave but ends with_ .",
-          "pick": 1,
-          "draw": 1
-        },
-        {
-          "content": "No one ever said: \"OMG, I love his _.\"",
-          "pick": 1,
-          "draw": 1
-        },
-        {
-          "content": "That’s like _ Santa’s beard!",
-          "pick": 1,
-          "draw": 1
-        },
-        {
-          "content": "You should consider having _ with _.",
-          "pick": 2,
-          "draw": 2
-        }
-      ],
-      "white": [
-        "A formidable moustache",
-        "A lion",
-        "A splending juicy full beard",
-        "Amish",
-        "Bearded ladies",
-        "Bearded man",
-        "Beards",
-        "Charlie Chaplin",
-        "Clean shaved babyface",
-        "Dick",
-        "Fucking Hipsters",
-        "Growing a beard",
-        "Not having a beard",
-        "Sex",
-        "Shaving",
-        "Shit",
-        "Some special Austrian guy",
-        "Stroking",
-        "The toothbrush",
-        "Wizard"
-      ],
-      "quantity": {
-        "black": 13,
-        "white": 20,
-        "total": 33
-      }
+  "pack": {
+    "name": "Bearded Pack",
+    "id": "bearded-pack"
+  },
+  "black": [
+    {
+      "content": "_ ruined _ forever!",
+      "pick": 2,
+      "draw": 2
     },
-    "buildVersion": 1
+    {
+      "content": "_ separates men from _!",
+      "pick": 2,
+      "draw": 2
+    },
+    {
+      "content": "Everyday I’m _ my_.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
+      "content": "Having a _ is the new _.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
+      "content": "Hey, you, the _ called, they want their _ back!",
+      "pick": 2,
+      "draw": 2
+    },
+    {
+      "content": "I discovered that I had _ in my beard for two years.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "I looked like _ until I started _.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
+      "content": "If I am _ put a gun to my _.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
+      "content": "If your _ doesn’t have a _ you’ve got two _.",
+      "pick": 3,
+      "draw": 2
+    },
+    {
+      "content": "It starts with a little shave but ends with_ .",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "No one ever said: \"OMG, I love his _.\"",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "That’s like _ Santa’s beard!",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "You should consider having _ with _.",
+      "pick": 2,
+      "draw": 2
+    }
+  ],
+  "white": [
+    "A formidable moustache",
+    "A lion",
+    "A splending juicy full beard",
+    "Amish",
+    "Bearded ladies",
+    "Bearded man",
+    "Beards",
+    "Charlie Chaplin",
+    "Clean shaved babyface",
+    "Dick",
+    "Fucking Hipsters",
+    "Growing a beard",
+    "Not having a beard",
+    "Sex",
+    "Shaving",
+    "Shit",
+    "Some special Austrian guy",
+    "Stroking",
+    "The toothbrush",
+    "Wizard"
+  ],
+  "quantity": {
+    "black": 13,
+    "white": 20,
+    "total": 33
+  }
 }
 

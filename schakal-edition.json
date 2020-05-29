@@ -170,7 +170,7 @@
       "draw": 1
     },
     {
-      "content": "I wish we had found out earlier that my uncle put _ in that piñata.",
+      "content": "I wish we had found out earlier that my uncle put _ in that pi\u00f1ata.",
       "pick": 1,
       "draw": 1
     },
@@ -385,6 +385,11 @@
       "draw": 1
     },
     {
+      "content": "What's that sound?",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "What's that taste in my mouth? _.",
       "pick": 1,
       "draw": 1
@@ -457,6 +462,7 @@
     "A wild grizzly bear",
     "A woman that looks like Danny Trejo",
     "ABBA",
+    "AIDS",
     "Ad hoc knowing how to spell Macauly Culkin's name",
     "Adam Sandler movies",
     "Advanced capitalism",
@@ -465,9 +471,9 @@
     "Alf",
     "Aluminum foil",
     "Amazon",
-    "An absent father",
     "An HIV infected needle placed in a cinema chair",
     "An STD and depts",
+    "An absent father",
     "An actual vampire",
     "An asian shemale stripper",
     "An out of control LARP",
@@ -481,6 +487,7 @@
     "Artificial intelligence",
     "Asbestos",
     "Asperger's syndrome",
+    "Auschwitz",
     "Babysitting",
     "Bachmannaids",
     "Bacon deodorant",
@@ -561,6 +568,7 @@
     "Dubstep",
     "Duct tape and cable ties",
     "Eating vegan and not being a bitch about it",
+    "Ebola",
     "Epic Rap Battles of History",
     "Even more pizza",
     "Everything a girl could wish for",
@@ -637,6 +645,7 @@
     "Human resources",
     "Hungry wolfs",
     "Inadequate human interaction",
+    "Incest",
     "Infected needles",
     "Inner harmony",
     "Islam",
@@ -646,7 +655,7 @@
     "Joseph Goebbels",
     "Just a little too much cocaine",
     "Just following orders",
-    "Jägermeister",
+    "J\u00e4germeister",
     "Kevin",
     "Kicking ass and chewing bubble-gum",
     "Killing all left-handed children",
@@ -724,7 +733,7 @@
     "Pirates",
     "Playing \"pickaboo\" with a blind baby",
     "Plowing through a group of school children with an SUV",
-    "Pokémon",
+    "Pok\u00e9mon",
     "Poverty",
     "Power Metal",
     "Proper education",
@@ -746,6 +755,7 @@
     "Ridin' dirty",
     "Rocking a flamboyant mustache",
     "Rolling a spliff with pages from the Bible",
+    "Roofies",
     "Sadness",
     "Salt & vinegar crisps",
     "Self respect and dignity",
@@ -867,9 +877,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 82,
-    "white": 449,
-    "total": 527
+    "black": 83,
+    "white": 454,
+    "total": 537
   }
 }
-

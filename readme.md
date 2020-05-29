@@ -14,7 +14,6 @@ ABC pack code: VRRCeJAWJ
 
 TODO:
 - Make a website for "Bachmannaids" (or remove the card)
-- Re-add duplicates to official CAH packs (since official packs were removed from ABC)?
 
 ## Farts with frank brutality
 Raw, uncurated collecting pond deck for random ideas from friends.

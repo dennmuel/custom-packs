@@ -2,12 +2,9 @@
 
 TODO:
 - Keep testing gameplay and remove weak elements
-- Create helper script to
-  - create a new deck (from file? also needs to escape double quotes!)
-  - insert/add cards
-  - sort the cards
-  - update the card count
-  - validate the deck file against the json schema
+- Helper script
+  - create a new deck from file?
+  - validate the deck file against the json schema?
 
 ## Schakal Edition
 A handmade, quality over quantity, allround deck carefully crafted by yours truly, Der Schakal.

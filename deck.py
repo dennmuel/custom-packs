@@ -29,6 +29,9 @@ def insert_cards(deck):
             continue
         content = input("Type in your card:\n")
         content = content.strip()
+        if is_duplicate(content, newcard, deck):
+            newcard = input("Card already exists! Add another card? (b/w/n)\n")
+            continue
         if newcard == "b":
             pick = 0
             while pick < 1 or pick > 3:
@@ -69,6 +72,20 @@ def sort_cards(deck):
     deck["white"].sort()
     print("Cards sorted!")
     return deck
+
+def is_duplicate(content, color, deck):
+    is_dupe = False
+    if color == "w":
+        for card in deck["white"]:
+            if content == card:
+                is_dupe = True
+                break
+    elif color == "b":
+        for card in deck["black"]:
+            if content == card["content"]:
+                is_dupe = True
+                break
+    return is_dupe
 
 def write_deck(deck, filepath):
     f = open(filepath, "w")

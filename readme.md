@@ -4,7 +4,9 @@ TODO:
 - Keep testing gameplay and remove weak elements
 - Helper script
   - create a new deck from file?
+  - prevent duplicates
   - validate the deck file against the json schema?
+  - arguments (https://docs.python.org/3/library/argparse.html)
 
 ## Schakal Edition
 A handmade, quality over quantity, allround deck carefully crafted by yours truly, Der Schakal.

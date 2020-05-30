@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
-from argparse import ArgumentParser
-from argparse import RawTextHelpFormatter
-from operator import itemgetter
+import argparse
 import json
+from operator import itemgetter
 
 def get_deck(filepath):
     # maybe do some validation here?
@@ -21,19 +20,16 @@ def create_deck():
     return deck
 
 def insert_cards(deck):
-    proceed = "y"
     blackcards = []
     whitecards = []
-    print("Let's add some cards!")
-    while proceed == "y":
-        color = input("Black or white card? (b/w)\n")
-        if color != "b" and color != "w":
-            print("Invalid color " + color + "!")
+    newcard = input("Do you want to add a black, a white or no more cards? (b/w/n)\n")
+    while newcard != "n":
+        if newcard != "b" and newcard != "w":
+            newcard = input("Invalid input " + newcard + "! Type b, w or n!\n")
             continue
         content = input("Type in your card:\n")
         content = content.strip()
-        #content = content.replace("\"", "\\\")
-        if color == "b":
+        if newcard == "b":
             pick = 0
             while pick < 1 or pick > 3:
                 pick = int(input("How many white cards does it take to answer the card? (min: 1, max: 3)\n"))
@@ -49,12 +45,14 @@ def insert_cards(deck):
             blackcards.append(card)
         else:
             whitecards.append(content)
-        proceed = input("Add another card? (y/n)\n")
+        newcard = input("Do you want to add another black or white card or none? (b/w/n)\n")
     else:
         deck["black"].extend(blackcards)
         deck["white"].extend(whitecards)
         print(str(len(blackcards)) + " black cards and " + str(len(whitecards)) + " white cards added!")
-    return update_count(deck)
+        if input("Sort cards? (y/n)\n") == "y":
+            deck = sort_cards(deck)
+        return update_count(deck)
 
 def update_count(deck):
     black = len(deck["black"])
@@ -78,25 +76,25 @@ def write_deck(deck, filepath):
     f.close
     print("Done! Wrote to file " + filepath)
 
-parser = ArgumentParser(description="Add and modify ABC/CAH custom decks in JSON format.", formatter_class=RawTextHelpFormatter)
-parser.add_argument("operation", metavar="operation", type=str,
+parser = argparse.ArgumentParser(description="Add and modify ABC/CAH custom decks in JSON format.", formatter_class=argparse.RawTextHelpFormatter)
+parser.add_argument("operation", type=str, choices=['create', 'insert', 'count', 'sort'],
                     help="""operation on deck
 - create: create a new deck based on template.json
 - insert: insert cards into the deck
-- sort: sort the cards alphabetically
 - count: update the card count
+- sort: sort the cards alphabetically
                         """)
-parser.add_argument("file", metavar="file",
-                    help="path to the file to operate on")
+parser.add_argument("filepath", type=str, help="path to the file to operate on")
+#parser.add_argument('--infile', type=argparse.FileType('r'), default=sys.stdin)
+#parser.add_argument('--outfile', type=argparse.FileType('w'), default=sys.stdout)
+
 args = parser.parse_args()
 
 operation = args.operation
-filepath = args.file
+filepath = args.filepath
 
 if operation == "create":
     deck = create_deck()
-    if input("Sort cards? (y/n)\n") == "y":
-        deck = sort_cards(deck)
 elif operation == "insert":
     deck = get_deck(filepath)
     deck = insert_cards(deck)

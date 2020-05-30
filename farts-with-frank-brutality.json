@@ -5,16 +5,6 @@
   },
   "black": [
     {
-      "content": "_ is my biggest wish.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Happy _ Day, everyone!",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "Fear not, my brave companions! We shall suffer no evil, for my _ will guide us through!",
       "pick": 1,
       "draw": 1
@@ -30,19 +20,29 @@
       "draw": 1
     },
     {
+      "content": "Happy _ Day, everyone!",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "Lazarus is back from the dead, looking like _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "_ is my biggest wish.",
       "pick": 1,
       "draw": 1
     }
   ],
   "white": [
-      "A gay bar",
-      "Civil war",
-      "Granny midget porn",
-      "Racial profiling",
-      "Social justice",
-      "Starting a nuclear war",
-      "Taking a dump with the bathroom door open"
+    "A gay bar",
+    "Civil war",
+    "Granny midget porn",
+    "Racial profiling",
+    "Social justice",
+    "Starting a nuclear war",
+    "Taking a dump with the bathroom door open"
   ],
   "quantity": {
     "black": 6,
@@ -50,4 +50,3 @@
     "total": 13
   }
 }
-

@@ -5,17 +5,7 @@
   },
   "black": [
     {
-      "content": "_ ruined _ forever!",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "_ separates men from _!",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Everyday I’m _ my_.",
+      "content": "Everyday I\u2019m _ my_.",
       "pick": 2,
       "draw": 2
     },
@@ -45,7 +35,7 @@
       "draw": 2
     },
     {
-      "content": "If your _ doesn’t have a _ you’ve got two _.",
+      "content": "If your _ doesn\u2019t have a _ you\u2019ve got two _.",
       "pick": 3,
       "draw": 2
     },
@@ -60,12 +50,22 @@
       "draw": 1
     },
     {
-      "content": "That’s like _ Santa’s beard!",
+      "content": "That\u2019s like _ Santa\u2019s beard!",
       "pick": 1,
       "draw": 1
     },
     {
       "content": "You should consider having _ with _.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
+      "content": "_ ruined _ forever!",
+      "pick": 2,
+      "draw": 2
+    },
+    {
+      "content": "_ separates men from _!",
       "pick": 2,
       "draw": 2
     }
@@ -98,4 +98,3 @@
     "total": 33
   }
 }
-

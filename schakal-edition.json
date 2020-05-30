@@ -155,6 +155,11 @@
       "draw": 1
     },
     {
+      "content": "I wanted to go to Disneyland, but _ won't let me.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "I wanted to kill myself until I discovered _.",
       "pick": 1,
       "draw": 1
@@ -447,6 +452,7 @@
     "A lake of liquid farts",
     "A landmine in a playground",
     "A little bit smaller",
+    "A man with a knife and nothing to lose",
     "A member of the Gestapo",
     "A multipurpose attack helicopter",
     "A neoliberal hamster",
@@ -520,7 +526,6 @@
     "Bossa Nova",
     "Brainfarts",
     "Bread",
-    "Breastfeeding",
     "Brutal owl fights",
     "Burning niggers",
     "Burrito farts",
@@ -613,6 +618,7 @@
     "Getting detained",
     "Getting friendzoned by your mom",
     "Getting layed by playing \"Wonderwall\" at a campfire",
+    "God",
     "Going bald",
     "Going to bed early",
     "Going to work",
@@ -884,8 +890,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 84,
-    "white": 456,
-    "total": 540
+    "black": 85,
+    "white": 457,
+    "total": 542
   }
 }

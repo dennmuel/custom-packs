@@ -5,6 +5,7 @@ TODO:
 - Helper script
   - create a new deck from file?
   - prevent duplicates
+  - Check spelling (first letters in caps, punctuation at the end or not, etc.)
   - validate the deck file against the json schema?
   - arguments (https://docs.python.org/3/library/argparse.html)
 

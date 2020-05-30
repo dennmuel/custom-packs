@@ -410,6 +410,11 @@
       "draw": 1
     },
     {
+      "content": "_ is my personal Christmas.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "_ is never wrong when you do it for _.",
       "pick": 2,
       "draw": 2
@@ -476,6 +481,7 @@
     "An absent father",
     "An actual vampire",
     "An asian shemale stripper",
+    "An obscure 90's reference",
     "An out of control LARP",
     "An unethical amount of money and cocaine",
     "Anal penetration",
@@ -750,6 +756,7 @@
     "Rat poison",
     "Reading books",
     "Relentless effort in the MeToo movement",
+    "Reminding people of Vietnam",
     "Reproduction",
     "Rick James, bitch!",
     "Ridin' dirty",
@@ -877,8 +884,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 83,
-    "white": 454,
-    "total": 537
+    "black": 84,
+    "white": 456,
+    "total": 540
   }
 }

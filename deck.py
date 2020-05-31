@@ -127,7 +127,7 @@ def count_cards(deck):
     return deck
 
 def write_deck(deck):
-    outfile = "./" + deck["pack"]["id"] + ".json"
+    outfile = "./packs/" + deck["pack"]["id"] + ".json"
     f = open(outfile, "w")
     f.write(json.dumps(deck, indent=2))
     f.close

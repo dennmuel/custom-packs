@@ -9,6 +9,7 @@ TODO:
 - do stuff in an object oriented way?
 - validate the deck file against the json schema?
 - add recommit operation (= sanitize + sort + count)
+- edit existing cards
 
 ## Schakal Edition
 A handmade, quality over quantity, allround deck carefully crafted by yours truly, Der Schakal.

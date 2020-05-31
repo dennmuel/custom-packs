@@ -1,37 +1,56 @@
 #!/usr/bin/python3
 
+from operator import itemgetter
 import argparse
 import json
-from operator import itemgetter
+import string
+import sys
 
-def get_deck(filepath):
+def get_deck(infile):
     # maybe do some validation here?
-    with open(filepath) as json_file:
-        json_data = json.load(json_file)
-        return json_data
+    with open(infile) as json_file:
+        deck = json.load(json_file)
+        return deck
 
 def create_deck():
-    deck = json.loads('{"pack":{"name":"","id":""},"black":[],"white":[],"quantity":{"black":0,"white":0,"total": 0}}')
-    name = input("Enter the name for the deck:\n")
-    # maybe do some validation here?
+    deck = {
+            "pack": {
+                "name": "",
+                "id": ""
+                },
+            "black": [],
+            "white": [],
+            "quantity": {
+                "black": 0,
+                "white": 0,
+                "total": 0
+                }
+            }
+    name = str(input("Enter the name for the deck:\n")).strip()
     deck["pack"]["name"] = name
     deck["pack"]["id"] = name.lower().replace(" ","-")
-    deck = insert_cards(deck)
     return deck
 
-def insert_cards(deck):
-    blackcards = []
-    whitecards = []
-    newcard = input("Do you want to add a black, a white or no more cards? (b/w/n)\n")
+def add_cards(deck):
+    print("Let's add some cards to " + deck["pack"]["name"] + "!")
+    newblackcards = []
+    newwhitecards = []
+    newcard = str(input("Add (b)lack, (w)hite or (n)o card?\n")).strip()
     while newcard != "n":
         if newcard != "b" and newcard != "w":
-            newcard = input("Invalid input " + newcard + "! Type b, w or n!\n")
+            newcard = str(input("Invalid input " + newcard + "! Type b, w or n!\n")).strip()
             continue
-        content = input("Type in your card:\n")
-        content = content.strip()
+        content = str(input("Type in your card:\n")).strip()
+        content = sanitize_content(content, newcard)
         if is_duplicate(content, newcard, deck):
-            newcard = input("Card already exists! Add another card? (b/w/n)\n")
-            continue
+            print("'" + content + "' already exists in " + deck["pack"]["name"] + "...\n")
+            force = "?"
+            while force != "n" or force != "y":
+                force = str(input("Add it anywa(y) or proceed with a (n)ew card? (y/n)\n")).strip()
+                if force == "y":
+                    break
+                elif force == "n":
+                    continue
         if newcard == "b":
             pick = 0
             while pick < 1 or pick > 3:
@@ -45,33 +64,36 @@ def insert_cards(deck):
                     "pick": pick,
                     "draw": draw
                     }
-            blackcards.append(card)
+            newblackcards.append(card)
         else:
-            whitecards.append(content)
-        newcard = input("Do you want to add another black or white card or none? (b/w/n)\n")
+            newwhitecards.append(content)
+        newcard = str(input("OMG, so funny! Add another (b)lack, (w)hite or (n)o card?\n")).strip()
     else:
-        deck["black"].extend(blackcards)
-        deck["white"].extend(whitecards)
-        print(str(len(blackcards)) + " black cards and " + str(len(whitecards)) + " white cards added!")
-        if input("Sort cards? (y/n)\n") == "y":
-            deck = sort_cards(deck)
-        return update_count(deck)
+        deck["black"].extend(newblackcards)
+        deck["white"].extend(newwhitecards)
+        txt = "Alright! {} black cards and {} white cards added to " + deck["pack"]["name"] + "!"
+        print(txt.format(len(newblackcards), len(newwhitecards)))
+        return(deck)
 
-def update_count(deck):
-    black = len(deck["black"])
-    white = len(deck["white"])
-    total = black + white
-    deck["quantity"]["black"] = black
-    deck["quantity"]["white"] = white
-    deck["quantity"]["total"] = total
-    print(deck["pack"]["name"] + " has " + str(black) + " black cards, " + str(white) + " white cards and thus " + str(total) + " cards in total!")
-    return deck
-
-def sort_cards(deck):
-    deck["black"] = sorted(deck["black"], key=itemgetter('content'))
-    deck["white"].sort()
-    print("Cards sorted!")
-    return deck
+def sanitize_content(content, color):
+    content = content.strip()
+    if content[0].islower():
+        content = content[0].upper() + content[1:]
+    if color == "w":
+        endswithchar = False
+        for i in string.punctuation:
+            if content.endswith(i):
+                endswithchar = True
+                break
+        if endswithchar:
+            print("'" + content + "' ends with punctuation (white cards usually don't).")
+            force = "?"
+            while force != "y" and force != "n":
+                force = str(input("Keep punctuation? (y/n)\n")).strip()
+                continue
+            if force == "n":
+                content = content[:-1]
+    return content
 
 def is_duplicate(content, color, deck):
     is_dupe = False
@@ -87,42 +109,59 @@ def is_duplicate(content, color, deck):
                 break
     return is_dupe
 
-def write_deck(deck, filepath):
-    f = open(filepath, "w")
+def sort_cards(deck):
+    deck["black"] = sorted(deck["black"], key=itemgetter('content'))
+    deck["white"].sort()
+    print("Cards sorted!")
+    return deck
+
+def count_cards(deck):
+    black = len(deck["black"])
+    white = len(deck["white"])
+    total = black + white
+    deck["quantity"]["black"] = black
+    deck["quantity"]["white"] = white
+    deck["quantity"]["total"] = total
+    txt = deck["pack"]["name"] + " has {} black cards, {} white cards and thus {} cards in total!"
+    print(txt.format(black, white, total))
+    return deck
+
+def write_deck(deck):
+    outfile = "./" + deck["pack"]["id"] + ".json"
+    f = open(outfile, "w")
     f.write(json.dumps(deck, indent=2))
     f.close
-    print("Done! Wrote to file " + filepath)
+    print("Done! Wrote to " + outfile)
 
-parser = argparse.ArgumentParser(description="Add and modify ABC/CAH custom decks in JSON format.", formatter_class=argparse.RawTextHelpFormatter)
-parser.add_argument("operation", type=str, choices=['create', 'insert', 'count', 'sort'],
-                    help="""operation on deck
-- create: create a new deck based on template.json
-- insert: insert cards into the deck
-- count: update the card count
-- sort: sort the cards alphabetically
-                        """)
-parser.add_argument("filepath", type=str, help="path to the file to operate on")
-#parser.add_argument('--infile', type=argparse.FileType('r'), default=sys.stdin)
-#parser.add_argument('--outfile', type=argparse.FileType('w'), default=sys.stdout)
+def main():
+    main_parser = argparse.ArgumentParser(description="Add and modify ABC/CAH custom decks in JSON format.")
+    subparsers = main_parser.add_subparsers(dest="command", description="Actions to perform on a deck.")
 
-args = parser.parse_args()
+    create_parser = subparsers.add_parser('create', help="Create a new deck.", description="Creates a new deck in an interactive workflow.")
+    create_parser.set_defaults(func=create_deck)
 
-operation = args.operation
-filepath = args.filepath
+    edit_parser = subparsers.add_parser('edit', help="Modify an existing deck.", description="Modifies an existing deck in the way specified by the optional arguments.")
+    edit_parser.add_argument('infile', type=str, help="Path to an existing JSON file to edit.", default=sys.stdin)
+    edit_parser.add_argument('-a', '--add', action="store_true", help="Add cards to the deck.")
+    edit_parser.add_argument('-s', '--sort', action="store_true", help="Sort cards alphabetically by their contents.")
+    edit_parser.add_argument('-c', '--count', action="store_true", help="Update the card count.")
+    edit_parser.set_defaults(func=get_deck)
 
-if operation == "create":
-    deck = create_deck()
-elif operation == "insert":
-    deck = get_deck(filepath)
-    deck = insert_cards(deck)
-elif operation == "count":
-    deck = get_deck(filepath)
-    deck = update_count(deck)
-elif operation == "sort":
-    deck = get_deck(filepath)
-    deck = sort_cards(deck)
-else:
-    print("Invalid operation " + operation + "!")
-    exit()
+    args = main_parser.parse_args()
 
-write_deck(deck, filepath)
+    if args.command == "create":
+        deck = create_deck()
+    else:
+        deck = get_deck(args.infile)
+
+    if args.command == "create" or args.add:
+        deck = add_cards(deck)
+    if args.command == "create" or args.sort:
+        deck = sort_cards(deck)
+    if args.command == "create" or args.count:
+        deck = count_cards(deck)
+
+    write_deck(deck)
+
+if __name__ == "__main__":
+    main()

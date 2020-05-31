@@ -1,12 +1,14 @@
-# Custom card packs for "Cards Against Humanity" / "AllBadCards".
+# Custom card packs for "Cards Against Humanity" / "AllBadCards"
+
+## deck.py
+Helper script to create and edit custom decks.
+See ''python3 deck.py --help''.
 
 TODO:
-- Keep testing gameplay and remove weak elements
-- Helper script
-  - create a new deck from file?
-  - Check spelling (first letters in caps, punctuation at the end or not, etc.)
-  - validate the deck file against the json schema?
-  - arguments (https://docs.python.org/3/library/argparse.html)
+- create a deck from file?
+- do stuff in an object oriented way?
+- validate the deck file against the json schema?
+- add recommit operation (= sanitize + sort + count)
 
 ## Schakal Edition
 A handmade, quality over quantity, allround deck carefully crafted by yours truly, Der Schakal.
@@ -15,6 +17,7 @@ This deck was designed to both work standalone as well as integrate well with ot
 ABC pack code: VRRCeJAWJ
 
 TODO:
+- Keep testing gameplay and refine
 - Make a website for "Bachmannaids" (or remove the card)
 
 ## Farts with frank brutality

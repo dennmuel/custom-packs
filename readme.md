@@ -22,15 +22,12 @@ TODO:
 - Make a website for "Bachmannaids" (or remove the card)
 
 ## Farts with frank brutality
-Raw, uncurated collecting pond deck for random ideas from friends.
+Random collection deck for ideas from friends.
 
 ABC pack code: Yk1skE31V
 
 ## Bearded Pack
-Raw, uncurated beard-themed pack made by some friends and lovers of facial hair.
+Beard-themed pack made by some friends and lovers of facial hair.
 
 ABC pack code: 1nMOZB6wn
 
-TODO:
-- Show Fabian how bad his stupid cards work.
-- Fix Fabians stupid cards.

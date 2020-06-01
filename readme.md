@@ -2,7 +2,7 @@
 
 ## deck.py
 Helper script to create and edit custom decks.
-See ''python3 deck.py --help''.
+See `python3 deck.py --help`.
 
 TODO:
 - create a deck from file?

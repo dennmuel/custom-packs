@@ -13,10 +13,11 @@ def get_deck(infile):
         return deck
 
 def create_deck():
+    name = str(input("Enter the name for the deck:\n")).strip()
     deck = {
             "pack": {
-                "name": "",
-                "id": ""
+                "name": name,
+                "id": name.lower().replace(" ","-")
                 },
             "black": [],
             "white": [],
@@ -26,39 +27,30 @@ def create_deck():
                 "total": 0
                 }
             }
-    name = str(input("Enter the name for the deck:\n")).strip()
-    deck["pack"]["name"] = name
-    deck["pack"]["id"] = name.lower().replace(" ","-")
     return deck
 
 def add_cards(deck):
     print("Let's add some cards to " + deck["pack"]["name"] + "!")
     newblackcards = []
     newwhitecards = []
-    newcard = str(input("Add (b)lack, (w)hite or (n)o card?\n")).strip()
+    newcard = "?"
     while newcard != "n":
         if newcard != "b" and newcard != "w":
-            newcard = str(input("Invalid input " + newcard + "! Type b, w or n!\n")).strip()
+            newcard = str(input("Add (b)lack, (w)hite or (n)o card?: ")).strip()
             continue
-        content = str(input("Type in your card:\n")).strip()
+        content = str(input("Type in your card: "))
         content = sanitize_content(content, newcard)
-        if is_duplicate(content, newcard, deck):
-            print("'" + content + "' already exists in " + deck["pack"]["name"] + "...\n")
-            force = "?"
-            while force != "n" or force != "y":
-                force = str(input("Add it anywa(y) or proceed with a (n)ew card? (y/n)\n")).strip()
-                if force == "y":
-                    break
-                elif force == "n":
-                    continue
+        if skip_duplicate(content, newcard, deck):
+            newcard = "?"
+            continue
         if newcard == "b":
             pick = 0
             while pick < 1 or pick > 3:
-                pick = int(input("How many white cards does it take to answer the card? (min: 1, max: 3)\n"))
+                pick = int(input("How many white cards does it take to answer the card (min: 1, max: 3)? "))
                 continue
             draw = 9
             while draw < 0 or draw > 2:
-                draw = int(input("How many white cards should be drawn after playing the card? (min: 0, max: 2)\n"))
+                draw = int(input("How many white cards should be drawn after playing the card (min: 0, max: 2)? "))
             card = {
                     "content": content,
                     "pick": pick,
@@ -67,7 +59,7 @@ def add_cards(deck):
             newblackcards.append(card)
         else:
             newwhitecards.append(content)
-        newcard = str(input("OMG, so funny! Add another (b)lack, (w)hite or (n)o card?\n")).strip()
+        newcard = str(input("OMG, so funny! Add another (b)lack, (w)hite or (n)o card? ")).strip()
     else:
         deck["black"].extend(newblackcards)
         deck["white"].extend(newwhitecards)
@@ -89,13 +81,13 @@ def sanitize_content(content, color):
             print("'" + content + "' ends with punctuation (white cards usually don't).")
             force = "?"
             while force != "y" and force != "n":
-                force = str(input("Keep punctuation? (y/n)\n")).strip()
+                force = str(input("Keep punctuation (y/n)? ")).strip()
                 continue
             if force == "n":
                 content = content[:-1]
     return content
 
-def is_duplicate(content, color, deck):
+def skip_duplicate(content, color, deck):
     is_dupe = False
     if color == "w":
         for card in deck["white"]:
@@ -107,6 +99,20 @@ def is_duplicate(content, color, deck):
             if content == card["content"]:
                 is_dupe = True
                 break
+    if is_dupe:
+        print("'" + content + "' already exists in " + deck["pack"]["name"] + "...\n")
+        skip = "?"
+        while skip != "y" or skip != "n":
+            skip = str(input("Skip card (y/n)? ")).strip()
+            print(skip)
+            if skip == "n":
+                is_dupe = False
+                break
+            elif skip == "y":
+                is_dupe = True
+                break
+            else:
+                continue
     return is_dupe
 
 def sort_cards(deck):
@@ -134,18 +140,56 @@ def write_deck(deck):
     print("Done! Wrote to " + outfile)
 
 def main():
-    main_parser = argparse.ArgumentParser(description="Add and modify ABC/CAH custom decks in JSON format.")
-    subparsers = main_parser.add_subparsers(dest="command", description="Actions to perform on a deck.")
+    main_parser = argparse.ArgumentParser(
+            description="Add and modify ABC/CAH custom decks in JSON format."
+            )
 
-    create_parser = subparsers.add_parser('create', help="Create a new deck.", description="Creates a new deck in an interactive workflow.")
-    create_parser.set_defaults(func=create_deck)
+    #main_parser.addArgument(
+            #'command',
+            #choice=['create', 'add-cards', 'edit', 'sort', 'count']
+            #)
+    # optionales infile, outfile, sort, count
+    # consolidate/recommit?
 
-    edit_parser = subparsers.add_parser('edit', help="Modify an existing deck.", description="Modifies an existing deck in the way specified by the optional arguments.")
-    edit_parser.add_argument('infile', type=str, help="Path to an existing JSON file to edit.", default=sys.stdin)
-    edit_parser.add_argument('-a', '--add', action="store_true", help="Add cards to the deck.")
-    edit_parser.add_argument('-s', '--sort', action="store_true", help="Sort cards alphabetically by their contents.")
-    edit_parser.add_argument('-c', '--count', action="store_true", help="Update the card count.")
-    edit_parser.set_defaults(func=get_deck)
+    subparsers = main_parser.add_subparsers(
+            dest="command",
+            description="Actions to perform on a deck."
+            )
+
+    create_parser = subparsers.add_parser(
+            'create',
+            help="Create a new deck.",
+            description="Creates a new deck in an interactive workflow."
+            )
+    #create_parser.set_defaults(func=create_deck)
+
+    edit_parser = subparsers.add_parser(
+            'edit',
+            help="Modify an existing deck.",
+            description="Modifies an existing deck in the way specified by the optional arguments."
+            )
+    edit_parser.add_argument(
+            'infile',
+            type=str,
+            help="Path to an existing JSON file to edit.",
+            default=sys.stdin
+            )
+    edit_parser.add_argument(
+            '-a', '--add',
+            action="store_true",
+            help="Add cards to the deck."
+            )
+    edit_parser.add_argument(
+            '-s', '--sort',
+            action="store_true",
+            help="Sort cards alphabetically by their contents."
+            )
+    edit_parser.add_argument(
+            '-c', '--count',
+            action="store_true",
+            help="Update the card count."
+            )
+    #edit_parser.set_defaults(func=get_deck)
 
     args = main_parser.parse_args()
 

@@ -10,7 +10,7 @@
       "draw": 2
     },
     {
-      "content": "Having a _ is the new _.",
+      "content": "Having _ is the new _.",
       "pick": 2,
       "draw": 2
     },
@@ -66,6 +66,7 @@
     }
   ],
   "white": [
+    "A bearded man",
     "A formidable moustache",
     "A lion",
     "A splending juicy full beard",
@@ -91,7 +92,7 @@
   ],
   "quantity": {
     "black": 12,
-    "white": 22,
-    "total": 34
+    "white": 23,
+    "total": 35
   }
 }

@@ -1,0 +1,56 @@
+{
+  "pack": {
+    "name": "Nerds With Turds",
+    "id": "nerds-with-turds"
+  },
+  "black": [
+    {
+      "content": "What annoys me most about Windows is _.",
+      "pick": 1,
+      "draw": 1
+    }
+  ],
+  "white": [
+    "AI",
+    "Active Directory",
+    "Bill Gates",
+    "Bitcoin",
+    "Blaming the Russians",
+    "Blockchain",
+    "Cisco",
+    "Downloading .exe files from dubious websites",
+    "Editing someone else's files",
+    "Encryption",
+    "Exiting VIM",
+    "Force-pushing to a git repository",
+    "Linus Torvalds",
+    "Linux",
+    "Lots and lots of coffee",
+    "Making backups",
+    "Mark Shuttleworth",
+    "Office macros",
+    "Open source",
+    "Outlook",
+    "People with absolutely no expertise",
+    "Rebooting",
+    "Richard Stallman",
+    "Snake oil",
+    "Stackoverflow",
+    "Steve Jobs",
+    "The IT-departement",
+    "The cloud",
+    "The year of the Linux desktop",
+    "Turning things off and on again",
+    "Ubuntu",
+    "Understanding git",
+    "Using a mouse",
+    "Using the same password everywhere",
+    "Windows",
+    "Writing CMD scripts"
+  ],
+  "quantity": {
+    "black": 1,
+    "white": 36,
+    "total": 37
+  }
+}

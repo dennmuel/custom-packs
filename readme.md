@@ -18,10 +18,6 @@ If you're trying any of these packs - try this one.
 
 ABC pack code: VRRCeJAWJ
 
-TODO:
-- Keep testing gameplay and refine
-- Make a website for "Bachmannaids" (or remove the card)
-
 ## Farts with frank brutality
 Random collection deck for ideas from friends.
 

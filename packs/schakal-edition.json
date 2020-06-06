@@ -115,6 +115,11 @@
       "draw": 1
     },
     {
+      "content": "I finally found God after _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "I finally quit my boring office job to pursue my lifelong dream of _.",
       "pick": 1,
       "draw": 1
@@ -446,6 +451,7 @@
     "A fat guy on a racing bike",
     "A freezer full of body parts",
     "A funny answer",
+    "A grumpy feminist",
     "A guitar with an acoustic douche",
     "A gun",
     "A harem of sexy scorpions",
@@ -457,12 +463,14 @@
     "A man with a knife and nothing to lose",
     "A member of the Gestapo",
     "A multipurpose attack helicopter",
+    "A mysterious wizard of ancient descent",
     "A neoliberal hamster",
     "A penguin wearing boots",
     "A pet funeral",
     "A pet monkey",
     "A piece of bacon actually named Kevin",
     "A power outage",
+    "A profound lack of common sense",
     "A prostitute",
     "A racist Asian in a wheelchair",
     "A really tasty lasagna",
@@ -484,6 +492,7 @@
     "Alf",
     "Aluminum foil",
     "Amazon",
+    "An Elvis impersonator",
     "An HIV infected needle placed in a cinema chair",
     "An STD and debts",
     "An absent father",
@@ -642,6 +651,7 @@
     "Having your first period",
     "Heavy oil",
     "Helicopter parents",
+    "Hiding a boner from your parents",
     "Hippies",
     "Hiroshima",
     "Hitler's evil twin",
@@ -713,6 +723,7 @@
     "My baby brother's dead little body",
     "My children",
     "My first kiss",
+    "My inner critic",
     "My natural parents",
     "My schoolbag",
     "MySpace",
@@ -737,6 +748,7 @@
     "Passive aggressive post-it notes",
     "Paying meth addicts to reenact the civil war",
     "People",
+    "People who talk so loud on the telephone as if they were actually trying to cover the physical distance to the respondent",
     "People who who change their name in facebook and now you can't remember their actual name",
     "People with self-respect",
     "Pharmacy",
@@ -800,6 +812,7 @@
     "Social media",
     "Socialism",
     "Solitary confinement",
+    "Some crying children",
     "Sperm",
     "Staring at a computer screen for eight hours straight",
     "Staring at a wasp until it leaves the room",
@@ -837,6 +850,7 @@
     "The Olsen twins",
     "The Queen's clit",
     "The SS of love",
+    "The Spanish Inquisition",
     "The Stockholm syndrome",
     "The Warsaw ghetto",
     "The Wehrmacht",
@@ -857,6 +871,7 @@
     "The slow realization that life is wrong",
     "The softness of a baby's fontanel",
     "The soul of a redhead",
+    "The voice of my father telling me I'm not good enough",
     "The will to live",
     "Thirteen chihuahuas reenacting the Last Supper",
     "This nigger who can't even play the bass",
@@ -894,8 +909,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 85,
-    "white": 462,
-    "total": 547
+    "black": 86,
+    "white": 471,
+    "total": 557
   }
 }

@@ -31,4 +31,4 @@ ABC pack code: 1nMOZB6wn
 ## Nerds with turds
 IT-themed expansion pack fueled by frustration.
 
-ABC pack code: tba
+ABC pack code: ZjnhXwI-w

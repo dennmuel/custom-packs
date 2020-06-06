@@ -5,14 +5,51 @@
   },
   "black": [
     {
+      "content": "After all this technological progress, _ is still the biggest security risk.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "An integral part of working in IT is _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "Canonical announced their new operating system. It's called \"Ubuntu _\".",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "If I learned one thing working in IT, it's _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "It's kind of cute when noobs are _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "Learing about \"git --_\" command was a real game changer in my workflow.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "The upcoming release of systemd is capable of _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "What annoys me most about Windows is _.",
       "pick": 1,
       "draw": 1
     }
   ],
   "white": [
+    "A blue screen of death",
     "AI",
     "Active Directory",
+    "Adobe",
     "Bill Gates",
     "Bitcoin",
     "Blaming the Russians",
@@ -22,35 +59,49 @@
     "Editing someone else's files",
     "Encryption",
     "Exiting VIM",
+    "Finding a year-old forum post that exactly fits your problem, but without any answers",
+    "Flash Player",
     "Force-pushing to a git repository",
+    "Internet Explorer",
     "Linus Torvalds",
     "Linux",
+    "Looking at some code thinking \"What idiot wrote that crap?!\", then realizing it was your past self",
     "Lots and lots of coffee",
     "Making backups",
     "Mark Shuttleworth",
+    "My boss asking if I could fix the database with some JavaScript",
     "Office macros",
     "Open source",
     "Outlook",
+    "People clicking on things",
+    "People sending you screenshots in a Word document",
     "People with absolutely no expertise",
     "Rebooting",
     "Richard Stallman",
+    "SQL injections",
+    "Shipping changes on a Friday afternoon",
+    "Short-sleeved shirts",
     "Snake oil",
+    "Spam mail",
     "Stackoverflow",
     "Steve Jobs",
+    "Systemd",
     "The IT-departement",
     "The cloud",
     "The year of the Linux desktop",
     "Turning things off and on again",
     "Ubuntu",
     "Understanding git",
+    "Upstart, MIR and Unity",
     "Using a mouse",
     "Using the same password everywhere",
+    "Web developement",
     "Windows",
     "Writing CMD scripts"
   ],
   "quantity": {
-    "black": 1,
-    "white": 36,
-    "total": 37
+    "black": 8,
+    "white": 52,
+    "total": 60
   }
 }

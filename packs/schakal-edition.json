@@ -145,6 +145,11 @@
       "draw": 1
     },
     {
+      "content": "I just realized how _ was _ some years ago.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
       "content": "I never thought you could improve _, but _ really did it for me.",
       "pick": 2,
       "draw": 2
@@ -223,6 +228,11 @@
       "content": "It might not be what we wanted, but _ sure was what we deserved.",
       "pick": 1,
       "draw": 1
+    },
+    {
+      "content": "It took me quite a while to realize that _ and _ were to different things.",
+      "pick": 2,
+      "draw": 2
     },
     {
       "content": "It's not commonly known, but _ is a clinically recognized illness.",
@@ -452,7 +462,6 @@
     "A freezer full of body parts",
     "A funny answer",
     "A grumpy feminist",
-    "A guitar with an acoustic douche",
     "A gun",
     "A harem of sexy scorpions",
     "A horrible car accident",
@@ -465,7 +474,6 @@
     "A multipurpose attack helicopter",
     "A mysterious wizard of ancient descent",
     "A neoliberal hamster",
-    "A penguin wearing boots",
     "A pet funeral",
     "A pet monkey",
     "A piece of bacon actually named Kevin",
@@ -519,6 +527,7 @@
     "Beavis and Butt-Head erotic fan fiction",
     "Being a dick",
     "Being a straight white male",
+    "Being ablte to solve any problem with a pocket knife",
     "Being alone with your own thoughts",
     "Being counterproductive to evolution",
     "Being easily aroused",
@@ -657,15 +666,10 @@
     "Hitler's evil twin",
     "Hitler's return",
     "Hodor!",
-    "Horses",
     "Hot guitar action",
     "How it feels to be a woman",
     "How shiny a bald head can be",
     "How to boogie",
-    "How to lead a happy life",
-    "How to solve any problem with a pocket knife",
-    "How to start a successful business",
-    "How to strangle a hooker",
     "Human resources",
     "Hungry wolfs",
     "Inadequate human interaction",
@@ -691,6 +695,7 @@
     "Lack of physical exercise",
     "Laughing alone in the dark",
     "Lawyers",
+    "Leading a happy life",
     "Licking her",
     "Life being meaningless",
     "Like, you know, the universe itself, bro",
@@ -723,6 +728,7 @@
     "My baby brother's dead little body",
     "My children",
     "My first kiss",
+    "My girlfriend",
     "My inner critic",
     "My natural parents",
     "My schoolbag",
@@ -816,9 +822,11 @@
     "Sperm",
     "Staring at a computer screen for eight hours straight",
     "Staring at a wasp until it leaves the room",
+    "Starting a successful business",
     "Staying at home",
     "Stolen cheese",
     "Straight white males",
+    "Strangling a hooker",
     "Strong greek men",
     "Subtle sexual tension",
     "Sucking a huge cock without throwing up",
@@ -873,11 +881,13 @@
     "The soul of a redhead",
     "The voice of my father telling me I'm not good enough",
     "The will to live",
+    "The woman I love",
     "Thirteen chihuahuas reenacting the Last Supper",
     "This nigger who can't even play the bass",
     "Three bottles of Mountain Dew",
     "Thursday",
     "Time travel",
+    "Tiny little horses",
     "Tom Jones' chest hair",
     "Tony Hawk's Pro Skater",
     "Tossing a midget",
@@ -902,6 +912,7 @@
     "Whatever happened to Lindsay Lohan",
     "Whatever happens in the teacher's room",
     "White supremacy",
+    "William Shatner",
     "Wishful thinking",
     "Wondering why everyone calls you a racist",
     "Working in online marketing",
@@ -909,8 +920,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 86,
-    "white": 471,
-    "total": 557
+    "black": 88,
+    "white": 472,
+    "total": 560
   }
 }

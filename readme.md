@@ -14,6 +14,7 @@ TODO:
 ## Schakal Edition
 A handmade, quality over quantity, allround deck carefully crafted by yours truly, Der Schakal.
 This deck was designed to both work standalone as well as integrate well with other packs.
+If you're trying any of these packs - try this one.
 
 ABC pack code: VRRCeJAWJ
 
@@ -27,7 +28,11 @@ Random collection deck for ideas from friends.
 ABC pack code: Yk1skE31V
 
 ## Bearded Pack
-Beard-themed pack made by some friends and lovers of facial hair.
+Beard-themed expansion pack made by some friends and lovers of facial hair.
 
 ABC pack code: 1nMOZB6wn
 
+## Nerds with turds
+IT-themed expansion pack fueled by frustration.
+
+ABC pack code: tba

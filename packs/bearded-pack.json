@@ -79,6 +79,7 @@
     "Clean shaven babyface",
     "Dick",
     "Fucking Hipsters",
+    "Going to the barber",
     "Growing a beard",
     "Having Sex",
     "Not having a beard",
@@ -92,7 +93,7 @@
   ],
   "quantity": {
     "black": 12,
-    "white": 23,
-    "total": 35
+    "white": 24,
+    "total": 36
   }
 }

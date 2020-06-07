@@ -95,13 +95,14 @@
     "Upstart, MIR and Unity",
     "Using a mouse",
     "Using the same password everywhere",
+    "Wearing a hoodie",
     "Web developement",
     "Windows",
     "Writing CMD scripts"
   ],
   "quantity": {
     "black": 8,
-    "white": 52,
-    "total": 60
+    "white": 53,
+    "total": 61
   }
 }

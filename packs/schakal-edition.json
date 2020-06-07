@@ -435,6 +435,11 @@
       "draw": 1
     },
     {
+      "content": "_ is my personal hell.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "_ is never wrong when you do it for _.",
       "pick": 2,
       "draw": 2
@@ -527,7 +532,7 @@
     "Beavis and Butt-Head erotic fan fiction",
     "Being a dick",
     "Being a straight white male",
-    "Being ablte to solve any problem with a pocket knife",
+    "Being able to solve any problem with a pocket knife",
     "Being alone with your own thoughts",
     "Being counterproductive to evolution",
     "Being easily aroused",
@@ -920,8 +925,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 88,
+    "black": 89,
     "white": 472,
-    "total": 560
+    "total": 561
   }
 }

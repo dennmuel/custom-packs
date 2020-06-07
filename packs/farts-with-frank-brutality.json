@@ -5,7 +5,7 @@
   },
   "black": [
     {
-      "content": "Fear not, my brave companions! We shall suffer no evil, for my _ will guide us through!",
+      "content": "Fear not, my brave companions! We shall suffer no evil, for _ will guide us through!",
       "pick": 1,
       "draw": 1
     },
@@ -38,21 +38,25 @@
   "white": [
     "A gay bar",
     "A new dick",
+    "A slow dying fart of an old fat man",
     "An Uber driver",
     "Breastfeeding",
     "Civil war",
     "Granny midget porn",
+    "My anus",
     "Power Rangers",
     "Racial profiling",
+    "Sir Christopher Lee explaining the sound of a man being stabbed in the back",
     "Social justice",
     "Starting a nuclear war",
     "Stephen Hawking",
     "Taking a dump with the bathroom door open",
+    "The Grinch",
     "Uncle Jerry"
   ],
   "quantity": {
     "black": 6,
-    "white": 13,
-    "total": 19
+    "white": 17,
+    "total": 23
   }
 }

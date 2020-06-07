@@ -32,3 +32,8 @@ ABC pack code: 1nMOZB6wn
 IT-themed expansion pack fueled by frustration.
 
 ABC pack code: ZjnhXwI-w
+
+## Rejection Selection
+Rejected cards from Schakal Edition.
+
+ABC pack code: tba

@@ -95,11 +95,6 @@
       "draw": 2
     },
     {
-      "content": "How can it be that in the 21st century _ is still a crime?",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "I could have never achieved _ without _.",
       "pick": 2,
       "draw": 2
@@ -335,11 +330,6 @@
       "draw": 1
     },
     {
-      "content": "Say whatever you want about _, but _ is still worse!",
-      "pick": 2,
-      "draw": 2
-    },
-    {
       "content": "Since that day with uncle Jerry, I just can't look at _ the same way again.",
       "pick": 1,
       "draw": 1
@@ -371,11 +361,6 @@
     },
     {
       "content": "There's nothing like _ to refresh on a hot summer day.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "They may take our lives, but they will never take _!",
       "pick": 1,
       "draw": 1
     },
@@ -925,8 +910,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 89,
+    "black": 86,
     "white": 472,
-    "total": 561
+    "total": 558
   }
 }

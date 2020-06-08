@@ -31,11 +31,16 @@
     }
   ],
   "white": [
-    "Horsers"
+    "Any given STD",
+    "Black lives",
+    "Horses",
+    "Sleeping",
+    "Suicide bombers",
+    "That feeling when you see someone dying"
   ],
   "quantity": {
     "black": 5,
-    "white": 1,
-    "total": 6
+    "white": 6,
+    "total": 11
   }
 }

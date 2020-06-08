@@ -110,7 +110,7 @@
       "draw": 1
     },
     {
-      "content": "I finally found God after _.",
+      "content": "I finally found Jesus because of _.",
       "pick": 1,
       "draw": 1
     },
@@ -350,6 +350,11 @@
       "draw": 1
     },
     {
+      "content": "The accusations against me are absolutely baseless - some of my best friends are _!",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "The reason why the Dalai Lama is always smiling: _.",
       "pick": 1,
       "draw": 1
@@ -386,6 +391,11 @@
     },
     {
       "content": "What happened to Lindsay Lohan? _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "What this country needs the most is clearly _.",
       "pick": 1,
       "draw": 1
     },
@@ -474,6 +484,7 @@
     "A really tasty lasagna",
     "A sex doll with Bill Cosby's face",
     "A stroke",
+    "A supremely well done foot massage",
     "A suprising amount of nails",
     "A teaspoon full of jizz",
     "A very low frustration tolerance",
@@ -502,7 +513,6 @@
     "Anal penetration",
     "Animal cruelty",
     "Another Holocaust",
-    "Any given STD",
     "Any guy you would meet in the street",
     "Appropriate misogyny",
     "Artificial intelligence",
@@ -525,7 +535,6 @@
     "Being repressed",
     "Being sober",
     "Being stuck in traffic",
-    "Big data",
     "Blackfacing",
     "Blaming immigrants",
     "Bleeding all the time",
@@ -660,6 +669,7 @@
     "How it feels to be a woman",
     "How shiny a bald head can be",
     "How to boogie",
+    "Hulk Hogan",
     "Human resources",
     "Hungry wolfs",
     "Inadequate human interaction",
@@ -781,6 +791,7 @@
     "Rocking a flamboyant mustache",
     "Rolling a spliff with pages from the Bible",
     "Roofies",
+    "Saddam Hussein",
     "Sadness",
     "Salt & vinegar crisps",
     "Self respect and dignity",
@@ -794,7 +805,6 @@
     "Slapping each other in a windowless room",
     "Slavery",
     "Slayer",
-    "Sleeping",
     "Sleeping on the couch",
     "Slightly less painkillers than sufficient",
     "Slovenian prostitutes",
@@ -821,7 +831,6 @@
     "Subtle sexual tension",
     "Sucking a huge cock without throwing up",
     "Suffering from spasms",
-    "Suicide bombers",
     "Surprise buttsex",
     "Swag",
     "Sweaty pants",
@@ -835,7 +844,7 @@
     "Teabagging disabled children",
     "Teenage pussy",
     "Testosterone",
-    "That feeling when you see someone dying",
+    "That kick-ass boat from \"Thunder in Paradise\"",
     "That stupid monk who set himself on fire",
     "The 70's",
     "The Berlin Wall",
@@ -910,8 +919,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 86,
-    "white": 472,
-    "total": 558
+    "black": 88,
+    "white": 471,
+    "total": 559
   }
 }

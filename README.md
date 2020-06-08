@@ -1,15 +1,13 @@
 # Custom card packs for "Cards Against Humanity" / "AllBadCards"
 
 ## deck.py
-Helper script to create and edit custom decks.
-See `python3 deck.py --help`.
+Helper script to create and edit custom decks. See `deck.py --help`.
+See issues for problems & enhancements.
 
-TODO:
-- create a deck from file?
-- do stuff in an object oriented way?
-- validate the deck file against the json schema?
-- add recommit operation (= sanitize + sort + count)
-- edit existing cards
+Create a deck: `deck.py create`
+
+Edit an existing deck: `deck.py edit [--add --sort --count] /path/to/existing/deck.json`
+
 
 ## Schakal Edition
 A handmade, quality over quantity, allround deck carefully crafted by yours truly, Der Schakal.

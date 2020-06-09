@@ -16,7 +16,7 @@ def create_deck():
     name = str(input("Enter the name for the deck:\n")).strip()
     deck = {
             "pack": {
-                "name": name,
+                "name": name.title(),
                 "id": name.lower().replace(" ","-")
                 },
             "black": [],

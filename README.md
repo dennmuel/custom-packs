@@ -16,7 +16,7 @@ If you're trying any of these packs - try this one.
 
 ABC pack code: VRRCeJAWJ
 
-## Farts with frank brutality
+## Farts With Frank Brutality
 Random collection deck for ideas from friends.
 
 ABC pack code: Yk1skE31V
@@ -26,7 +26,7 @@ Beard-themed expansion pack made by some friends and lovers of facial hair.
 
 ABC pack code: 1nMOZB6wn
 
-## Nerds with turds
+## Nerds With Turds
 IT-themed expansion pack fueled by frustration.
 
 ABC pack code: ZjnhXwI-w

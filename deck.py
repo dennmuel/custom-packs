@@ -169,8 +169,9 @@ def main():
             description="Modifies an existing deck in the way specified by the optional arguments."
             )
     edit_parser.add_argument(
-            'infile',
+            'infiles',
             type=str,
+            nargs='+',
             help="Path to an existing JSON file to edit.",
             default=sys.stdin
             )
@@ -193,19 +194,19 @@ def main():
 
     args = main_parser.parse_args()
 
-    if args.command == "create":
-        deck = create_deck()
-    else:
-        deck = get_deck(args.infile)
+    for infile in args.infiles:
+        if args.command == "create":
+            deck = create_deck()
+        else:
+            deck = get_deck(infile)
+        if args.command == "create" or args.add:
+            deck = add_cards(deck)
+        if args.command == "create" or args.sort:
+            deck = sort_cards(deck)
+        if args.command == "create" or args.count:
+            deck = count_cards(deck)
 
-    if args.command == "create" or args.add:
-        deck = add_cards(deck)
-    if args.command == "create" or args.sort:
-        deck = sort_cards(deck)
-    if args.command == "create" or args.count:
-        deck = count_cards(deck)
-
-    write_deck(deck)
+        write_deck(deck)
 
 if __name__ == "__main__":
     main()

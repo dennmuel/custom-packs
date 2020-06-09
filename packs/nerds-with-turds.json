@@ -61,6 +61,7 @@
     "Encryption",
     "Exiting VIM",
     "Finding a year-old forum post that exactly fits your problem, but without any answers",
+    "Finding an answer by clicking on literally the first Google result",
     "Flash Player",
     "Force-pushing to a git repository",
     "Internet Explorer",
@@ -103,7 +104,7 @@
   ],
   "quantity": {
     "black": 8,
-    "white": 54,
-    "total": 62
+    "white": 55,
+    "total": 63
   }
 }

@@ -190,6 +190,11 @@
       "draw": 1
     },
     {
+      "content": "I've regularly been _ in my college years.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "If it weren't for _, Germany would have won the war.",
       "pick": 1,
       "draw": 1
@@ -216,6 +221,11 @@
     },
     {
       "content": "In the name of the people, you are hereby sentenced to death by _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "It impresses me with awe to realize my grandparents were _ by hand.",
       "pick": 1,
       "draw": 1
     },
@@ -291,6 +301,11 @@
     },
     {
       "content": "Oh boy, I wish I weren't _ during that job interview.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "Oh, this life... Ten years pass and suddenly you're _.",
       "pick": 1,
       "draw": 1
     },
@@ -380,6 +395,16 @@
       "draw": 1
     },
     {
+      "content": "Time flies when you're _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "Today only Tibetan monks master the lost art of _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "Today we celebrate our town's long and proud history of _.",
       "pick": 1,
       "draw": 1
@@ -430,6 +455,11 @@
       "draw": 1
     },
     {
+      "content": "_ hits you hard, bro.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "_ is my personal Christmas.",
       "pick": 1,
       "draw": 1
@@ -458,6 +488,7 @@
     "A box full of catsuits",
     "A broken nose",
     "A burn victim",
+    "A burp so intense the neighbours come over to see if everything's okay",
     "A childhood without sunlight",
     "A chokeslam",
     "A collection of rubber ducks",
@@ -490,6 +521,7 @@
     "A racist Asian in a wheelchair",
     "A really tasty lasagna",
     "A sex doll with Bill Cosby's face",
+    "A slam poet",
     "A stroke",
     "A supremely well done foot massage",
     "A suprising amount of nails",
@@ -576,6 +608,7 @@
     "Cleaning your pants from jizz",
     "Coffee",
     "Colonialism",
+    "Comparing with the Nazis",
     "Constantly farting",
     "Constantly raping",
     "Cosmic justice",
@@ -726,6 +759,7 @@
     "Making balloon animals with used condoms",
     "Many, many owls",
     "Mass shootings in elementary schools",
+    "Massive diarrhea",
     "Masturbating with your weak hand",
     "Math",
     "Mean football tackles in slow motion",
@@ -798,6 +832,7 @@
     "Rape",
     "Rat poison",
     "Reading books",
+    "Reality",
     "Relentless effort in the MeToo movement",
     "Reminding people of Vietnam",
     "Repeatedly jumping on someones throat while wearing ice skates",
@@ -935,8 +970,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 89,
-    "white": 482,
-    "total": 571
+    "black": 95,
+    "white": 487,
+    "total": 582
   }
 }

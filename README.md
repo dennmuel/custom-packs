@@ -34,9 +34,9 @@ ABC pack code: ZjnhXwI-w
 ## Rejection Selection
 Rejected cards from Schakal Edition.
 
-ABC pack code: tba
+ABC pack code: 56hm4kKGU
 
 ## Ladies Edition
 A potpourri of estrogen-fuled madness made with love by - a woman.
 
-ABC pack code: tba
+ABC pack code: HWpLb4zCn

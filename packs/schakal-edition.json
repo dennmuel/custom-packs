@@ -330,6 +330,11 @@
       "draw": 1
     },
     {
+      "content": "Say what you want about _, but it has nothing to do with _.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
       "content": "Since that day with uncle Jerry, I just can't look at _ the same way again.",
       "pick": 1,
       "draw": 1
@@ -449,6 +454,7 @@
     "9/11",
     "A bacon negligee",
     "A banker",
+    "A black Jewish woman",
     "A box full of catsuits",
     "A broken nose",
     "A burn victim",
@@ -741,7 +747,7 @@
     "My schoolbag",
     "MySpace",
     "Needing a hip replacement",
-    "Needlessly wrapping things in plastic",
+    "Nestl\u00e9",
     "Never gonna give you up, never gonna let you down, never gonna run around and desert you",
     "Not a single mushroom, actually",
     "Not being a dick for once",
@@ -758,6 +764,7 @@
     "Optimus Prime's car insurance",
     "Other human beings",
     "Pakistani slave traders",
+    "Parmesan cheese",
     "Passive aggressive post-it notes",
     "Paying meth addicts to reenact the civil war",
     "Peeing yourself",
@@ -898,7 +905,6 @@
     "Tiny little horses",
     "Tom Jones' chest hair",
     "Tony Hawk's Pro Skater",
-    "Tossing a midget",
     "Tossing midgets",
     "Toto's \"Africa\"",
     "Uncle Jerry's Winchester",
@@ -911,6 +917,7 @@
     "Vikings",
     "Vlad the impaler",
     "Waking up",
+    "Walking while black",
     "War",
     "Wasting water",
     "Watching TV",
@@ -928,8 +935,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 88,
-    "white": 480,
-    "total": 568
+    "black": 89,
+    "white": 482,
+    "total": 571
   }
 }

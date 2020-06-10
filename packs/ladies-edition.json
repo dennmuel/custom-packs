@@ -15,7 +15,7 @@
       "draw": 1
     },
     {
-      "content": "After my mother gave me sex education I _ the first time.",
+      "content": "After my mother gave me sex education I had _ for the first time.",
       "pick": 1,
       "draw": 1
     },
@@ -75,7 +75,7 @@
       "draw": 2
     },
     {
-      "content": "Boss, Sir, is _ really necessary? I already _.",
+      "content": "Boss, Sir, is _ really necessary? I'm already _.",
       "pick": 2,
       "draw": 2
     },
@@ -105,6 +105,11 @@
       "draw": 2
     },
     {
+      "content": "Fashion is like _ to be.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "For a date with _ I even would _.",
       "pick": 2,
       "draw": 2
@@ -115,22 +120,17 @@
       "draw": 2
     },
     {
-      "content": "For me, fashion is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "For women _ is really necessary until they get used to _.",
       "pick": 2,
       "draw": 2
     },
     {
-      "content": "Freud saying women have penis envy. But the only thing we envy from men actually is _.",
+      "content": "Freud says women have penis envy. But the only thing we envy from men actually is _.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "From time to time, every gilr needs _.",
+      "content": "From time to time, every girl needs _.",
       "pick": 1,
       "draw": 1
     },
@@ -170,12 +170,12 @@
       "draw": 1
     },
     {
-      "content": "Hello everybody, my Name is Stacy, and I\u2018m here because of _.",
+      "content": "Hey darling, I read about _ in a women\u2018s magazine. I think we should realy try this.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "Hey darling, I read about _ in a women\u2018s magazine. I think we should realy try this.",
+      "content": "Hi everybody, my name is Stacy and I\u2018m here because of _.",
       "pick": 1,
       "draw": 1
     },
@@ -280,7 +280,7 @@
       "draw": 1
     },
     {
-      "content": "Most women like guys with _. I really like _.",
+      "content": "Most women like guys with _, while I prefer _.",
       "pick": 2,
       "draw": 2
     },
@@ -290,9 +290,9 @@
       "draw": 2
     },
     {
-      "content": "My BFF and I often get mistaken with _.",
-      "pick": 1,
-      "draw": 1
+      "content": "My BFF and I often get mistaken for _ and _.",
+      "pick": 2,
+      "draw": 2
     },
     {
       "content": "My BFF for me is _.",
@@ -305,7 +305,7 @@
       "draw": 1
     },
     {
-      "content": "My boyfriends pet name is _.",
+      "content": "My boyfriend's pet name is _.",
       "pick": 1,
       "draw": 1
     },
@@ -340,7 +340,7 @@
       "draw": 2
     },
     {
-      "content": "My therapist says, I have to _ to get _.",
+      "content": "My therapist says, I must be _ to get _.",
       "pick": 2,
       "draw": 2
     },
@@ -425,7 +425,12 @@
       "draw": 2
     },
     {
-      "content": "The only time having success with beeing a woman is _.",
+      "content": "The news said that _ is _ now. Hell yeah, I thought this would never happen!",
+      "pick": 2,
+      "draw": 2
+    },
+    {
+      "content": "The only chance to be a succesful woman is _.",
       "pick": 1,
       "draw": 1
     },
@@ -435,17 +440,17 @@
       "draw": 1
     },
     {
-      "content": "The reason why women always go to toilet together: _.",
+      "content": "The reason why women always go to the toilet together: _.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "The worst day in my life showed up with _.",
+      "content": "The worst day of my life was when I was _.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "There are many reasons having sex. _ for example.",
+      "content": "There are many reasons to have sex. _ for example.",
       "pick": 1,
       "draw": 1
     },
@@ -460,22 +465,17 @@
       "draw": 1
     },
     {
-      "content": "VIP news say that _ is _ now. Hell yeah, I thaught this will never happen!",
-      "pick": 2,
-      "draw": 2
-    },
-    {
       "content": "Visiting an art exhibition with my boyfriend always feels like _.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "What Women love on gay men most, is _.",
+      "content": "What women love about gay men the most is _.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "When I\u2018m really depressed, only _ can make me happy again.",
+      "content": "When I\u2018m really depressed only _ can make me happy again.",
       "pick": 1,
       "draw": 1
     },
@@ -586,7 +586,7 @@
     }
   ],
   "white": [
-    "90 60 \u2013 90",
+    "90 \u2013 60 \u2013 90",
     "A bath tub full of rose petals, candlelight and a glass of my favorite wine",
     "A beautiful sunset",
     "A bodyguard",
@@ -691,6 +691,7 @@
     "All kinds of men",
     "All kinds of penisses",
     "All kinds of vaginas",
+    "All the single ladies",
     "All this fucking celebrities",
     "Amazon prime",
     "An escalading situation",
@@ -704,7 +705,7 @@
     "Armpit hair",
     "Audrey Hepburn",
     "Baby face",
-    "Bad habbits",
+    "Bad habits",
     "Balancing job, kids and marriage while having a crisis",
     "Barbara Streisand",
     "Barbie",
@@ -716,7 +717,7 @@
     "Being a housewife",
     "Being a housewife for my whole life",
     "Being an actress",
-    "Being bitten from a vampire and getting his sex slave",
+    "Being bitten by a vampire and becoming his sex slave",
     "Being homeless",
     "Being lesbian",
     "Being so drunk that you can\u2018t even recognise your husband",
@@ -749,7 +750,6 @@
     "Butt plugs",
     "Buying glasses just to look smart in the job interview",
     "Calling a taxi",
-    "Calling everybody to calm down and then start freaking out for yourself",
     "Carrie",
     "Cash",
     "Cashmere",
@@ -783,7 +783,7 @@
     "Dirty",
     "Dirty pants",
     "Divorce",
-    "Doing a bank robbery without wearing a mask because your hairdress looks so well today",
+    "Doing a bank robbery without wearing a mask because your hair looks so well today",
     "Domina",
     "Drama series",
     "Duty",
@@ -822,7 +822,6 @@
     "Gender Pay Gap",
     "Genital mutilation",
     "Getting a face palm with a penis",
-    "Getting an ograsm everytime you have sex",
     "Getting divorced",
     "Getting invited",
     "Getting kidnapped",
@@ -848,8 +847,9 @@
     "Hairy feet",
     "Harley Quinn",
     "Hating musicals",
-    "Having a heart attac",
+    "Having a heart attack",
     "Having a stroke",
+    "Having an orgasm everytime you have sex",
     "Having my tighs liposucked",
     "Having your period but not wearing underwear",
     "Heaven",
@@ -873,7 +873,6 @@
     "Just 10 \u201aHola, chica\u2018s\u2018 away",
     "Just leaving",
     "Just riddling all the time",
-    "Just wondering about everyone seeing your brilliant makeup, when you\u2018ve to wear a face shield",
     "Justin Timberlake",
     "Kissing in the cinema",
     "Kitchen porn",
@@ -991,7 +990,7 @@
     "Pussy riot",
     "Putting a finger in his anus",
     "Pyromania",
-    "Racing your children with love and respect",
+    "Raising your children with love and respect",
     "Rape",
     "Real life",
     "Reality tv",
@@ -1046,7 +1045,6 @@
     "Stinky armpits",
     "Stomach smell",
     "Stutter",
-    "Sucking a huge cock without throwing up",
     "Sucking his cock and swallowing the jizz",
     "Sunny",
     "Superwoman",
@@ -1054,14 +1052,15 @@
     "Taking out the trash",
     "Taste",
     "Telling everybody that you\u2018re an actress but in fact been just a waitress your whole live",
+    "Telling everybody to calm down and then start freaking out for yourself",
     "Terrorism",
     "Thai Chi",
     "That bitch at the sale, that snapped the last size S t-shirt",
     "That bitch with the Manolo Blanics",
-    "That bitch, that attracts every mens attention, when she enters a room",
+    "That bitch, that attracts every man's attention, when she enters a room",
     "That crazy neighbor opening and reading my mail every day and giving me a summary of it",
     "That smell, when my guy came home from gym",
-    "That weird uncle nobody want\u2018s to invite to family meetings",
+    "That weird uncle nobody wants to invite to family meetings",
     "The Bangles",
     "The Joker",
     "The White House",
@@ -1114,6 +1113,7 @@
     "Wearing a short skirt but no underwear",
     "Women\u2018s magazine",
     "Women\u2018s rights",
+    "Worrying if people can see your brilliant makeup while you have to wear a face shield",
     "Yoga",
     "Yoga pants",
     "Your child puking on your dress when you\u2018re in a hurry",

@@ -31,8 +31,6 @@ def create_deck():
 
 def add_cards(deck):
     print("Let's add some cards to " + deck["pack"]["name"] + "!")
-    newblackcards = []
-    newwhitecards = []
     newcard = "?"
     while newcard != "n":
         if newcard != "b" and newcard != "w":
@@ -43,28 +41,52 @@ def add_cards(deck):
         if skip_duplicate(content, newcard, deck):
             newcard = "?"
             continue
-        if newcard == "b":
-            pick = 0
-            while pick < 1 or pick > 3:
-                pick = int(input("How many white cards does it take to answer the card (min: 1, max: 3)? "))
-                continue
-            draw = 9
-            while draw < 0 or draw > 2:
-                draw = int(input("How many white cards should be drawn after playing the card (min: 0, max: 2)? "))
-            card = {
-                    "content": content,
-                    "pick": pick,
-                    "draw": draw
-                    }
-            newblackcards.append(card)
-        else:
-            newwhitecards.append(content)
+        deck = add_card(content, newcard, deck);
         newcard = str(input("OMG, so funny! Add another (b)lack, (w)hite or (n)o card? ")).strip()
     else:
-        deck["black"].extend(newblackcards)
-        deck["white"].extend(newwhitecards)
-        txt = "Alright! {} black cards and {} white cards added to " + deck["pack"]["name"] + "!"
-        print(txt.format(len(newblackcards), len(newwhitecards)))
+        print("Alright! Cards added to " + deck["pack"]["name"] + "!")
+        return(deck)
+
+def add_card(content, color, deck):
+    if color == "b":
+        pick = 0
+        while pick < 1 or pick > 3:
+            pick = int(input("How many white cards does it take to answer the card (min: 1, max: 3)? "))
+            continue
+        draw = 9
+        while draw < 0 or draw > 2:
+            draw = int(input("How many white cards should be drawn after playing the card (min: 0, max: 2)? "))
+        card = {
+                "content": content,
+                "pick": pick,
+                "draw": draw
+                }
+        deck["black"].append(card)
+    else:
+        deck["white"].append(content)
+    return(deck)
+
+def import_cards(deck):
+    print("Let's import some cards to " + deck["pack"]["name"] + "!")
+    newcard = "?"
+    while newcard != "n":
+        if newcard != "b" and newcard != "w":
+            newcard = str(input("Add (b)lack, (w)hite or (n)o cards?: ")).strip()
+            continue
+        path = str(input("Type in the path to the card file: "))
+        with open(path) as p:
+            while True:
+                content = p.readline()
+                if not content.strip():
+                    break
+                content = sanitize_content(content, newcard)
+                if skip_duplicate(content, newcard, deck):
+                    continue
+                print(content)
+                deck = add_card(content, newcard, deck);
+        newcard = str(input("OMG, so funny! Add further (b)lack, (w)hite or (n)o cards? ")).strip()
+    else:
+        print("Alright! Cards added to " + deck["pack"]["name"] + "!")
         return(deck)
 
 def sanitize_content(content, color):
@@ -190,23 +212,33 @@ def main():
             action="store_true",
             help="Update the card count."
             )
+    edit_parser.add_argument(
+            '-i', '--fileimport',
+            action="store_true",
+            help="Import cards from a text file."
+            )
     #edit_parser.set_defaults(func=get_deck)
 
     args = main_parser.parse_args()
 
-    for infile in args.infiles:
-        if args.command == "create":
-            deck = create_deck()
-        else:
+    if args.command == "create":
+        deck = create_deck()
+        deck = add_cards(deck)
+        deck = sort_cards(deck)
+        deck = count_cards(deck)
+    else:
+        for infile in args.infiles:
             deck = get_deck(infile)
-        if args.command == "create" or args.add:
-            deck = add_cards(deck)
-        if args.command == "create" or args.sort:
-            deck = sort_cards(deck)
-        if args.command == "create" or args.count:
-            deck = count_cards(deck)
+            if args.add:
+                deck = add_cards(deck)
+            if args.fileimport:
+                deck = import_cards(deck)
+            if args.sort:
+                deck = sort_cards(deck)
+            if args.count:
+                deck = count_cards(deck)
 
-        write_deck(deck)
+    write_deck(deck)
 
 if __name__ == "__main__":
     main()

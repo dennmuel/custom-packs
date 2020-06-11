@@ -1,7 +1,7 @@
 {
   "pack": {
-    "name": "Ladies Edition",
-    "id": "ladies-edition"
+    "name": "A Handmaid's Fail",
+    "id": "a-handmaids-fail"
   },
   "black": [
     {
@@ -30,11 +30,6 @@
       "draw": 1
     },
     {
-      "content": "As a boy, I\u2018d love to be _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "Ask me anything about _, but not about _, please!",
       "pick": 2,
       "draw": 2
@@ -55,24 +50,24 @@
       "draw": 1
     },
     {
-      "content": "Be careful with that guy Chelsea! I heard he\u2018s _.",
+      "content": "Be careful with that guy, Chelsea! I heard he\u2018s _.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "Beeing the only female member of the supervisory board is like _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Beeing the only woman in the army often feels like _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Being married is like _ they say. But for me it\u2018s more like _.",
+      "content": "Being married is like _, they say. But for me it\u2018s more like _.",
       "pick": 2,
       "draw": 2
+    },
+    {
+      "content": "Being the only female member of the supervisory board is like _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "Being the only woman in the army often feels like _.",
+      "pick": 1,
+      "draw": 1
     },
     {
       "content": "Boss, Sir, is _ really necessary? I'm already _.",
@@ -110,7 +105,7 @@
       "draw": 1
     },
     {
-      "content": "For a date with _ I even would _.",
+      "content": "For a date with _ I'd even tolerate _.",
       "pick": 2,
       "draw": 2
     },
@@ -140,7 +135,7 @@
       "draw": 1
     },
     {
-      "content": "Girl, you really should reading that guidebook about _. It helped me through _.",
+      "content": "Girl, you should really read that guidebook about _. It helped me through _.",
       "pick": 2,
       "draw": 2
     },
@@ -180,11 +175,6 @@
       "draw": 1
     },
     {
-      "content": "I always turn _ when other women tell me I\u2018m looking nice in that dress.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "I can run out of _, but a weekend without _ is horrible for me!",
       "pick": 2,
       "draw": 2
@@ -220,7 +210,7 @@
       "draw": 2
     },
     {
-      "content": "I remember sex education in biology lessons. I was _ after that.",
+      "content": "I remember sex education in biology class. I was _ after that.",
       "pick": 1,
       "draw": 1
     },
@@ -246,6 +236,11 @@
     },
     {
       "content": "If I were a boy, I really would like to _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "If I were a boy, I\u2018d love to be _.",
       "pick": 1,
       "draw": 1
     },
@@ -325,7 +320,7 @@
       "draw": 2
     },
     {
-      "content": "My first time in a sex shop was _.",
+      "content": "My first time in a sex shop? _.",
       "pick": 1,
       "draw": 1
     },
@@ -380,11 +375,6 @@
       "draw": 1
     },
     {
-      "content": "Poor thing you. Don\u2018t worry, everything will get _ again.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "Rumor has it, that _ in real life isn\u2018t _ but _.",
       "pick": 3,
       "draw": 2
@@ -395,9 +385,14 @@
       "draw": 1
     },
     {
-      "content": "Since I interrupted my husband with our baby sitter, I\u2018m allowed to _ whenever I want.",
+      "content": "Since I interrupted my husband with our baby sitter, I\u2018m allowed _ whenever I want.",
       "pick": 1,
       "draw": 1
+    },
+    {
+      "content": "Since I joined this self-help group for _, I\u2018m doing well with _.",
+      "pick": 2,
+      "draw": 2
     },
     {
       "content": "Since I turned 30 my boobs look like _.",
@@ -405,17 +400,12 @@
       "draw": 1
     },
     {
-      "content": "Since I visit this self-help group for _, I\u2018m doing well with _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
       "content": "Since my husband told me about _, I can understand his bias towards _.",
       "pick": 2,
       "draw": 2
     },
     {
-      "content": "The best thing about my job as a domina is _.",
+      "content": "The best thing about working as a domina is _.",
       "pick": 1,
       "draw": 1
     },
@@ -440,12 +430,12 @@
       "draw": 2
     },
     {
-      "content": "The only chance to be a succesful woman is _.",
+      "content": "The only chance to be succesful as a woman is _.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "The real intention, why young hot girls marry old ugly guys with money is _.",
+      "content": "The real intention behind young hot girls marrying old ugly guys is _.",
       "pick": 1,
       "draw": 1
     },
@@ -490,7 +480,12 @@
       "draw": 1
     },
     {
-      "content": "When it\u2018s getting serious with a man I _.",
+      "content": "When it's time to pay the dinner bill on a first date I\u2018m _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "When it\u2018s getting serious with a man I am _.",
       "pick": 1,
       "draw": 1
     },
@@ -515,22 +510,22 @@
       "draw": 1
     },
     {
-      "content": "When the bill shows up at my first date with guys, I\u2018m _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "When the doctor told me I was pregnant, the first thing I did was _.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "When we grow old, my husband and I want to _.",
+      "content": "When we grow old, my husband and I want to try _.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "When we have a night off from the kids, my husband and I _.",
+      "content": "When we have a night off from the kids, my husband and I like _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "Women don\u2018t have careers - they have _.",
       "pick": 1,
       "draw": 1
     },
@@ -560,7 +555,7 @@
       "draw": 2
     },
     {
-      "content": "You\u2018re a woman, when you _.",
+      "content": "You\u2018re not a woman until you're _.",
       "pick": 1,
       "draw": 1
     },
@@ -575,9 +570,9 @@
       "draw": 1
     },
     {
-      "content": "_ ruined my career. Just kidding, girls. Women don\u2018t have careers. They only have _.",
-      "pick": 2,
-      "draw": 2
+      "content": "_ ruined my career.",
+      "pick": 1,
+      "draw": 1
     },
     {
       "content": "_ ruined my life.",
@@ -617,10 +612,12 @@
     "A diet",
     "A dirty toilet seat",
     "A doll",
+    "A domina",
     "A dream",
     "A dress looking like you shopped it at a bargain sale, but actually is from Prada",
     "A fashion outlet",
     "A fat burger with double cheese on it",
+    "A favour",
     "A fetish",
     "A flea market",
     "A fluffy puppy",
@@ -644,7 +641,7 @@
     "A lesbian",
     "A lonely island",
     "A match",
-    "A mosquito in my bedroom only bitting me and not my boyfriend",
+    "A mosquito in the bedroom biting only me and not my boyfriend",
     "A moustache with food from last lunch stuck in it",
     "A muezzin",
     "A mysterium",
@@ -668,6 +665,7 @@
     "A real super hero",
     "A romantic dinner",
     "A romantic movie",
+    "A sale at Tiffany\u2018s",
     "A self-help group",
     "A sex doll",
     "A sexual therapist",
@@ -684,7 +682,7 @@
     "A stalker",
     "A stinky fart",
     "A string tanga so deep in my ass it\u2018s already ingrown",
-    "A tattoo of every of your pet\u2018s",
+    "A tattoo of every of your pets",
     "A tattoo of your child\u2018s name",
     "A taxi driver",
     "A teacup pig",
@@ -731,18 +729,18 @@
     "Barbie",
     "Bat Girl",
     "Batman",
-    "Beeing raped all the time",
-    "Beeing raped because of my sexy dress",
-    "Beeing to shy to say something",
     "Being a housewife",
     "Being a housewife for my whole life",
     "Being an actress",
     "Being bitten by a vampire and becoming his sex slave",
     "Being homeless",
     "Being lesbian",
+    "Being raped all the time",
+    "Being raped because of my sexy dress",
     "Being so drunk that you can\u2018t even recognise your husband",
     "Being sober",
     "Being that nervous, you start having diarrrhea immediately",
+    "Being too shy to say something",
     "Being useless",
     "Belle dumping the beast and choosing Gaston instead",
     "Beoncy\u00e9",
@@ -758,8 +756,8 @@
     "Brad Pitt",
     "Brangelina",
     "Break up",
-    "Breast feeding",
     "Breast implants",
+    "Breastfeeding",
     "Bromance",
     "Brother and sister",
     "Brothers",
@@ -773,13 +771,14 @@
     "Carrie",
     "Cash",
     "Cashmere",
+    "Cheating on you",
     "Cherry flavoured",
     "Chest hair",
     "Chlorophorm",
     "Chocolate",
     "Church",
     "Cinema",
-    "Cleaning your husbands pants from jizz but knowing that you were\u2018nt envolved",
+    "Cleaning your husband's pants from jizz but knowing that you weren't involved",
     "Cleptomania",
     "Coconut flavoured",
     "Constantly farting",
@@ -804,11 +803,11 @@
     "Dirty pants",
     "Divorce",
     "Doing a bank robbery without wearing a mask because your hair looks so well today",
-    "Domina",
     "Drama series",
     "Drugs",
     "Duty",
     "Dying",
+    "Earning money just to spend it on clothes and makeup",
     "Eating the placenta",
     "Equal Pay Day",
     "Erectile dysfunction",
@@ -818,7 +817,7 @@
     "Eve eating the apple",
     "Ever lasting love",
     "Everything looks better with glitter",
-    "Exhusbands",
+    "Ex-husbands",
     "Explaining your children how they were made but actually having no idea how it really happened",
     "Falling in love",
     "Falling in love with a serial killer",
@@ -829,8 +828,7 @@
     "Farting with your vagina while having sex with a pretty hot guy",
     "Fat shaming",
     "Father and son",
-    "Favour",
-    "Fear of loosing out",
+    "Fear of missing out",
     "Female scientists",
     "Femen",
     "Feng Shui",
@@ -840,8 +838,6 @@
     "Fresh made salad",
     "From 9 to 5",
     "Funny",
-    "Gaining money only to spend it on clothes and makeup",
-    "Gaining your own money",
     "Gender Pay Gap",
     "Genital mutilation",
     "Getting a face palm with a penis",
@@ -863,7 +859,7 @@
     "Good sleep",
     "Goosebumps",
     "Grabbing everything I can carry in sale",
-    "Grandfathers denture",
+    "Grandfather's denture",
     "Grandma\u2018s cutting glance, when I wear hotpants",
     "Grandma\u2018s neglig\u00e9e",
     "Grinder",
@@ -905,13 +901,14 @@
     "Lady Gaga",
     "Laundry day",
     "Leather",
+    "Leaving",
     "Leonardo di Caprio",
     "Letting blood rain",
     "Licking his hairy balls",
     "Lip gloss",
     "Lipstick on his collar",
     "Long beautiful hair",
-    "Looking in my eyes and not on my boobs",
+    "Looking in my eyes and not at my boobs",
     "Loosing my mind",
     "Loosing the wedding rings instead of virginity",
     "Loosing your voice",
@@ -923,6 +920,7 @@
     "Love, respect and fucking equal pay",
     "Lovely parents",
     "Lust",
+    "Making your own money",
     "Marie Curie glowing in the dark",
     "Marilyn Monroe",
     "Marlene Dietrich",
@@ -934,6 +932,7 @@
     "Menopause",
     "Mental health",
     "Milk and honey",
+    "Misogyny",
     "Mobbing",
     "Money",
     "Mormons",
@@ -948,7 +947,7 @@
     "My boss",
     "My bosses secretary",
     "My boyfriend scratching my back",
-    "My boyfriends ex",
+    "My boyfriend's ex",
     "My bra",
     "My brother in law",
     "My collection of Feminine Hygiene articles",
@@ -965,7 +964,7 @@
     "My gynecologist",
     "My hairy legs",
     "My hairy pussy",
-    "My honeypod",
+    "My honeypot",
     "My hundredth diet",
     "My husband",
     "My jewell case",
@@ -985,13 +984,12 @@
     "My wedding dress",
     "My weird aunt from the west",
     "My whole life",
-    "Mysogony",
     "Mysterious",
     "Nail polish",
     "Needy and naughty",
     "Not been taken serious all the time I open my mouth",
     "Not getting attention at all",
-    "Not shaving my pussy because I\u2018m 40 and not 14, Bicht",
+    "Not shaving my pussy because I\u2018m 40 and not 14, bitch!",
     "Nothing to wear in the closet",
     "Oldies but goldies",
     "Ovulation",
@@ -1016,7 +1014,7 @@
     "Puberty",
     "Puking in my handbag",
     "Pumps",
-    "Pussy riot",
+    "Pussy Riot",
     "Putting a finger in his anus",
     "Pyromania",
     "Raising your children with love and respect",
@@ -1066,8 +1064,8 @@
     "Social media",
     "Sodomy",
     "Some hairy balls",
+    "Speaking in foreign tongues",
     "Speaking to me like I am ten years old",
-    "Speaking with foreign tongues",
     "Spray teint",
     "Sprinkling around glitter",
     "Stephen King",
@@ -1114,6 +1112,7 @@
     "The perfect couple",
     "The perfect penis",
     "The pope",
+    "The postman",
     "The red carpet",
     "The secretary of my bosses secretary",
     "The sex shop of my trust",
@@ -1121,7 +1120,6 @@
     "Therapy",
     "Theresa May",
     "Thunder",
-    "Tiffany\u2018s in sale",
     "Tina Turner",
     "Tinder",
     "True romance",
@@ -1150,8 +1148,8 @@
     "Your taste of men"
   ],
   "quantity": {
-    "black": 119,
-    "white": 547,
-    "total": 666
+    "black": 118,
+    "white": 550,
+    "total": 668
   }
 }

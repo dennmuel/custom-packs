@@ -36,7 +36,7 @@ Rejected cards from Schakal Edition.
 
 ABC pack code: 56hm4kKGU
 
-## Ladies Edition
-A potpourri of estrogen-fuled madness made with love by - a woman.
+## A Handmaid's Fail
+KeGro's potpourri of allround madness.
 
 ABC pack code: HWpLb4zCn

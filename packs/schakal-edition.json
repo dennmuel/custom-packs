@@ -180,6 +180,11 @@
       "draw": 1
     },
     {
+      "content": "I wasted the best years of my life on _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "I wish we had found out earlier that uncle Jerry put _ in that pi\u00f1ata.",
       "pick": 1,
       "draw": 1
@@ -519,6 +524,7 @@
     "A profound lack of common sense",
     "A prostitute",
     "A racist Asian in a wheelchair",
+    "A real pain in the ass",
     "A really tasty lasagna",
     "A sex doll with Bill Cosby's face",
     "A slam poet",
@@ -574,6 +580,7 @@
     "Being incompetent and irrelevant from 9 to 5",
     "Being repressed",
     "Being sober",
+    "Being spoken to before the first cup of coffee",
     "Being stuck in traffic",
     "Being such a horrible person, even your therapist tells you to kill yourself",
     "Blackfacing",
@@ -776,6 +783,7 @@
     "My children",
     "My first kiss",
     "My girlfriend",
+    "My girlfriend who just won't shut up",
     "My inner critic",
     "My natural parents",
     "My schoolbag",
@@ -803,6 +811,7 @@
     "Paying meth addicts to reenact the civil war",
     "Peeing yourself",
     "People",
+    "People who comment literally everything they do, think or see",
     "People who talk so loud on the telephone as if they were actually trying to cover the physical distance to the respondent",
     "People who who change their name in facebook and now you can't remember their actual name",
     "People with self-respect",
@@ -820,6 +829,7 @@
     "Power Metal",
     "Pretending you didn't hear your wife calling",
     "Proper education",
+    "Puns",
     "Putting more effort into pretending to work than actual work would take",
     "Pyromania",
     "Queen's \"Bohemian Rhapsody\"",
@@ -970,8 +980,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 95,
-    "white": 487,
-    "total": 582
+    "black": 96,
+    "white": 492,
+    "total": 588
   }
 }

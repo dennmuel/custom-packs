@@ -240,6 +240,11 @@
       "draw": 1
     },
     {
+      "content": "I'm so proud to receive this award! But I wouldn't be here without _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "If I were a boy, I really would like to _.",
       "pick": 1,
       "draw": 1
@@ -296,6 +301,11 @@
     },
     {
       "content": "My BFF for me is _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "My ass is that beautiful, I even get _ with it.",
       "pick": 1,
       "draw": 1
     },
@@ -545,6 +555,11 @@
       "draw": 1
     },
     {
+      "content": "You had one job: _. And what did you do? _.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
       "content": "You\u2018re a woman, when you _.",
       "pick": 1,
       "draw": 1
@@ -598,6 +613,7 @@
     "A cat suit",
     "A cupcake with poop flavour",
     "A cute prince on a hot horse",
+    "A darkroom",
     "A diet",
     "A dirty toilet seat",
     "A doll",
@@ -608,6 +624,7 @@
     "A fetish",
     "A flea market",
     "A fluffy puppy",
+    "A footgasm",
     "A fotoshooting",
     "A fresh shaved face",
     "A fucking princess",
@@ -641,6 +658,7 @@
     "A photo model",
     "A piercing placed where nobody else than me can see it",
     "A placenta",
+    "A pop-up store in the ladies' room",
     "A priest",
     "A proper drink",
     "A pyjama party",
@@ -661,6 +679,7 @@
     "A shoulder to cry on",
     "A shoulder to lean on",
     "A sixpack",
+    "A sperm bank",
     "A splatter movie",
     "A stalker",
     "A stinky fart",
@@ -700,6 +719,7 @@
     "Anal sex",
     "Angela Merkel",
     "Angelina Jolie",
+    "Antidepressants",
     "Aretha Franklin",
     "Arielle, the mermaid",
     "Armpit hair",
@@ -786,10 +806,13 @@
     "Doing a bank robbery without wearing a mask because your hair looks so well today",
     "Domina",
     "Drama series",
+    "Drugs",
     "Duty",
     "Dying",
     "Eating the placenta",
     "Equal Pay Day",
+    "Erectile dysfunction",
+    "Estrogen",
     "Euphoria",
     "Euphoric",
     "Eve eating the apple",
@@ -838,6 +861,7 @@
     "God",
     "Good news",
     "Good sleep",
+    "Goosebumps",
     "Grabbing everything I can carry in sale",
     "Grandfathers denture",
     "Grandma\u2018s cutting glance, when I wear hotpants",
@@ -863,6 +887,8 @@
     "I don\u2018t need no fucking reason! I am a woman!",
     "Icecream",
     "Ignoring the dress code for a costume party because you look awesome in your new dress",
+    "In vitro fertilisation",
+    "Infertility",
     "Insane asylum",
     "Insanity",
     "Jake Gyllenhal",
@@ -905,6 +931,7 @@
     "Masturbation",
     "Matriarchy",
     "Me while having multiple orgasms",
+    "Menopause",
     "Mental health",
     "Milk and honey",
     "Mobbing",
@@ -920,6 +947,7 @@
     "My bite guard",
     "My boss",
     "My bosses secretary",
+    "My boyfriend scratching my back",
     "My boyfriends ex",
     "My bra",
     "My brother in law",
@@ -965,6 +993,7 @@
     "Not getting attention at all",
     "Not shaving my pussy because I\u2018m 40 and not 14, Bicht",
     "Nothing to wear in the closet",
+    "Oldies but goldies",
     "Ovulation",
     "PMS",
     "Parents",
@@ -1069,6 +1098,7 @@
     "The catwalk",
     "The colour red",
     "The devil wearing prada",
+    "The drugstore",
     "The female cycle",
     "The hottest guy on the party",
     "The hunger games",
@@ -1120,8 +1150,8 @@
     "Your taste of men"
   ],
   "quantity": {
-    "black": 116,
-    "white": 532,
-    "total": 648
+    "black": 119,
+    "white": 547,
+    "total": 666
   }
 }

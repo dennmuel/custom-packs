@@ -9,8 +9,7 @@ import sys
 def get_deck(infile):
     # maybe do some validation here?
     with open(infile) as json_file:
-        deck = json.load(json_file)
-        return deck
+        return json.load(json_file)
 
 def create_deck():
     name = str(input("Enter the name for the deck:\n")).strip()
@@ -30,21 +29,26 @@ def create_deck():
     return deck
 
 def add_cards(deck):
-    print("Let's add some cards to " + deck["pack"]["name"] + "!")
-    newcard = "?"
-    while newcard != "n":
-        if newcard != "b" and newcard != "w":
-            newcard = str(input("Add (b)lack, (w)hite or (n)o card?: ")).strip()
+    print("Let's add some cards!")
+    color = ""
+    while color != "n":
+        if color != "b" and color != "w":
+            color = str(input("Add (b)lack, (w)hite or (n)o cards?: ")).strip()
             continue
-        content = str(input("Type in your card: "))
-        content = sanitize_content(content, newcard)
-        if skip_duplicate(content, newcard, deck):
-            newcard = "?"
+        if color == "b":
+            content = str(input("Type in the content of your black card (leave empty to change color or exit): "))
+        else:
+            content = str(input("Type in your white card (leave empty to change color or exit): "))
+        if content == "":
+            color = content
             continue
-        deck = add_card(content, newcard, deck);
-        newcard = str(input("OMG, so funny! Add another (b)lack, (w)hite or (n)o card? ")).strip()
+        content = sanitize_content(content, color)
+        if skip_duplicate(content, color, deck):
+            continue
+        deck = add_card(content, color, deck);
+        print("Added '" + content + "'")
     else:
-        print("Alright! Cards added to " + deck["pack"]["name"] + "!")
+        print("Added cards to " + deck["pack"]["name"] + "!")
         return(deck)
 
 def add_card(content, color, deck):
@@ -67,11 +71,11 @@ def add_card(content, color, deck):
     return(deck)
 
 def import_cards(deck):
-    print("Let's import some cards to " + deck["pack"]["name"] + "!")
-    newcard = "?"
-    while newcard != "n":
-        if newcard != "b" and newcard != "w":
-            newcard = str(input("Add (b)lack, (w)hite or (n)o cards?: ")).strip()
+    print("Let's import some cards!")
+    color = "?"
+    while color != "n":
+        if color != "b" and color != "w":
+            color = str(input("Add (b)lack, (w)hite or (n)o cards?: ")).strip()
             continue
         path = str(input("Type in the path to the card file: "))
         with open(path) as p:
@@ -79,14 +83,15 @@ def import_cards(deck):
                 content = p.readline()
                 if not content.strip():
                     break
-                content = sanitize_content(content, newcard)
-                if skip_duplicate(content, newcard, deck):
+                content = sanitize_content(content, color)
+                if skip_duplicate(content, color, deck):
                     continue
                 print(content)
-                deck = add_card(content, newcard, deck);
-        newcard = str(input("OMG, so funny! Add further (b)lack, (w)hite or (n)o cards? ")).strip()
+                deck = add_card(content, color, deck);
+        print("---")
+        color = str(input("Done! Add further (b)lack, (w)hite or (n)o cards? ")).strip()
     else:
-        print("Alright! Cards added to " + deck["pack"]["name"] + "!")
+        print("Alright! Cards imported to " + deck["pack"]["name"] + "!")
         return(deck)
 
 def sanitize_content(content, color):
@@ -126,7 +131,6 @@ def skip_duplicate(content, color, deck):
         skip = "?"
         while skip != "y" or skip != "n":
             skip = str(input("Skip card (y/n)? ")).strip()
-            print(skip)
             if skip == "n":
                 is_dupe = False
                 break
@@ -138,19 +142,21 @@ def skip_duplicate(content, color, deck):
     return is_dupe
 
 def sort_cards(deck):
+    print("Sorting...")
     deck["black"] = sorted(deck["black"], key=itemgetter('content'))
     deck["white"].sort()
     print("Cards sorted!")
     return deck
 
 def count_cards(deck):
+    print("Counting...")
     black = len(deck["black"])
     white = len(deck["white"])
     total = black + white
     deck["quantity"]["black"] = black
     deck["quantity"]["white"] = white
     deck["quantity"]["total"] = total
-    txt = deck["pack"]["name"] + " has {} black cards, {} white cards and thus {} cards in total!"
+    txt = "Deck has {} black cards, {} white cards and thus {} cards in total!"
     print(txt.format(black, white, total))
     return deck
 
@@ -166,7 +172,7 @@ def write_deck(deck):
     f = open(outfile, "w")
     f.write(json.dumps(deck, indent=2))
     f.close
-    print("Done! Wrote to " + outfile)
+    print("Wrote to " + outfile)
 
 def main():
     main_parser = argparse.ArgumentParser(
@@ -248,6 +254,7 @@ def main():
 
     for deck in decks:
         if args.command == "create" or args.command == "edit":
+            print("Editing " + deck["pack"]["name"] + " ...")
             if args.add:
                 deck = add_cards(deck)
             if args.fileimport:
@@ -257,6 +264,7 @@ def main():
             if args.count:
                 deck = count_cards(deck)
             write_deck(deck)
+            print("Done!\n")
         elif args.command == "recommit":
             print("TODO: add recommit command")
         elif args.command == "status":

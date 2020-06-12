@@ -55,11 +55,6 @@
       "draw": 1
     },
     {
-      "content": "Can we drive back home quickly? I think I forgot _ again.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "Captain _ really should be leading the Avengers.",
       "pick": 1,
       "draw": 1
@@ -88,11 +83,6 @@
       "content": "Hey, honey, what are you thinking about? _.",
       "pick": 1,
       "draw": 1
-    },
-    {
-      "content": "Hiring: The federal office of _ wants you as _. Special qualifications must include _.",
-      "pick": 3,
-      "draw": 2
     },
     {
       "content": "I could have never achieved _ without _.",
@@ -131,11 +121,6 @@
     },
     {
       "content": "I got this nice apartment by _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I hate it when I come home hungry and the only thing in the fridge is _.",
       "pick": 1,
       "draw": 1
     },
@@ -536,7 +521,6 @@
     "A stroke",
     "A supremely well done foot massage",
     "A suprising amount of nails",
-    "A teaspoon full of jizz",
     "A very low frustration tolerance",
     "A voice controlled anal vibrator",
     "A wild grizzly bear",
@@ -615,9 +599,7 @@
     "Christians",
     "Civilization",
     "Clamydia",
-    "Clean drinking water",
     "Cleaning up crime scenes",
-    "Cleaning your pants from jizz",
     "Coffee",
     "Colonialism",
     "Comparing with the Nazis",
@@ -804,7 +786,6 @@
     "Not the bees",
     "Nothing",
     "Nothing but potential",
-    "Nothing worth shooting",
     "One dead Siamese twin",
     "Onions",
     "Online gaming",
@@ -904,7 +885,6 @@
     "Switzerland",
     "Swords",
     "Taking a dump",
-    "Taking an arrow to the knee",
     "Taking no responsibility at all",
     "Talking about a revolution, man",
     "Talking like a pirate until you're in Italy",
@@ -969,7 +949,6 @@
     "Waking up",
     "Walking while black",
     "War",
-    "Wasting water",
     "Watching TV",
     "Watching music videos from 15 years ago",
     "Watching old men walking through the park",

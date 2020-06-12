@@ -163,72 +163,79 @@ def write_deck(deck):
 
 def main():
     main_parser = argparse.ArgumentParser(
-            description="Add and modify ABC/CAH custom decks in JSON format."
+            description="Handle allbadcards custom decks in JSON format.",
             )
 
-    #main_parser.addArgument(
-            #'command',
-            #choice=['create', 'add-cards', 'edit', 'sort', 'count']
-            #)
-    # optionales infile, outfile, sort, count
-    # consolidate/recommit?
-
-    subparsers = main_parser.add_subparsers(
-            dest="command",
-            description="Actions to perform on a deck."
+    operations_parser = argparse.ArgumentParser(
+            description="Operations for create and edit commands.",
+            add_help=False
+            )
+    operations_parser.add_argument(
+            '-a', '--add',
+            action="store_true",
+            help="add cards to deck(s) manually"
+            )
+    operations_parser.add_argument(
+            '-i', '--fileimport',
+            action="store_true",
+            help="import cards from line separated text file(s)"
+            )
+    operations_parser.add_argument(
+            '-s', '--sort',
+            action="store_true",
+            help="sort cards alphabetically"
+            )
+    operations_parser.add_argument(
+            '-c', '--count',
+            action="store_true",
+            help="update card count"
             )
 
-    create_parser = subparsers.add_parser(
-            'create',
-            help="Create a new deck.",
-            description="Creates a new deck in an interactive workflow."
+    file_parser = argparse.ArgumentParser(
+            description="Input files for edit command.",
+            add_help=False
             )
-    #create_parser.set_defaults(func=create_deck)
-
-    edit_parser = subparsers.add_parser(
-            'edit',
-            help="Modify an existing deck.",
-            description="Modifies an existing deck in the way specified by the optional arguments."
-            )
-    edit_parser.add_argument(
+    file_parser.add_argument(
             'infiles',
             type=str,
             nargs='+',
-            help="Path to an existing JSON file to edit.",
+            help="path to existing JSON file(s)",
             default=sys.stdin
             )
-    edit_parser.add_argument(
-            '-a', '--add',
-            action="store_true",
-            help="Add cards to the deck."
+
+    subparsers = main_parser.add_subparsers(
+            dest="command",
+            title='supported commands',
+            description="Actions to perform on a deck.",
+            help='see "deck.py [command] -h" for more details'
             )
-    edit_parser.add_argument(
-            '-s', '--sort',
-            action="store_true",
-            help="Sort cards alphabetically by their contents."
+    create_parser = subparsers.add_parser(
+            'create',
+            parents=[operations_parser],
+            help="create a new deck",
+            description="Creates a new deck and performs the actions specified by the optional arguments.",
             )
-    edit_parser.add_argument(
-            '-c', '--count',
-            action="store_true",
-            help="Update the card count."
+    edit_parser = subparsers.add_parser(
+            'edit',
+            parents=[operations_parser, file_parser],
+            help="modify existing deck(s)",
+            description="Modifies existing deck(s) according to the optional arguments.",
             )
-    edit_parser.add_argument(
-            '-i', '--fileimport',
-            action="store_true",
-            help="Import cards from a text file."
-            )
-    #edit_parser.set_defaults(func=get_deck)
+
+    # consolidate/recommit, status
 
     args = main_parser.parse_args()
 
+    decks = []
+
     if args.command == "create":
-        deck = create_deck()
-        deck = add_cards(deck)
-        deck = sort_cards(deck)
-        deck = count_cards(deck)
+        decks.append(create_deck())
     else:
         for infile in args.infiles:
-            deck = get_deck(infile)
+            decks.append(get_deck(infile))
+
+    for deck in decks:
+        if args.command == "create" or args.command == "edit":
             if args.add:
                 deck = add_cards(deck)
             if args.fileimport:
@@ -237,8 +244,14 @@ def main():
                 deck = sort_cards(deck)
             if args.count:
                 deck = count_cards(deck)
-
-    write_deck(deck)
+        elif args.command == "recommit":
+            print("TODO: add recommit command")
+        elif args.command == "status":
+            print("TODO: add status command")
+        else:
+            print("Invalid command!")
+            exit()
+        write_deck(deck)
 
 if __name__ == "__main__":
     main()

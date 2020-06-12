@@ -154,6 +154,13 @@ def count_cards(deck):
     print(txt.format(black, white, total))
     return deck
 
+def deck_info(deck):
+    print("Name: " + deck["pack"]["name"])
+    print("ID: " + deck["pack"]["id"])
+    print("Black cards: " + str(deck["quantity"]["black"]))
+    print("White cards: " + str(deck["quantity"]["white"]))
+    print("Total cards: " + str(deck["quantity"]["total"]))
+
 def write_deck(deck):
     outfile = "./packs/" + deck["pack"]["id"] + ".json"
     f = open(outfile, "w")
@@ -221,8 +228,13 @@ def main():
             help="modify existing deck(s)",
             description="Modifies existing deck(s) according to the optional arguments.",
             )
-
-    # consolidate/recommit, status
+    status_parser = subparsers.add_parser(
+            'status',
+            parents=[file_parser],
+            help="show deck info",
+            description="Shows information about existing decks.",
+            )
+    # consolidate/recommit
 
     args = main_parser.parse_args()
 
@@ -244,14 +256,13 @@ def main():
                 deck = sort_cards(deck)
             if args.count:
                 deck = count_cards(deck)
+            write_deck(deck)
         elif args.command == "recommit":
             print("TODO: add recommit command")
         elif args.command == "status":
-            print("TODO: add status command")
+            deck_info(deck)
         else:
             print("Invalid command!")
-            exit()
-        write_deck(deck)
 
 if __name__ == "__main__":
     main()

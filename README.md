@@ -1,20 +1,21 @@
-# Custom card packs for "Cards Against Humanity" / "AllBadCards"
+# Custom card packs for allbad.cards
 
 ## deck.py
-Helper script to create and edit custom decks. See `deck.py --help`.
-See issues for problems & enhancements.
+Helper script to create and edit custom decks.
 
-Create a deck: `deck.py create`
-
-Edit an existing deck: `deck.py edit [--add --sort --count] /path/to/existing/deck.json`
-
+For instructions on how to use it run `deck.py --help`.
 
 ## Schakal Edition
-A handmade, quality over quantity, allround deck carefully crafted by yours truly, Der Schakal.
+A handmade allround deck carefully crafted by yours truly, Der Schakal.
 This deck was designed to both work standalone as well as integrate well with other packs.
 If you're trying any of these packs - try this one.
 
 ABC pack code: VRRCeJAWJ
+
+## A Handmaid's Fail
+KeGro's potpourri of allround madness.
+
+ABC pack code: HWpLb4zCn
 
 ## Farts With Frank Brutality
 Random collection deck for ideas from friends.
@@ -35,8 +36,3 @@ ABC pack code: ZjnhXwI-w
 Rejected cards from Schakal Edition.
 
 ABC pack code: 56hm4kKGU
-
-## A Handmaid's Fail
-KeGro's potpourri of allround madness.
-
-ABC pack code: HWpLb4zCn

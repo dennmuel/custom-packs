@@ -335,12 +335,12 @@
       "draw": 2
     },
     {
-      "content": "My therapist told me to think about _ when _ happens again.",
+      "content": "My therapist says, I must be _ to get _.",
       "pick": 2,
       "draw": 2
     },
     {
-      "content": "My therapist says, I must be _ to get _.",
+      "content": "My therapist told me to think about _ when _ happens again.",
       "pick": 2,
       "draw": 2
     },
@@ -1138,8 +1138,8 @@
     "Your taste of men"
   ],
   "quantity": {
-    "black": 118,
-    "white": 550,
-    "total": 668
+    "black": 117,
+    "white": 545,
+    "total": 662
   }
 }

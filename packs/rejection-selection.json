@@ -10,7 +10,22 @@
       "draw": 2
     },
     {
+      "content": "Can we drive back home quickly? I think I forgot _ again.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "Hiring: The federal office of _ wants you as _. Special qualifications must include _.",
+      "pick": 3,
+      "draw": 2
+    },
+    {
       "content": "How can it be that in the 21st century _ is still a crime?",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "I hate it when I come home hungry and the only thing in the fridge is _.",
       "pick": 1,
       "draw": 1
     },
@@ -25,45 +40,30 @@
       "draw": 1
     },
     {
-      "content": "Hiring: The federal office of _ wants you as _. Special qualifications must include _.",
-      "pick": 3,
-      "draw": 2
-    },
-    {
-      "content": "I hate it when I come home hungry and the only thing in the fridge is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Can we drive back home quickly? I think I forgot _ again.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "This weekend is the grand opening of the new _ theme park.",
       "pick": 1,
       "draw": 1
     }
   ],
   "white": [
+    "A teaspoon full of jizz",
     "Any given STD",
-    "Wasting water",
+    "Black lives",
     "Clean drinking water",
     "Cleaning your pants from jizz",
-    "A teaspoon full of jizz",
-    "Black lives",
     "Horses",
+    "Nothing worth shooting",
     "Obamas birth certificate",
     "Sleeping",
     "Suicide bombers",
-    "Nothing worth shooting",
     "Taking an arrow to the knee",
     "That feeling when you see someone dying",
-    "Thursday"
+    "Thursday",
+    "Wasting water"
   ],
   "quantity": {
-    "black": 5,
-    "white": 8,
-    "total": 13
+    "black": 8,
+    "white": 14,
+    "total": 22
   }
 }

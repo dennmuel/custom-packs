@@ -815,6 +815,7 @@
     "Power Metal",
     "Pretending you didn't hear your wife calling",
     "Proper education",
+    "Pulling the fire alarm",
     "Puns",
     "Putting more effort into pretending to work than actual work would take",
     "Pyromania",
@@ -911,7 +912,6 @@
     "The aftermath of colonialism",
     "The bank",
     "The darknet",
-    "Pulling the fire alarm",
     "The guys from the gym",
     "The inability to feel guilt",
     "The inability to smell your own farts",
@@ -964,8 +964,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 97,
-    "white": 492,
-    "total": 589
+    "black": 94,
+    "white": 486,
+    "total": 580
   }
 }

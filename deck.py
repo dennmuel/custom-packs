@@ -53,6 +53,7 @@ def add_cards(deck):
 
 def add_card(content, color, deck):
     if color == "b":
+        print(content)
         pick = 0
         while pick < 1 or pick > 3:
             pick = int(input("How many white cards does it take to answer the card (min: 1, max: 3)? "))
@@ -86,7 +87,6 @@ def import_cards(deck):
                 content = sanitize_content(content, color)
                 if skip_duplicate(content, color, deck):
                     continue
-                print(content)
                 deck = add_card(content, color, deck);
         print("---")
         color = str(input("Done! Add further (b)lack, (w)hite or (n)o cards? ")).strip()
@@ -160,6 +160,15 @@ def count_cards(deck):
     print(txt.format(black, white, total))
     return deck
 
+def recommit_deck(deck):
+    print("Recommitting...")
+    for blackcard in deck["black"]:
+        blackcard["content"] = sanitize_content(blackcard["content"], "b")
+    for whitecard in deck["white"]:
+        whitecard = sanitize_content(whitecard, "w")
+    print("Recommited!")
+    return deck
+
 def deck_info(deck):
     print("Name: " + deck["pack"]["name"])
     print("ID: " + deck["pack"]["id"])
@@ -192,6 +201,11 @@ def main():
             '-i', '--fileimport',
             action="store_true",
             help="import cards from line separated text file(s)"
+            )
+    operations_parser.add_argument(
+            '-r', '--recommit',
+            action="store_true",
+            help="recommit existing deck(s) (encoding, capital letters, etc.)",
             )
     operations_parser.add_argument(
             '-s', '--sort',
@@ -240,7 +254,6 @@ def main():
             help="show deck info",
             description="Shows information about existing decks.",
             )
-    # consolidate/recommit
 
     args = main_parser.parse_args()
 
@@ -259,14 +272,14 @@ def main():
                 deck = add_cards(deck)
             if args.fileimport:
                 deck = import_cards(deck)
+            if args.recommit:
+                deck = recommit_deck(deck)
             if args.sort:
                 deck = sort_cards(deck)
             if args.count:
                 deck = count_cards(deck)
             write_deck(deck)
             print("Done!\n")
-        elif args.command == "recommit":
-            print("TODO: add recommit command")
         elif args.command == "status":
             deck_info(deck)
         else:

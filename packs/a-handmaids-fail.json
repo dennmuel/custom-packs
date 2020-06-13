@@ -150,6 +150,11 @@
       "draw": 1
     },
     {
+      "content": "Happy _ Day, everyone!",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "Have you seen this lovely movie about _? It was so romantic!",
       "pick": 1,
       "draw": 1
@@ -250,6 +255,11 @@
       "draw": 1
     },
     {
+      "content": "If _ taught me anything, it's _.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
       "content": "If another man tells me _ is _, I\u2018ll cut off his head.",
       "pick": 2,
       "draw": 2
@@ -258,6 +268,11 @@
       "content": "If someone asked me to choose, I\u2018d rather take _ than _.",
       "pick": 2,
       "draw": 2
+    },
+    {
+      "content": "If someone offers you _, don't say no!",
+      "pick": 1,
+      "draw": 1
     },
     {
       "content": "It\u2018s not blasphemy, it\u2018s _.",
@@ -411,6 +426,16 @@
     },
     {
       "content": "Since my husband told me about _, I can understand his bias towards _.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
+      "content": "Sometimes I hate my colleagues so much, I wish they were _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "That's one small step for _, one giant leap for _.",
       "pick": 2,
       "draw": 2
     },
@@ -635,6 +660,7 @@
     "A cupcake with poop flavour",
     "A cute prince on a hot horse",
     "A darkroom",
+    "A dick pick",
     "A diet",
     "A dirty toilet seat",
     "A doll",
@@ -651,6 +677,7 @@
     "A fotoshooting",
     "A fresh shaved face",
     "A fucking princess",
+    "A gay bar",
     "A gay guy",
     "A hair and makeup artist",
     "A handbag",
@@ -671,6 +698,7 @@
     "A moustache with food from last lunch stuck in it",
     "A muezzin",
     "A mysterium",
+    "A new dick",
     "A nice city trip",
     "A nightmare",
     "A nipple piercing",
@@ -730,7 +758,6 @@
     "Acting like having balls instead of ovaries",
     "Adams rib",
     "Adorable",
-    "Alcohol",
     "Alimonies",
     "All kinds of men",
     "All kinds of penisses",
@@ -765,7 +792,6 @@
     "Being raped all the time",
     "Being raped because of my sexy dress",
     "Being so drunk that you can\u2018t even recognise your husband",
-    "Being sober",
     "Being that nervous, you start having diarrrhea immediately",
     "Being too shy to say something",
     "Being useless",
@@ -805,10 +831,10 @@
     "Chocolate",
     "Church",
     "Cinema",
+    "Civil war",
     "Cleaning your husband's pants from jizz but knowing that you weren't involved",
     "Cleptomania",
     "Coconut flavoured",
-    "Constantly farting",
     "Cousins",
     "Crying in front of my boss",
     "Crying in front of my boyfriend",
@@ -844,7 +870,6 @@
     "Everything looks better with glitter",
     "Ex-husbands",
     "Explaining your children how they were made but actually having no idea how it really happened",
-    "Falling in love",
     "Falling in love with a serial killer",
     "Farting in front of strangers",
     "Farting in front of your friends",
@@ -880,7 +905,6 @@
     "Giving a blowjob just to not see his stupid face again",
     "Giving a handjob with my weak hand",
     "Glitter",
-    "God",
     "Godzilla",
     "Good news",
     "Good sleep",
@@ -902,7 +926,6 @@
     "Heaven",
     "Hell",
     "Higheels",
-    "Hippies",
     "His moustache scratching me while kissing",
     "Home office",
     "Homeschooling",
@@ -910,6 +933,7 @@
     "I don\u2018t need no fucking reason! I am a woman!",
     "Icecream",
     "Ignoring the dress code for a costume party because you look awesome in your new dress",
+    "Ignoring the garbage until it evolves and throws itself away",
     "In vitro fertilisation",
     "Infertility",
     "Insane asylum",
@@ -938,6 +962,7 @@
     "Living in New York City",
     "Long beautiful hair",
     "Looking in my eyes and not at my boobs",
+    "Looking into the toilet with pride after taking a dump",
     "Loosing my mind",
     "Loosing the wedding rings instead of virginity",
     "Loosing your voice",
@@ -955,6 +980,7 @@
     "Marilyn Monroe",
     "Marlene Dietrich",
     "Marriage",
+    "Marty McFly and a DeLorean",
     "Masturbating",
     "Masturbation",
     "Matriarchy",
@@ -963,7 +989,6 @@
     "Mental health",
     "Milk and honey",
     "Misogyny",
-    "Mobbing",
     "Money",
     "Mormons",
     "Mother and daughter",
@@ -1040,16 +1065,15 @@
     "Popcorn",
     "Pornhub",
     "Pornos for women with sexy actors and real stories",
+    "Power Rangers",
     "Pregnancy",
-    "Proper education",
     "Puberty",
     "Puking in my handbag",
     "Pumps",
     "Pussy Riot",
     "Putting a finger in his anus",
-    "Pyromania",
+    "Racial profiling",
     "Raising your children with love and respect",
-    "Rape",
     "Real life",
     "Reality tv",
     "Recaping your life and getting a mental breakdown",
@@ -1078,7 +1102,6 @@
     "Sex therapy",
     "Sex with the ex",
     "Sexual disfunction",
-    "Sexual harassment",
     "Shaved legs",
     "Shiny",
     "Shop lifting",
@@ -1089,15 +1112,15 @@
     "Slapping that bitch\u2018s face who tackled me at the concert",
     "Smoking cigarettes",
     "Smoking cigars",
-    "Social anxiety",
     "Social justice",
-    "Social media",
     "Sodomy",
     "Some hairy balls",
     "Speaking in foreign tongues",
     "Speaking to me like I am ten years old",
     "Spray teint",
     "Sprinkling around glitter",
+    "Starting a nuclear war",
+    "Stephen Hawking",
     "Stephen King",
     "Stinky armpits",
     "Stomach smell",
@@ -1105,6 +1128,7 @@
     "Sucking his cock and swallowing the jizz",
     "Sunny",
     "Superwoman",
+    "Taking a dump with the bathroom door open",
     "Taking a night off",
     "Taking out the trash",
     "Taste",
@@ -1119,6 +1143,7 @@
     "That smell, when my guy came home from gym",
     "That weird uncle nobody wants to invite to family meetings",
     "The Bangles",
+    "The Grinch",
     "The Joker",
     "The Undertaker",
     "The White House",
@@ -1132,7 +1157,6 @@
     "The goodwill",
     "The hottest guy on the party",
     "The hunger games",
-    "The internet",
     "The last, but broken condom",
     "The latest fashion trends",
     "The latest gossip",
@@ -1166,7 +1190,6 @@
     "Virginity",
     "Vogue",
     "Walking down the catwalk heelless",
-    "War",
     "Wearing a T-shirt, wich says \u201afree tits\u2018 instead of \u201afree hugs\u2018",
     "Wearing a dress that tight that you look like a porn actress",
     "Wearing a short skirt but no underwear",
@@ -1180,8 +1203,8 @@
     "Your taste of men"
   ],
   "quantity": {
-    "black": 123,
-    "white": 557,
-    "total": 680
+    "black": 128,
+    "white": 555,
+    "total": 683
   }
 }

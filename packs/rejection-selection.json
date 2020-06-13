@@ -25,7 +25,27 @@
       "draw": 1
     },
     {
+      "content": "I didn't get the job at Hooters because of _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "I got this nice apartment by _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "I hate it when I come home hungry and the only thing in the fridge is _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "In my last year at school I tried to start a killing spree with _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "My wife went to Las Vegas and all I got was _.",
       "pick": 1,
       "draw": 1
     },
@@ -33,6 +53,11 @@
       "content": "Say whatever you want about _, but _ is still worse!",
       "pick": 2,
       "draw": 2
+    },
+    {
+      "content": "There's nothing like _ to refresh on a hot summer day.",
+      "pick": 1,
+      "draw": 1
     },
     {
       "content": "They may take our lives, but they will never take _!",
@@ -46,6 +71,8 @@
     }
   ],
   "white": [
+    "A box full of catsuits",
+    "A racist Asian in a wheelchair",
     "A teaspoon full of jizz",
     "Any given STD",
     "Black lives",
@@ -62,8 +89,8 @@
     "Wasting water"
   ],
   "quantity": {
-    "black": 8,
-    "white": 14,
-    "total": 22
+    "black": 13,
+    "white": 16,
+    "total": 29
   }
 }

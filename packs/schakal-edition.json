@@ -100,11 +100,6 @@
       "draw": 1
     },
     {
-      "content": "I didn't get the job at Hooters because of _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "I finally found Jesus because of _.",
       "pick": 1,
       "draw": 1
@@ -121,11 +116,6 @@
     },
     {
       "content": "I find your lack of _ disturbing.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I got this nice apartment by _.",
       "pick": 1,
       "draw": 1
     },
@@ -220,11 +210,6 @@
       "draw": 2
     },
     {
-      "content": "In my last year at school I tried to start a killing spree with _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "In the name of the people, you are hereby sentenced to death by _.",
       "pick": 1,
       "draw": 1
@@ -285,12 +270,7 @@
       "draw": 1
     },
     {
-      "content": "My wife went to Las Vegas and all I got was _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Nobody could make cheesecake like grandma. I think her secret ingridient was _.",
+      "content": "Nobody could make cheesecake like grandma. I think her secret ingredient was _.",
       "pick": 1,
       "draw": 1
     },
@@ -388,11 +368,6 @@
       "content": "The sound of _ always reminds me of _.",
       "pick": 2,
       "draw": 2
-    },
-    {
-      "content": "There's nothing like _ to refresh on a hot summer day.",
-      "pick": 1,
-      "draw": 1
     },
     {
       "content": "They say nothing is stronger than love, except _.",
@@ -495,7 +470,6 @@
     "A bacon negligee",
     "A banker",
     "A black Jewish woman",
-    "A box full of catsuits",
     "A broken nose",
     "A burn victim",
     "A burp so intense the neighbours come over to see if everything's okay",
@@ -529,7 +503,6 @@
     "A power outage",
     "A profound lack of common sense",
     "A prostitute",
-    "A racist Asian in a wheelchair",
     "A real pain in the ass",
     "A really tasty lasagna",
     "A sex doll with Bill Cosby's face",
@@ -776,6 +749,7 @@
     "Mean football tackles in slow motion",
     "Mecha-Hitler",
     "Medieval markets",
+    "Men",
     "Meth",
     "Mistaking babysitting for facesitting",
     "Mobbing",
@@ -815,9 +789,9 @@
     "Paying meth addicts to reenact the civil war",
     "Peeing yourself",
     "People",
+    "People who change their name in facebook and now you can't remember their actual name",
     "People who comment literally everything they do, think or see",
     "People who talk so loud on the telephone as if they were actually trying to cover the physical distance to the respondent",
-    "People who who change their name in facebook and now you can't remember their actual name",
     "People with self-respect",
     "Pharmacy",
     "Phil Collins",
@@ -964,7 +938,7 @@
     "Video games",
     "Vietnam",
     "Vikings",
-    "Vlad the impaler",
+    "Vlad the Impaler",
     "Waking up",
     "Walking while black",
     "War",
@@ -983,8 +957,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 97,
-    "white": 490,
-    "total": 587
+    "black": 92,
+    "white": 489,
+    "total": 581
   }
 }

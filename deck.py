@@ -6,9 +6,9 @@ import json
 import string
 import sys
 
-def get_deck(infile):
+def get_deck(filepath):
     # maybe do some validation here?
-    with open(infile) as json_file:
+    with open(filepath) as json_file:
         return json.load(json_file)
 
 def create_deck():
@@ -43,7 +43,7 @@ def add_cards(deck):
             color = content
             continue
         content = sanitize_content(content, color)
-        if skip_duplicate(content, color, deck):
+        if is_duplicate(content, color, deck) and skip_duplicate(content, deck):
             continue
         deck = add_card(content, color, deck);
         print("Added '" + content + "'")
@@ -85,7 +85,7 @@ def import_cards(deck):
                 if not content.strip():
                     break
                 content = sanitize_content(content, color)
-                if skip_duplicate(content, color, deck):
+                if is_duplicate(content, color, deck) and skip_duplicate(content, deck):
                     continue
                 deck = add_card(content, color, deck);
         print("---")
@@ -114,32 +114,73 @@ def sanitize_content(content, color):
                 content = content[:-1]
     return content
 
-def skip_duplicate(content, color, deck):
+def is_duplicate(content, color, deck):
     is_dupe = False
     if color == "w":
         for card in deck["white"]:
             if content == card:
                 is_dupe = True
+                print("White card '" + content + "' is a duplicate!")
                 break
     elif color == "b":
         for card in deck["black"]:
             if content == card["content"]:
                 is_dupe = True
+                print("Black card '" + content + "' is a duplicate!")
                 break
-    if is_dupe:
-        print("'" + content + "' already exists in " + deck["pack"]["name"] + "...\n")
-        skip = "?"
-        while skip != "y" or skip != "n":
-            skip = str(input("Skip card (y/n)? ")).strip()
-            if skip == "n":
-                is_dupe = False
-                break
-            elif skip == "y":
-                is_dupe = True
-                break
-            else:
-                continue
     return is_dupe
+
+def skip_duplicate(content, deck):
+    skip_dupe = False
+    skip = "?"
+    while skip != "y" or skip != "n":
+        skip = str(input("Skip card (y/n)? ")).strip()
+        if skip == "n":
+            skip_dupe = False
+            break
+        elif skip == "y":
+            skip_dupe = True
+            break
+        else:
+            continue
+    return skip_dupe
+
+def deduplicate(deck, refdeck):
+    print("Checking '" + deck["pack"]["name"] + "' for duplicates with '" + refdeck["pack"]["name"] + "' ...")
+    for blackcard in deck["black"]:
+        if is_duplicate(blackcard["content"], "b", refdeck):
+            delete = "?"
+            while delete != "y" or delete != "n":
+                delete = str(input("Delete card (y/n)? ")).strip()
+                if delete == "y":
+                    deck = delete_card(blackcard["content"], "b", deck)
+                    break
+                elif delete == "n":
+                    break
+                else:
+                    continue
+    for whitecard in deck["white"]:
+        if is_duplicate(whitecard, "w", refdeck):
+            delete = "?"
+            while delete != "y" or delete != "n":
+                delete = str(input("Delete card (y/n)? ")).strip()
+                if delete == "y":
+                    deck = delete_card(whitecard, "w", deck)
+                    break
+                elif delete == "n":
+                    break
+                else:
+                    continue
+    print("Deduplication complete!")
+    return deck
+
+def delete_card(content, color, deck):
+    print("Deleting...")
+    if color == "b":
+        deck["black"][:] = [c for c in deck["black"] if c['content'] != content]
+    else:
+        deck["white"].remove(content)
+    return deck
 
 def sort_cards(deck):
     print("Sorting...")
@@ -218,15 +259,15 @@ def main():
             help="update card count"
             )
 
-    file_parser = argparse.ArgumentParser(
+    infiles_parser = argparse.ArgumentParser(
             description="Input files for edit command.",
             add_help=False
             )
-    file_parser.add_argument(
+    infiles_parser.add_argument(
             'infiles',
             type=str,
             nargs='+',
-            help="path to existing JSON file(s)",
+            help="path to JSON file(s)",
             default=sys.stdin
             )
 
@@ -244,13 +285,31 @@ def main():
             )
     edit_parser = subparsers.add_parser(
             'edit',
-            parents=[operations_parser, file_parser],
+            parents=[operations_parser, infiles_parser],
             help="modify existing deck(s)",
             description="Modifies existing deck(s) according to the optional arguments.",
             )
+    dupe_parser = subparsers.add_parser(
+            'deduplicate',
+            help="remove duplicates with other deck(s)",
+            description="Removes duplicates with other deck(s).",
+            )
+    dupe_parser.add_argument(
+            'infile',
+            type=str,
+            help="path to JSON file to check for duplicates",
+            default=sys.stdin
+            )
+    dupe_parser.add_argument(
+            'reffiles',
+            type=str,
+            nargs='+',
+            help="path to JSON file(s) to check against",
+            default=sys.stdin
+            )
     status_parser = subparsers.add_parser(
             'status',
-            parents=[file_parser],
+            parents=[infiles_parser],
             help="show deck info",
             description="Shows information about existing decks.",
             )
@@ -261,6 +320,8 @@ def main():
 
     if args.command == "create":
         decks.append(create_deck())
+    if args.command == "deduplicate":
+        decks.append(get_deck(args.infile))
     else:
         for infile in args.infiles:
             decks.append(get_deck(infile))
@@ -278,6 +339,11 @@ def main():
                 deck = sort_cards(deck)
             if args.count:
                 deck = count_cards(deck)
+            write_deck(deck)
+            print("Done!\n")
+        elif args.command == "deduplicate":
+            for filepath in args.reffiles:
+                deck = deduplicate(deck, get_deck(filepath))
             write_deck(deck)
             print("Done!\n")
         elif args.command == "status":

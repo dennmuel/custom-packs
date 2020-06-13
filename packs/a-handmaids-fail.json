@@ -5,7 +5,7 @@
   },
   "black": [
     {
-      "content": "After I interrupted my boyfriend watching pornos, he\u2018s totally cool with me _.",
+      "content": "After I caught my boyfriend watching porn, he\u2018s totally cool with me _.",
       "pick": 1,
       "draw": 1
     },
@@ -23,16 +23,6 @@
       "content": "After visiting my husband in jail, I was _.",
       "pick": 1,
       "draw": 1
-    },
-    {
-      "content": "All the single ladies sing _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Ask me anything about _, but not about _, please!",
-      "pick": 2,
-      "draw": 2
     },
     {
       "content": "Asking a man about his feelings always ends with _.",
@@ -80,11 +70,6 @@
       "draw": 1
     },
     {
-      "content": "Diamonds are a girls best _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "Dont\u2018 need _ to get my box wet, _ is enough.",
       "pick": 2,
       "draw": 2
@@ -93,11 +78,6 @@
       "content": "Every night I pray for _.",
       "pick": 1,
       "draw": 1
-    },
-    {
-      "content": "Every woman I talked with, said, being pregnant for her was like _. But for me it\u2018s just _.",
-      "pick": 2,
-      "draw": 2
     },
     {
       "content": "Fashion is like _ to be.",
@@ -130,11 +110,6 @@
       "draw": 1
     },
     {
-      "content": "Getting my aliments every month for me is like _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "Girl, you should really read that guidebook about _. It helped me through _.",
       "pick": 2,
       "draw": 2
@@ -145,7 +120,7 @@
       "draw": 1
     },
     {
-      "content": "Guys just like me because of my _.",
+      "content": "Guys just like me because of _.",
       "pick": 1,
       "draw": 1
     },
@@ -175,7 +150,7 @@
       "draw": 1
     },
     {
-      "content": "Hey darling, I read about _ in a women\u2018s magazine. I think we should realy try this.",
+      "content": "Hey darling, I read about _ in a women\u2018s magazine. I think we should really try this.",
       "pick": 1,
       "draw": 1
     },
@@ -195,17 +170,12 @@
       "draw": 1
     },
     {
-      "content": "I hate my own sex \u2013 women are so _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "I like it when a man is _.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "I never wanna be like my mother. She is such a _, always _.",
+      "content": "I never wanted to be like my mother. She's such _, always _.",
       "pick": 2,
       "draw": 2
     },
@@ -235,11 +205,6 @@
       "draw": 1
     },
     {
-      "content": "I take every _ I can get.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "I'm so proud to receive this award! But I wouldn't be here without _.",
       "pick": 1,
       "draw": 1
@@ -263,6 +228,16 @@
       "content": "If another man tells me _ is _, I\u2018ll cut off his head.",
       "pick": 2,
       "draw": 2
+    },
+    {
+      "content": "If my grandma taught my anything, it was _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "If porn for men showed me anything, it\u2018s _.",
+      "pick": 1,
+      "draw": 1
     },
     {
       "content": "If someone asked me to choose, I\u2018d rather take _ than _.",
@@ -306,6 +281,11 @@
     },
     {
       "content": "Most women love _, but I love _ instead.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
+      "content": "Most women say being pregnant is like _. But for me it\u2018s just _.",
       "pick": 2,
       "draw": 2
     },
@@ -395,12 +375,17 @@
       "draw": 1
     },
     {
+      "content": "Please, ask me anything about _, but not about _!",
+      "pick": 2,
+      "draw": 2
+    },
+    {
       "content": "Poor thing you, don\u2018t think about him anymore. He was _ anyway.",
       "pick": 1,
       "draw": 1
     },
     {
-      "content": "Rumor has it, that _ in real life isn\u2018t _ but _.",
+      "content": "Rumor has it, that _ isn\u2018t actually _ but _.",
       "pick": 3,
       "draw": 2
     },
@@ -490,14 +475,14 @@
       "draw": 1
     },
     {
-      "content": "Trust me, Darling. I\u2018ve done _ before, it\u2018s _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
       "content": "Trust me, _ is a great problem solver for any relationship.",
       "pick": 1,
       "draw": 1
+    },
+    {
+      "content": "Trust me, darling. I\u2018ve done _ before, it\u2018s like _.",
+      "pick": 2,
+      "draw": 2
     },
     {
       "content": "Us in one word? _.",
@@ -510,7 +495,17 @@
       "draw": 1
     },
     {
+      "content": "What men think women really want: _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "What women love about gay men the most is _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "What women really want is _.",
       "pick": 1,
       "draw": 1
     },
@@ -536,16 +531,6 @@
     },
     {
       "content": "When my boyfriend says he\u2018s mad at me, he\u2018s actually mad at _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "When my grandma taught my anything, it was _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "When pornos for men showed me anything, it\u2018s _.",
       "pick": 1,
       "draw": 1
     },
@@ -595,11 +580,6 @@
       "draw": 2
     },
     {
-      "content": "You guys always think, you know what women want. But what we really want is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
       "content": "You had one job: _. And what did you do? _.",
       "pick": 2,
       "draw": 2
@@ -647,6 +627,7 @@
   ],
   "white": [
     "90 \u2013 60 \u2013 90",
+    "A Pi\u00f1a Colada",
     "A bath tub full of rose petals, candlelight and a glass of my favorite wine",
     "A beautiful sunset",
     "A bodyguard",
@@ -660,7 +641,7 @@
     "A cupcake with poop flavour",
     "A cute prince on a hot horse",
     "A darkroom",
-    "A dick pick",
+    "A dick pic",
     "A diet",
     "A dirty toilet seat",
     "A doll",
@@ -669,7 +650,6 @@
     "A dress looking like you shopped it at a bargain sale, but actually is from Prada",
     "A fashion outlet",
     "A fat burger with double cheese on it",
-    "A favour",
     "A fetish",
     "A flea market",
     "A fluffy puppy",
@@ -754,9 +734,8 @@
     "Abomination",
     "Abortion",
     "Abortion by the hands of God",
-    "Abortion opponents",
     "Acting like having balls instead of ovaries",
-    "Adams rib",
+    "Adam's rib",
     "Adorable",
     "Alimonies",
     "All kinds of men",
@@ -771,6 +750,7 @@
     "Anal sex",
     "Angela Merkel",
     "Angelina Jolie",
+    "Anti-abortionists",
     "Antidepressants",
     "Aretha Franklin",
     "Arielle the mermaid",
@@ -797,7 +777,7 @@
     "Being useless",
     "Belle dumping the beast and choosing Gaston instead",
     "Beoncy\u00e9",
-    "Bigottery",
+    "Bigotry",
     "Bitch please!",
     "Bitch-slapping someone",
     "Blasphemy",
@@ -818,7 +798,6 @@
     "Burning everything down",
     "Burrying the placenta in the garden",
     "Bushy eyebrows",
-    "Butt plugs",
     "Buying glasses just to look smart in the job interview",
     "Calling a taxi",
     "Carrie",
@@ -887,33 +866,10 @@
     "Free hugs",
     "French nails",
     "Fresh made salad",
-    "From 9 to 5",
     "Funny",
     "Gender Pay Gap",
     "Genital mutilation",
-    "Getting a face palm with a penis",
-    "Getting divorced",
-    "Getting invited",
-    "Getting kidnapped",
-    "Getting married",
-    "Getting married against your will",
-    "Getting pregnant",
-    "Getting pregnant in prison",
-    "Getting tea bagged",
-    "Getting the job just because of my boobs",
-    "Getting used to be humiliated all the time",
-    "Giving a blowjob just to not see his stupid face again",
-    "Giving a handjob with my weak hand",
-    "Glitter",
-    "Godzilla",
-    "Good news",
-    "Good sleep",
-    "Goosebumps",
-    "Grabbing everything I can carry in sale",
-    "Grandfather's denture",
-    "Grandma\u2018s cutting glance, when I wear hotpants",
-    "Grandma\u2018s neglig\u00e9e",
-    "Grinder",
+    "Grindr",
     "Hairy",
     "Hairy feet",
     "Harley Quinn",
@@ -941,8 +897,8 @@
     "Jake Gyllenhal",
     "James Bond",
     "Jesus crucifying Romans",
-    "John Snow",
-    "John Snow really knew nothing",
+    "Jon Snow",
+    "Jon Snow really knowing nothing",
     "Joseph Gordon Levitt",
     "Just 10 \u201aHola, chica\u2018s\u2018 away",
     "Just leaving",
@@ -972,7 +928,7 @@
     "Lots and lots of icecream",
     "Lots and lots of money",
     "Love, respect and fucking equal pay",
-    "Lovely parents",
+    "Loving parents",
     "Lust",
     "Making the sign of the cross",
     "Making your own money",
@@ -994,7 +950,6 @@
     "Mother and daughter",
     "Mothra",
     "Moths",
-    "Mulan in the army",
     "Multiple orgasms",
     "My Grandma, looking at me judgementally",
     "My bachelorette-party",
@@ -1002,7 +957,7 @@
     "My beautiful vulva",
     "My bite guard",
     "My boss",
-    "My bosses secretary",
+    "My boss' secretary",
     "My boyfriend scratching my back",
     "My boyfriend's ex",
     "My bra",
@@ -1057,14 +1012,10 @@
     "Paying no attention at all",
     "Paying the bills",
     "Perfect makeup",
-    "Pi\u00f1a Colada",
-    "Plain white sheets",
-    "Plain white teeth",
-    "Pocahontas",
     "Pole dancing",
     "Popcorn",
+    "Porn for women with sexy actors and real stories",
     "Pornhub",
-    "Pornos for women with sexy actors and real stories",
     "Power Rangers",
     "Pregnancy",
     "Puberty",
@@ -1104,7 +1055,7 @@
     "Sexual disfunction",
     "Shaved legs",
     "Shiny",
-    "Shop lifting",
+    "Shoplifting",
     "Shopping",
     "Shopping malls",
     "Sisters",
@@ -1193,7 +1144,7 @@
     "Wearing a T-shirt, wich says \u201afree tits\u2018 instead of \u201afree hugs\u2018",
     "Wearing a dress that tight that you look like a porn actress",
     "Wearing a short skirt but no underwear",
-    "Women\u2018s magazine",
+    "Women\u2018s magazines",
     "Women\u2018s rights",
     "Worrying if people can see your brilliant makeup while you have to wear a face shield",
     "Wrestling",
@@ -1203,8 +1154,8 @@
     "Your taste of men"
   ],
   "quantity": {
-    "black": 128,
-    "white": 555,
-    "total": 683
+    "black": 124,
+    "white": 526,
+    "total": 650
   }
 }

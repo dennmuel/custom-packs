@@ -45,6 +45,11 @@
       "draw": 1
     },
     {
+      "content": "Being alone with my mother in law feels like _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "Boy, being stuck in traffic felt like _.",
       "pick": 1,
       "draw": 1
@@ -176,6 +181,11 @@
     },
     {
       "content": "I wish we had found out earlier that uncle Jerry put _ in that pi\u00f1ata.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "I would love to be _ more often if it wasn't so time consuming.",
       "pick": 1,
       "draw": 1
     },
@@ -470,6 +480,11 @@
       "draw": 2
     },
     {
+      "content": "_ never fails to get me out of bed.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "_ was even more fun when I tried it with _.",
       "pick": 2,
       "draw": 2
@@ -757,6 +772,7 @@
     "Masturbating with your weak hand",
     "Math",
     "Mean football tackles in slow motion",
+    "Mecha-Hitler",
     "Medieval markets",
     "Meth",
     "Mistaking babysitting for facesitting",
@@ -880,6 +896,7 @@
     "Subtle sexual tension",
     "Sucking a huge cock without throwing up",
     "Suffering from spasms",
+    "Superior firepower",
     "Surprise buttsex",
     "Swag",
     "Sweaty pants",
@@ -964,8 +981,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 94,
-    "white": 486,
-    "total": 580
+    "black": 97,
+    "white": 488,
+    "total": 585
   }
 }

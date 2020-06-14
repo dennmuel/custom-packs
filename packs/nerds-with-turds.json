@@ -20,7 +20,22 @@
       "draw": 1
     },
     {
+      "content": "Don't ask me why, but somehow _ just works for me.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "I work with _ everyday although I don't really understand it.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "If I learned one thing working in IT, it's _.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
+      "content": "It's astonishing how much you can do with _.",
       "pick": 1,
       "draw": 1
     },
@@ -46,6 +61,7 @@
     }
   ],
   "white": [
+    "A Raspberry Pi",
     "A blue screen of death",
     "AI",
     "Active Directory",
@@ -78,6 +94,8 @@
     "People clicking on things",
     "People sending you screenshots in a Word document",
     "People with absolutely no expertise",
+    "Perl",
+    "Quantum computing",
     "Rebooting",
     "Richard Stallman",
     "SQL injections",
@@ -103,8 +121,8 @@
     "Writing CMD scripts"
   ],
   "quantity": {
-    "black": 8,
-    "white": 55,
-    "total": 63
+    "black": 11,
+    "white": 58,
+    "total": 69
   }
 }

@@ -3,6 +3,7 @@
 from operator import itemgetter
 import argparse
 import json
+import random
 import string
 import sys
 
@@ -224,6 +225,24 @@ def write_deck(deck):
     f.close
     print("Wrote to " + outfile)
 
+def play_round(decks, hands):
+    blackcards = []
+    whitecards = []
+    for deck in decks:
+        blackcards.extend(deck["black"])
+        whitecards.extend(deck["white"])
+    blackcard = random.choice(blackcards)
+    if blackcard["pick"] * hands > len(whitecards):
+        print("Not enough white cards available to play " + str(hands) + " hands for\n'" + blackcard["content"] + "'")
+    else:
+        print("Prompt:\n" + blackcard["content"] + "\n---")
+        for i in range(hands):
+            response = "Response " + str(i+1) + ":\n"
+            for n in range(blackcard["pick"]):
+                response += str(random.choice(whitecards)) + "\n"
+            response += "---\n"
+            print(response)
+
 def main():
     main_parser = argparse.ArgumentParser(
             description="Handle allbadcards custom decks in JSON format.",
@@ -313,6 +332,18 @@ def main():
             help="show deck info",
             description="Shows information about existing decks.",
             )
+    play_parser = subparsers.add_parser(
+            'play',
+            parents=[infiles_parser],
+            help="plays random cards",
+            description="Plays one black card and a number of responses from the specified deck(s)",
+            )
+    play_parser.add_argument(
+            '-n', '--number',
+            type=int,
+            default=1,
+            help="number of hands to be played"
+            )
 
     args = main_parser.parse_args()
 
@@ -326,30 +357,31 @@ def main():
         for infile in args.infiles:
             decks.append(get_deck(infile))
 
-    for deck in decks:
-        if args.command == "create" or args.command == "edit":
-            print("Editing " + deck["pack"]["name"] + " ...")
-            if args.add:
-                deck = add_cards(deck)
-            if args.fileimport:
-                deck = import_cards(deck)
-            if args.recommit:
-                deck = recommit_deck(deck)
-            if args.sort:
-                deck = sort_cards(deck)
-            if args.count:
-                deck = count_cards(deck)
-            write_deck(deck)
-            print("Done!\n")
-        elif args.command == "deduplicate":
-            for filepath in args.reffiles:
-                deck = deduplicate(deck, get_deck(filepath))
-            write_deck(deck)
-            print("Done!\n")
-        elif args.command == "status":
-            deck_info(deck)
-        else:
-            print("Invalid command!")
+    if args.command == "play":
+        play_round(decks, args.number)
+    else:
+        for deck in decks:
+            if args.command == "create" or args.command == "edit":
+                print("Editing " + deck["pack"]["name"] + " ...")
+                if args.add:
+                    deck = add_cards(deck)
+                if args.fileimport:
+                    deck = import_cards(deck)
+                if args.recommit:
+                    deck = recommit_deck(deck)
+                if args.sort:
+                    deck = sort_cards(deck)
+                if args.count:
+                    deck = count_cards(deck)
+                write_deck(deck)
+                print("Done!\n")
+            elif args.command == "deduplicate":
+                for filepath in args.reffiles:
+                    deck = deduplicate(deck, get_deck(filepath))
+                write_deck(deck)
+                print("Done!\n")
+            elif args.command == "status":
+                deck_info(deck)
 
 if __name__ == "__main__":
     main()

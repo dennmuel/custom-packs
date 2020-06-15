@@ -39,9 +39,9 @@ def add_cards(deck):
             color = str(input("Add (b)lack, (w)hite or (n)o cards?: ")).strip()
             continue
         if color == "b":
-            content = str(input("Type in the content of your black card (leave empty to change color or exit): "))
+            content = str(input("Type in the content of your black card below (leave empty to change color or exit):\n"))
         else:
-            content = str(input("Type in your white card (leave empty to change color or exit): "))
+            content = str(input("Type in your white card below (leave empty to change color or exit):\n"))
         if content == "":
             color = content
             continue
@@ -83,7 +83,7 @@ def import_cards(deck):
         if color != "b" and color != "w":
             color = str(input("Add (b)lack, (w)hite or (n)o cards?: ")).strip()
             continue
-        path = str(input("Type in the path to the card file: "))
+        path = str(input("Type in the path to the card file below:\n"))
         with open(path) as p:
             while True:
                 content = p.readline()
@@ -142,12 +142,12 @@ def skip_duplicate(content, deck):
     skip_dupe = False
     skip = "?"
     while skip != "y" or skip != "n":
-        skip = str(input("Skip card (y/n)? ")).strip()
+        skip = str(input("Add card anyway (y/n)? ")).strip()
         if skip == "n":
-            skip_dupe = False
+            skip_dupe = True
             break
         elif skip == "y":
-            skip_dupe = True
+            skip_dupe = False
             break
         else:
             continue
@@ -159,25 +159,25 @@ def deduplicate(deck, refdeck):
     print("Checking '" + deck["pack"]["name"] + "' for duplicates with '" + refdeck["pack"]["name"] + "' ...")
     for blackcard in deck["black"]:
         if is_duplicate(blackcard["content"], "b", refdeck):
-            delete = "?"
-            while delete != "y" or delete != "n":
-                delete = str(input("Delete card (y/n)? ")).strip()
-                if delete == "y":
-                    deck = delete_card(blackcard["content"], "b", deck)
+            keep = "?"
+            while keep != "y" or keep != "n":
+                keep = str(input("Keep card anyway (y/n)? ")).strip()
+                if keep == "y":
                     break
-                elif delete == "n":
+                elif keep == "n":
+                    deck = delete_card(blackcard["content"], "b", deck)
                     break
                 else:
                     continue
     for whitecard in deck["white"]:
         if is_duplicate(whitecard, "w", refdeck):
-            delete = "?"
-            while delete != "y" or delete != "n":
-                delete = str(input("Delete card (y/n)? ")).strip()
-                if delete == "y":
-                    deck = delete_card(whitecard, "w", deck)
+            keep = "?"
+            while keep != "y" or keep != "n":
+                keep = str(input("Keep card anyway (y/n)? ")).strip()
+                if keep == "y":
                     break
-                elif delete == "n":
+                elif keep == "n":
+                    deck = delete_card(whitecard, "w", deck)
                     break
                 else:
                     continue

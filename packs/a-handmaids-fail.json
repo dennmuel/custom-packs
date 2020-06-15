@@ -1,631 +1,132 @@
 {
-  "pack": {
-    "name": "A Handmaid's Fail",
-    "id": "a-handmaids-fail"
-  },
-  "black": [
-    {
-      "content": "After I caught my boyfriend watching porn, he\u2018s totally cool with me _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "After a few months of seperation, I now realized that my exboyfriend at least was _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "After my mother gave me sex education I had _ for the first time.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "After visiting my husband in jail, I was _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Asking a man about his feelings always ends with _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Asking a woman about her feelings always ends in _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Balancing your job, kids and marriage isn\u2018t a womans duty, it\u2018s _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Be careful with that guy, Chelsea! I heard he\u2018s _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Being married is like _, they say. But for me it\u2018s more like _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Being the only female member of the supervisory board is like _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Being the only woman in the army often feels like _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Boss, Sir, is _ really necessary? I'm already _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Breaking up with men always ends with _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Dont\u2018 need _ to get my box wet, _ is enough.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Every night I pray for _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Fashion is like _ to be.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "For a date with _ I'd even tolerate _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "For me, a perfect date should start with _ and end with _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "For women _ is really necessary until they get used to _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Freud says women have penis envy. But the only thing we envy from men actually is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "From time to time, every girl needs _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Girl, you should really read that guidebook about _. It helped me through _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Girls just wanna have _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Guys just like me because of _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Happy _ Day, everyone!",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Have you seen this lovely movie about _? It was so romantic!",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Having _ in _ is so uncomfortable.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Having a date with _ is like _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Having no health insurance really feels like _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Hey darling, I read about _ in a women\u2018s magazine. I think we should really try this.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Hi everybody, my name is Stacy and I\u2018m here because of _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I can run out of _, but a weekend without _ is horrible for me!",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "I don\u2018t need no boyfriend, I just need _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I like it when a man is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I never wanted to be like my mother. She's such _, always _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "I quit my suicidal thoughts when I discovered _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I rather would marry _ than _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "I remember sex education in biology class. I was _ after that.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I still ask myself why men like _ but not _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "I stopped cutting myself as I experienced _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I'm so proud to receive this award! But I wouldn't be here without _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "If I were a boy, I really would like to _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "If I were a boy, I\u2018d love to be _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "If _ taught me anything, it's _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "If another man tells me _ is _, I\u2018ll cut off his head.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "If my grandma taught my anything, it was _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "If porn for men showed me anything, it\u2018s _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "If someone asked me to choose, I\u2018d rather take _ than _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "If someone offers you _, don't say no!",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "It\u2018s not blasphemy, it\u2018s _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Look at this sexy guy, isn\u2018t he _?",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Me in home office looks like _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Men are all the same. All they want is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Men call it hysteria, women just call it _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Most women like guys with _, while I prefer _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Most women love _, but I love _ instead.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Most women say being pregnant is like _. But for me it\u2018s just _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "My BFF and I often get mistaken for _ and _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "My BFF for me is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "My ass is so hot, I even get _ with it.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "My boyfriend says I\u2018m like _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "My boyfriend's pet name is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "My dear daughter, I assure you _ is absolutely overrated. It\u2018s enough to be _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "My first time in a sex shop? _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "My husband calls me _, since I had an encounter with _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "My partner should come with _ and _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "My perfect bachelorette party has to include _ and _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "My therapist says, I must be _ to get _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "My therapist told me to think about _ when _ happens again.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "My vagina always get's the same reaction: _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Not enought that _ ruined my relation ship, it also ruined _ for me.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Oh Lord, won\u2018t you buy me _. My friends, they _. I must say Amens!",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Oh boy, my mother in law is really _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "One thing I really want to try with my husband is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Please, ask me anything about _, but not about _!",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Poor thing you, don\u2018t think about him anymore. He was _ anyway.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Rumor has it, that _ isn\u2018t actually _ but _.",
-      "pick": 3,
-      "draw": 2
-    },
-    {
-      "content": "Scientists found out that women often commit suicide because of _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Since I interrupted my husband with our baby sitter, I\u2018m allowed _ whenever I want.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Since I joined this self-help group for _, I\u2018m doing well with _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Since I turned 30 my boobs look like they're _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Since my husband told me about _, I can understand his bias towards _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Sometimes I hate my colleagues so much, I wish they were _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "That's one small step for _, one giant leap for _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "The best thing about working as a domina is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "The first thing I did, when he split up with me was _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "The most important point in our marriage contract for me is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "The most perfect day in my life starts with _ and ends with _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "The news said that _ is _ now. Hell yeah, I thought this would never happen!",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "The only chance to be succesful as a woman is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "The real intention behind young hot girls marrying old ugly guys is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "The reason why women always go to the toilet together: _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "The worst day of my life was when I was _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "There are many reasons to have sex. _ for example.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Trust me, _ is a great problem solver for any relationship.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Trust me, darling. I\u2018ve done _ before, it\u2018s like _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Us in one word? _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Visiting an art exhibition with my boyfriend always feels like _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "What men think women really want: _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "What women love about gay men the most is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "What women really want is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "When I\u2018m really depressed only _ can make me happy again.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "When it's time to pay the dinner bill on a first date I\u2018m _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "When it\u2018s getting serious with a man I am _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "When my boyfriend isn\u2018t at home I love _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "When my boyfriend says he\u2018s mad at me, he\u2018s actually mad at _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "When the doctor told me I was pregnant, the first thing I did was _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "When we grow old, my husband and I want to try _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "When we have a night off from the kids, my husband and I like _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "With _ you can make every woman smile.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Women don\u2018t have careers - they have _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Women getting attention behave like _. Men getting attention are like _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Women in executive positions are _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Working together with other women is like _: _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "You can only understand _ if you're _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "You had one job: _. And what did you do? _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "You\u2018re not a woman until you're _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "_ is the absolute horror scenario for my wedding day.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "_ makes me go wild.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "_ ruined my career.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "_ ruined my life.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "_ ruined my wedding ceremony.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "_ seperates women from girls.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "_ turns my box wet.",
-      "pick": 1,
-      "draw": 1
-    }
+  "packName": "A Handmaid's Fail",
+  "blackCards": [
+    "After I caught my boyfriend watching porn, he\u2018s totally cool with me _.",
+    "After a few months of seperation, I now realized that my exboyfriend at least was _.",
+    "After my mother gave me sex education I had _ for the first time.",
+    "After visiting my husband in jail, I was _.",
+    "Asking a man about his feelings always ends with _.",
+    "Asking a woman about her feelings always ends in _.",
+    "Balancing your job, kids and marriage isn\u2018t a womans duty, it\u2018s _.",
+    "Be careful with that guy, Chelsea! I heard he\u2018s _.",
+    "Being married is like _, they say. But for me it\u2018s more like _.",
+    "Being the only female member of the supervisory board is like _.",
+    "Being the only woman in the army often feels like _.",
+    "Boss, Sir, is _ really necessary? I'm already _.",
+    "Breaking up with men always ends with _.",
+    "Dont\u2018 need _ to get my box wet, _ is enough.",
+    "Every night I pray for _.",
+    "Fashion is like _ to be.",
+    "For a date with _ I'd even tolerate _.",
+    "For me, a perfect date should start with _ and end with _.",
+    "For women _ is really necessary until they get used to _.",
+    "Freud says women have penis envy. But the only thing we envy from men actually is _.",
+    "From time to time, every girl needs _.",
+    "Girl, you should really read that guidebook about _. It helped me through _.",
+    "Girls just wanna have _.",
+    "Guys just like me because of _.",
+    "Happy _ Day, everyone!",
+    "Have you seen this lovely movie about _? It was so romantic!",
+    "Having _ in _ is so uncomfortable.",
+    "Having a date with _ is like _.",
+    "Having no health insurance really feels like _.",
+    "Hey darling, I read about _ in a women\u2018s magazine. I think we should really try this.",
+    "Hi everybody, my name is Stacy and I\u2018m here because of _.",
+    "I can run out of _, but a weekend without _ is horrible for me!",
+    "I don\u2018t need no boyfriend, I just need _.",
+    "I like it when a man is _.",
+    "I never wanted to be like my mother. She's such _, always _.",
+    "I quit my suicidal thoughts when I discovered _.",
+    "I rather would marry _ than _.",
+    "I remember sex education in biology class. I was _ after that.",
+    "I still ask myself why men like _ but not _.",
+    "I stopped cutting myself as I experienced _.",
+    "I'm so proud to receive this award! But I wouldn't be here without _.",
+    "If I were a boy, I really would like to _.",
+    "If I were a boy, I\u2018d love to be _.",
+    "If _ taught me anything, it's _.",
+    "If another man tells me _ is _, I\u2018ll cut off his head.",
+    "If my grandma taught my anything, it was _.",
+    "If porn for men showed me anything, it\u2018s _.",
+    "If someone asked me to choose, I\u2018d rather take _ than _.",
+    "If someone offers you _, don't say no!",
+    "It\u2018s not blasphemy, it\u2018s _.",
+    "Look at this sexy guy, isn\u2018t he _?",
+    "Me in home office looks like _.",
+    "Men are all the same. All they want is _.",
+    "Men call it hysteria, women just call it _.",
+    "Most women like guys with _, while I prefer _.",
+    "Most women love _, but I love _ instead.",
+    "Most women say being pregnant is like _. But for me it\u2018s just _.",
+    "My BFF and I often get mistaken for _ and _.",
+    "My BFF for me is _.",
+    "My ass is so hot, I even get _ with it.",
+    "My boyfriend says I\u2018m like _.",
+    "My boyfriend's pet name is _.",
+    "My dear daughter, I assure you _ is absolutely overrated. It\u2018s enough to be _.",
+    "My first time in a sex shop? _.",
+    "My husband calls me _, since I had an encounter with _.",
+    "My partner should come with _ and _.",
+    "My perfect bachelorette party has to include _ and _.",
+    "My therapist says, I must be _ to get _.",
+    "My therapist told me to think about _ when _ happens again.",
+    "My vagina always get's the same reaction: _.",
+    "Not enought that _ ruined my relation ship, it also ruined _ for me.",
+    "Oh Lord, won\u2018t you buy me _. My friends, they _. I must say Amens!",
+    "Oh boy, my mother in law is really _.",
+    "One thing I really want to try with my husband is _.",
+    "Please, ask me anything about _, but not about _!",
+    "Poor thing you, don\u2018t think about him anymore. He was _ anyway.",
+    "Rumor has it, that _ isn\u2018t actually _ but _.",
+    "Scientists found out that women often commit suicide because of _.",
+    "Since I interrupted my husband with our baby sitter, I\u2018m allowed _ whenever I want.",
+    "Since I joined this self-help group for _, I\u2018m doing well with _.",
+    "Since I turned 30 my boobs look like they're _.",
+    "Since my husband told me about _, I can understand his bias towards _.",
+    "Sometimes I hate my colleagues so much, I wish they were _.",
+    "That's one small step for _, one giant leap for _.",
+    "The best thing about working as a domina is _.",
+    "The first thing I did, when he split up with me was _.",
+    "The most important point in our marriage contract for me is _.",
+    "The most perfect day in my life starts with _ and ends with _.",
+    "The news said that _ is _ now. Hell yeah, I thought this would never happen!",
+    "The only chance to be succesful as a woman is _.",
+    "The real intention behind young hot girls marrying old ugly guys is _.",
+    "The reason why women always go to the toilet together: _.",
+    "The worst day of my life was when I was _.",
+    "There are many reasons to have sex. _ for example.",
+    "Trust me, _ is a great problem solver for any relationship.",
+    "Trust me, darling. I\u2018ve done _ before, it\u2018s like _.",
+    "Us in one word? _.",
+    "Visiting an art exhibition with my boyfriend always feels like _.",
+    "What men think women really want: _.",
+    "What women love about gay men the most is _.",
+    "What women really want is _.",
+    "When I\u2018m really depressed only _ can make me happy again.",
+    "When it's time to pay the dinner bill on a first date I\u2018m _.",
+    "When it\u2018s getting serious with a man I am _.",
+    "When my boyfriend isn\u2018t at home I love _.",
+    "When my boyfriend says he\u2018s mad at me, he\u2018s actually mad at _.",
+    "When the doctor told me I was pregnant, the first thing I did was _.",
+    "When we grow old, my husband and I want to try _.",
+    "When we have a night off from the kids, my husband and I like _.",
+    "With _ you can make every woman smile.",
+    "Women don\u2018t have careers - they have _.",
+    "Women getting attention behave like _. Men getting attention are like _.",
+    "Women in executive positions are _.",
+    "Working together with other women is like _: _.",
+    "You can only understand _ if you're _.",
+    "You had one job: _. And what did you do? _.",
+    "You\u2018re not a woman until you're _.",
+    "_ is the absolute horror scenario for my wedding day.",
+    "_ makes me go wild.",
+    "_ ruined my career.",
+    "_ ruined my life.",
+    "_ ruined my wedding ceremony.",
+    "_ seperates women from girls.",
+    "_ turns my box wet."
   ],
-  "white": [
+  "whiteCards": [
     "90 \u2013 60 \u2013 90",
     "A Pi\u00f1a Colada",
     "A bath tub full of rose petals, candlelight and a glass of my favorite wine",
@@ -1152,10 +653,5 @@
     "Yoga pants",
     "Your child puking on your dress when you\u2018re in a hurry",
     "Your taste of men"
-  ],
-  "quantity": {
-    "black": 124,
-    "white": 526,
-    "total": 650
-  }
+  ]
 }

@@ -234,7 +234,7 @@ def deck_info(deck):
 
 # write deck dictionary to json file
 def write_deck(deck):
-    outfile = "./packs/" + deck["pack"]["id"] + ".json"
+    outfile = "./packs/" + deck["packName"].lower().replace(" ","-") + ".json"
     f = open(outfile, "w")
     f.write(json.dumps(deck, indent=2))
     f.close
@@ -258,6 +258,16 @@ def play_round(decks, hands):
                 response += str(random.choice(whitecards)) + "\n"
             response += "---\n"
             print(response)
+
+def convert_deck(deck):
+    newdeck = {
+            "packName": deck["pack"]["name"],
+            "blackCards": [],
+            "whiteCards": deck["white"]
+            }
+    for card in deck["black"]:
+        newdeck["blackCards"].append(card["content"])
+    return newdeck
 
 def main():
     # main argument parser
@@ -370,6 +380,11 @@ def main():
             default=1,
             help="number of hands to be played"
             )
+    convert_parser = subparsers.add_parser(
+            'convert',
+            parents=[infiles_parser],
+            help="converts from old to new json schema"
+            )
 
     args = main_parser.parse_args()
 
@@ -415,6 +430,10 @@ def main():
                 print("Done!\n")
             elif args.command == "status":
                 deck_info(deck)
+            elif args.command == "convert":
+                deck = convert_deck(deck)
+                write_deck(deck)
+                print("Done!\n")
 
 if __name__ == "__main__":
     main()

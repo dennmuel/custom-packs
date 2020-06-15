@@ -7,11 +7,12 @@ import random
 import string
 import sys
 
+#load deck dictionary from json file
 def get_deck(filepath):
-    # maybe do some validation here?
     with open(filepath) as json_file:
         return json.load(json_file)
 
+#create deck dictionary
 def create_deck():
     name = str(input("Enter the name for the deck:\n")).strip()
     deck = {
@@ -29,6 +30,7 @@ def create_deck():
             }
     return deck
 
+# interactive workflow framing the addition of cards
 def add_cards(deck):
     print("Let's add some cards!")
     color = ""
@@ -52,6 +54,7 @@ def add_cards(deck):
         print("Added cards to " + deck["pack"]["name"] + "!")
         return(deck)
 
+# interactive workflow for adding a single card
 def add_card(content, color, deck):
     if color == "b":
         print(content)
@@ -72,6 +75,7 @@ def add_card(content, color, deck):
         deck["white"].append(content)
     return(deck)
 
+# interactive workflow for importing cards from files
 def import_cards(deck):
     print("Let's import some cards!")
     color = "?"
@@ -95,6 +99,7 @@ def import_cards(deck):
         print("Alright! Cards imported to " + deck["pack"]["name"] + "!")
         return(deck)
 
+# normalize card content
 def sanitize_content(content, color):
     content = content.strip()
     if content[0].islower():
@@ -115,6 +120,7 @@ def sanitize_content(content, color):
                 content = content[:-1]
     return content
 
+# check if card is a duplicate with a given deck
 def is_duplicate(content, color, deck):
     is_dupe = False
     if color == "w":
@@ -131,6 +137,7 @@ def is_duplicate(content, color, deck):
                 break
     return is_dupe
 
+# ask user whether to keep or skip duplicate card
 def skip_duplicate(content, deck):
     skip_dupe = False
     skip = "?"
@@ -146,6 +153,8 @@ def skip_duplicate(content, deck):
             continue
     return skip_dupe
 
+# check given deck for duplicate cards with another deck
+# interactive workflow for duplicate deletion
 def deduplicate(deck, refdeck):
     print("Checking '" + deck["pack"]["name"] + "' for duplicates with '" + refdeck["pack"]["name"] + "' ...")
     for blackcard in deck["black"]:
@@ -175,6 +184,7 @@ def deduplicate(deck, refdeck):
     print("Deduplication complete!")
     return deck
 
+# deletion of a single card in a given deck
 def delete_card(content, color, deck):
     print("Deleting...")
     if color == "b":
@@ -183,6 +193,7 @@ def delete_card(content, color, deck):
         deck["white"].remove(content)
     return deck
 
+# sort cards in deck alphabetically
 def sort_cards(deck):
     print("Sorting...")
     deck["black"] = sorted(deck["black"], key=itemgetter('content'))
@@ -190,6 +201,7 @@ def sort_cards(deck):
     print("Cards sorted!")
     return deck
 
+# update the card count of a deck
 def count_cards(deck):
     print("Counting...")
     black = len(deck["black"])
@@ -202,6 +214,7 @@ def count_cards(deck):
     print(txt.format(black, white, total))
     return deck
 
+# re-sanitize all cards of a deck
 def recommit_deck(deck):
     print("Recommitting...")
     for blackcard in deck["black"]:
@@ -211,6 +224,7 @@ def recommit_deck(deck):
     print("Recommited!")
     return deck
 
+# print some deck information
 def deck_info(deck):
     print("Name: " + deck["pack"]["name"])
     print("ID: " + deck["pack"]["id"])
@@ -218,6 +232,7 @@ def deck_info(deck):
     print("White cards: " + str(deck["quantity"]["white"]))
     print("Total cards: " + str(deck["quantity"]["total"]))
 
+# write deck dictionary to json file
 def write_deck(deck):
     outfile = "./packs/" + deck["pack"]["id"] + ".json"
     f = open(outfile, "w")
@@ -225,6 +240,7 @@ def write_deck(deck):
     f.close
     print("Wrote to " + outfile)
 
+# print random cards from given decks
 def play_round(decks, hands):
     blackcards = []
     whitecards = []
@@ -244,10 +260,12 @@ def play_round(decks, hands):
             print(response)
 
 def main():
+    # main argument parser
     main_parser = argparse.ArgumentParser(
             description="Handle allbadcards custom decks in JSON format.",
             )
 
+    # parser for operation flags used in creation and editing
     operations_parser = argparse.ArgumentParser(
             description="Operations for create and edit commands.",
             add_help=False
@@ -278,6 +296,8 @@ def main():
             help="update card count"
             )
 
+    # parent parser for multiple input files, used in several commands
+    # (e.g. edit, status, play, deduplicate)
     infiles_parser = argparse.ArgumentParser(
             description="Input files for edit command.",
             add_help=False
@@ -290,6 +310,7 @@ def main():
             default=sys.stdin
             )
 
+    # subparser for supported commands
     subparsers = main_parser.add_subparsers(
             dest="command",
             title='supported commands',
@@ -313,12 +334,17 @@ def main():
             help="remove duplicates with other deck(s)",
             description="Removes duplicates with other deck(s).",
             )
+    # single input file (not to be confused with the one for multiple infiles!)
+    # should be made a parent parser as soon as there are other commands that require
+    # (exactly) one input file
     dupe_parser.add_argument(
             'infile',
             type=str,
             help="path to JSON file to check for duplicates",
             default=sys.stdin
             )
+    # multiple reference files. should be made a parent parser as soon as there are other
+    # commands requiring multiple reference files
     dupe_parser.add_argument(
             'reffiles',
             type=str,
@@ -347,21 +373,27 @@ def main():
 
     args = main_parser.parse_args()
 
+    # create or get deck(s) to operate on
     decks = []
-
     if args.command == "create":
+        # create deck
         decks.append(create_deck())
     elif args.command == "deduplicate":
+        # only one deck is sensible here
         decks.append(get_deck(args.infile))
     else:
+        # multiple decks for all the other commands
         for infile in args.infiles:
             decks.append(get_deck(infile))
 
     if args.command == "play":
+        # put all cards in big lists and play them
         play_round(decks, args.number)
     else:
+        # loop through decks (even if there's just one in it)
         for deck in decks:
             if args.command == "create" or args.command == "edit":
+                # operations only available for creation and editing
                 print("Editing " + deck["pack"]["name"] + " ...")
                 if args.add:
                     deck = add_cards(deck)
@@ -376,6 +408,7 @@ def main():
                 write_deck(deck)
                 print("Done!\n")
             elif args.command == "deduplicate":
+                # loop through reference files for dupe check
                 for filepath in args.reffiles:
                     deck = deduplicate(deck, get_deck(filepath))
                 write_deck(deck)

@@ -66,6 +66,7 @@
     "AI",
     "Active Directory",
     "Adobe",
+    "Bastard Operator From Hell",
     "Big data",
     "Bill Gates",
     "Bitcoin",
@@ -80,6 +81,7 @@
     "Finding an answer by clicking on literally the first Google result",
     "Flash Player",
     "Force-pushing to a git repository",
+    "Forgetting that freakin' \";\"",
     "Internet Explorer",
     "Linus Torvalds",
     "Linux",
@@ -122,7 +124,7 @@
   ],
   "quantity": {
     "black": 11,
-    "white": 58,
-    "total": 69
+    "white": 61,
+    "total": 72
   }
 }

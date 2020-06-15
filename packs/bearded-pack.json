@@ -25,6 +25,11 @@
       "draw": 1
     },
     {
+      "content": "I haven't seen _ for years.",
+      "pick": 1,
+      "draw": 1
+    },
+    {
       "content": "I looked like _ until I started _.",
       "pick": 2,
       "draw": 2
@@ -69,6 +74,7 @@
     "A bearded man",
     "A formidable moustache",
     "A lion",
+    "A razor",
     "A splending juicy full beard",
     "A wizard",
     "Amish",
@@ -82,8 +88,10 @@
     "Going to the barber",
     "Growing a beard",
     "Having Sex",
+    "My chin",
     "Not having a beard",
     "Shaving",
+    "Shaving cream",
     "Shit",
     "Some special Austrian guy",
     "Stroking",
@@ -92,8 +100,8 @@
     "Wizards"
   ],
   "quantity": {
-    "black": 12,
-    "white": 24,
-    "total": 36
+    "black": 13,
+    "white": 27,
+    "total": 40
   }
 }

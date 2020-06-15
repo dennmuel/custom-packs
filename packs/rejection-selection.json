@@ -1,86 +1,23 @@
 {
-  "pack": {
-    "name": "Rejection Selection",
-    "id": "rejection-selection"
-  },
-  "black": [
-    {
-      "content": "Although I wanted _ for Christmas, I knew my parents would only have _ for me.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Can we drive back home quickly? I think I forgot _ again.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Hiring: The federal office of _ wants you as _. Special qualifications must include _.",
-      "pick": 3,
-      "draw": 2
-    },
-    {
-      "content": "How can it be that in the 21st century _ is still a crime?",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I didn't get the job at Hooters because of _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I got this nice apartment by _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I hate it when I come home hungry and the only thing in the fridge is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "In my last year at school I tried to start a killing spree with _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "It took me quite a while to realize that _ and _ were to different things.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "My wife went to Las Vegas and all I got was _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Say what you want about _, but it has nothing to do with _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Say whatever you want about _, but _ is still worse!",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "There's nothing like _ to refresh on a hot summer day.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "They may take our lives, but they will never take _!",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "This weekend is the grand opening of the new _ theme park.",
-      "pick": 1,
-      "draw": 1
-    }
+  "packName": "Rejection Selection",
+  "blackCards": [
+    "Although I wanted _ for Christmas, I knew my parents would only have _ for me.",
+    "Can we drive back home quickly? I think I forgot _ again.",
+    "Hiring: The federal office of _ wants you as _. Special qualifications must include _.",
+    "How can it be that in the 21st century _ is still a crime?",
+    "I didn't get the job at Hooters because of _.",
+    "I got this nice apartment by _.",
+    "I hate it when I come home hungry and the only thing in the fridge is _.",
+    "In my last year at school I tried to start a killing spree with _.",
+    "It took me quite a while to realize that _ and _ were to different things.",
+    "My wife went to Las Vegas and all I got was _.",
+    "Say what you want about _, but it has nothing to do with _.",
+    "Say whatever you want about _, but _ is still worse!",
+    "There's nothing like _ to refresh on a hot summer day.",
+    "They may take our lives, but they will never take _!",
+    "This weekend is the grand opening of the new _ theme park."
   ],
-  "white": [
+  "whiteCards": [
     "A box full of catsuits",
     "A racist Asian in a wheelchair",
     "A teaspoon full of jizz",
@@ -104,10 +41,5 @@
     "That feeling when you see someone dying",
     "Thursday",
     "Wasting water"
-  ],
-  "quantity": {
-    "black": 15,
-    "white": 23,
-    "total": 38
-  }
+  ]
 }

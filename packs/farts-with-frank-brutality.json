@@ -1,46 +1,15 @@
 {
-  "pack": {
-    "name": "Farts With Frank Brutality",
-    "id": "farts-with-frank-brutality"
-  },
-  "black": [
-    {
-      "content": "Fear not, my brave companions! We shall suffer no evil, for _ will guide us through!",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Fuck _!",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Fuck, _!",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "Lazarus is back from the dead, looking like _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "One of mankind's biggest accomplishments is _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "They say marriage is like _: _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "_ is my biggest wish.",
-      "pick": 1,
-      "draw": 1
-    }
+  "packName": "Farts With Frank Brutality",
+  "blackCards": [
+    "Fear not, my brave companions! We shall suffer no evil, for _ will guide us through!",
+    "Fuck _!",
+    "Fuck, _!",
+    "Lazarus is back from the dead, looking like _.",
+    "One of mankind's biggest accomplishments is _.",
+    "They say marriage is like _: _.",
+    "_ is my biggest wish."
   ],
-  "white": [
+  "whiteCards": [
     "A slow dying fart of an old fat man",
     "An Uber driver",
     "Blank",
@@ -48,10 +17,5 @@
     "My anus",
     "Sir Christopher Lee explaining the sound of a man being stabbed in the back",
     "Uncle Jerry"
-  ],
-  "quantity": {
-    "black": 7,
-    "white": 7,
-    "total": 14
-  }
+  ]
 }

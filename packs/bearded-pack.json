@@ -1,76 +1,21 @@
 {
-  "pack": {
-    "name": "Bearded Pack",
-    "id": "bearded-pack"
-  },
-  "black": [
-    {
-      "content": "Everyday I\u2019m _ my _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Having _ is the new _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "Hey, you, _ called, they want _ back!",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "I discovered that I had _ in my beard for two years.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I haven't seen _ for years.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "I looked like _ until I started _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "If I am _ put a gun to _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "If _ doesn\u2019t have  _ you\u2019ve got _.",
-      "pick": 3,
-      "draw": 2
-    },
-    {
-      "content": "It starts with a little shave but ends with _.",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "No woman ever said: \"OMG, I love _!\"",
-      "pick": 1,
-      "draw": 1
-    },
-    {
-      "content": "You should consider _ with _.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "_ ruined _ forever!",
-      "pick": 2,
-      "draw": 2
-    },
-    {
-      "content": "_ separates men from _!",
-      "pick": 2,
-      "draw": 2
-    }
+  "packName": "Bearded Pack",
+  "blackCards": [
+    "Everyday I\u2019m _ my _.",
+    "Having _ is the new _.",
+    "Hey, you, _ called, they want _ back!",
+    "I discovered that I had _ in my beard for two years.",
+    "I haven't seen _ for years.",
+    "I looked like _ until I started _.",
+    "If I am _ put a gun to _.",
+    "If _ doesn\u2019t have  _ you\u2019ve got _.",
+    "It starts with a little shave but ends with _.",
+    "No woman ever said: \"OMG, I love _!\"",
+    "You should consider _ with _.",
+    "_ ruined _ forever!",
+    "_ separates men from _!"
   ],
-  "white": [
+  "whiteCards": [
     "A bearded man",
     "A formidable moustache",
     "A lion",
@@ -98,10 +43,5 @@
     "Stroking Santa's beard",
     "The toothbrush",
     "Wizards"
-  ],
-  "quantity": {
-    "black": 13,
-    "white": 27,
-    "total": 40
-  }
+  ]
 }

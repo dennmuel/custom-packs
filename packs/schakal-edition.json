@@ -230,11 +230,6 @@
       "draw": 1
     },
     {
-      "content": "It took me quite a while to realize that _ and _ were to different things.",
-      "pick": 2,
-      "draw": 2
-    },
-    {
       "content": "It's not commonly known, but _ is a clinically recognized illness.",
       "pick": 1,
       "draw": 1
@@ -333,11 +328,6 @@
       "content": "Say what you want about Hitler, but at least he was _.",
       "pick": 1,
       "draw": 1
-    },
-    {
-      "content": "Say what you want about _, but it has nothing to do with _.",
-      "pick": 2,
-      "draw": 2
     },
     {
       "content": "Since that day with uncle Jerry, I just can't look at _ the same way again.",
@@ -543,7 +533,7 @@
     "An autoimmune disease",
     "An obscure 90's reference",
     "An out of control LARP",
-    "An unethical amount of money and cocaine",
+    "An unethical amount of money",
     "Anal penetration",
     "Animal cruelty",
     "Another Holocaust",
@@ -553,6 +543,7 @@
     "Asbestos",
     "Asperger's syndrome",
     "Auschwitz",
+    "Autism",
     "Babysitting",
     "Bachmannaids",
     "Bacon deodorant",
@@ -564,6 +555,7 @@
     "Being a straight white male",
     "Being able to solve any problem with a pocket knife",
     "Being alone with your own thoughts",
+    "Being better at math through autism",
     "Being counterproductive to evolution",
     "Being easily aroused",
     "Being incompetent and irrelevant from 9 to 5",
@@ -584,8 +576,6 @@
     "Bossa Nova",
     "Brainfarts",
     "Bread",
-    "Brutal owl fights",
-    "Burning niggers",
     "Burrito farts",
     "Buttplugs",
     "Cabin fever",
@@ -597,16 +587,15 @@
     "Chinese food",
     "Chloroform",
     "Choking a small asian woman",
-    "Choose your own adventure",
     "Christians",
     "Civilization",
     "Clamydia",
     "Cleaning up crime scenes",
+    "Cocaine",
     "Coffee",
     "Colonialism",
     "Comparing with the Nazis",
     "Constantly farting",
-    "Constantly raping",
     "Cosmic justice",
     "Crocodile Dundee",
     "Crowning yourself King of England",
@@ -619,7 +608,7 @@
     "Death",
     "Denying climate change deniers",
     "Denying equal rights to minorities",
-    "Depression again",
+    "Depression, again",
     "Diapers",
     "Diarrhea",
     "Disagreeing with a cop",
@@ -644,6 +633,7 @@
     "Exploring the human body",
     "FIFA",
     "Facesitting",
+    "Facial recognition",
     "Falling in love",
     "Fapping in the kitchen",
     "Farting and walking away",
@@ -743,8 +733,6 @@
     "Listening to an entire Coldplay album",
     "Living in Nicaragua",
     "Living in your parents' basement",
-    "Looking for a fight",
-    "Looking nice in that red dress",
     "Losing weight",
     "Lots and lots of bees",
     "Lots of clowns inside a small car",
@@ -875,6 +863,7 @@
     "Some crying children",
     "Spartans",
     "Sperm",
+    "Stalingrad",
     "Staring at a computer screen for eight hours straight",
     "Staring at a wasp until it leaves the room",
     "Starting a successful business",
@@ -926,6 +915,7 @@
     "The invention of fire",
     "The kids next door",
     "The laws of physics",
+    "The military",
     "The mob",
     "The pointlessness of human existence",
     "The pope giving a facepalm",
@@ -972,8 +962,8 @@
     "Your stupid face"
   ],
   "quantity": {
-    "black": 94,
+    "black": 92,
     "white": 494,
-    "total": 588
+    "total": 586
   }
 }

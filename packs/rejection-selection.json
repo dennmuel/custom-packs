@@ -45,9 +45,19 @@
       "draw": 1
     },
     {
+      "content": "It took me quite a while to realize that _ and _ were to different things.",
+      "pick": 2,
+      "draw": 2
+    },
+    {
       "content": "My wife went to Las Vegas and all I got was _.",
       "pick": 1,
       "draw": 1
+    },
+    {
+      "content": "Say what you want about _, but it has nothing to do with _.",
+      "pick": 2,
+      "draw": 2
     },
     {
       "content": "Say whatever you want about _, but _ is still worse!",
@@ -74,11 +84,18 @@
     "A box full of catsuits",
     "A racist Asian in a wheelchair",
     "A teaspoon full of jizz",
+    "An unethical amount of money and cocaine",
     "Any given STD",
     "Black lives",
+    "Brutal owl fights",
+    "Burning niggers",
+    "Choose your own adventure",
     "Clean drinking water",
     "Cleaning your pants from jizz",
+    "Constantly raping",
     "Horses",
+    "Looking for a fight",
+    "Looking nice in that red dress",
     "Nothing worth shooting",
     "Obamas birth certificate",
     "Sleeping",
@@ -89,8 +106,8 @@
     "Wasting water"
   ],
   "quantity": {
-    "black": 13,
-    "white": 16,
-    "total": 29
+    "black": 15,
+    "white": 23,
+    "total": 38
   }
 }

@@ -351,7 +351,7 @@ def main():
 
     if args.command == "create":
         decks.append(create_deck())
-    if args.command == "deduplicate":
+    elif args.command == "deduplicate":
         decks.append(get_deck(args.infile))
     else:
         for infile in args.infiles:

@@ -7,7 +7,9 @@ PR's should ideally be rebased on the current state of master.
 
 ## Writing Tips
 
-Feel free to write your cards however you want, but here are some tips I found quite useful to ensure at least a basic level of quality for packs.
+There's only one absolutely mandatory thing: Black cards must have as many blank characters (`_`) as it takes white cards to answer it.
+
+Otherwise feel free to write your cards however you want, but here are some tips I found quite useful to ensure at least a basic level of quality for packs.
 
 ### Ratio
 Looking at the "Cards Against Humanity" base pack, a ratio for black to white cards of at least 1:5 should work well. Having more white cards is even better, of course, but going below a ratio of 1:4 might make the pack wear itself off too rapidly.

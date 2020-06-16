@@ -3,17 +3,30 @@
 ## The Script
 `deck.py` is a helper script that allows you to create, edit and test custom decks. It produces a JSON file you can upload to the custom pack editor at https://allbad.cards/packs/mine.
 
-For instructions on supported commands and flags run `deck.py --help` and `deck.py [command] --help` respectively.
+Features include:
+
+- import cards from line separated textfiles
+- add cards manually in an interactive workflow
+- check look and sanity of added or already existing cards (e.g. if black cards have blanks)
+- check if added cards are duplicates
+- check a single deck for duplicates with several other decks
+- sorting cards alphabetically
+- test your deck with random drawn cards
+- show info about decks
+
+For instructions on all supported commands and flags run `deck.py --help` and `deck.py [command] --help` respectively.
 
 ### Quickstart
 
-Run `deck.py create -isc` to create a new deck, import cards from textfiles, sort them alphabetically and update the card count in an interactive workflow.
+To create a new deck and import your black and white cards run
 
-Add (and sort and count) cards to existing decks with `deck.py edit -asc ./packs/my-pack.json [./packs/my-other-pack.json ./packs/my-next-pack.json]`.
+`deck.py create my-deck.json -b my-black-cards.txt -w my-white-cards.txt`
 
-Files are saved to the `packs/` directory by default.
+To add cards to all your existing decks run
 
-Test your packs by playing e.g. 5 random hands using `deck.py play -n 5 ./packs/my-*.json`
+`deck.py edit -a my-deck.json [my-other-deck.json my-foobar-deck.json]`.
+
+Test your packs by playing e.g. 5 random hands via `deck.py play -n 5 .my-*.json`
 
 ## The Packs
 See `CONTRIBUTING.md` for writing tips.

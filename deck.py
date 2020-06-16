@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-from operator import itemgetter
 import argparse
 import json
 import random
@@ -16,92 +15,93 @@ def get_deck(filepath):
 def create_deck():
     name = str(input("Enter the name for the deck:\n")).strip()
     deck = {
-            "pack": {
-                "name": name.title(),
-                "id": name.lower().replace(" ","-")
-                },
-            "black": [],
-            "white": [],
-            "quantity": {
-                "black": 0,
-                "white": 0,
-                "total": 0
-                }
+            "packName": name.title(),
+            "blackCards": [],
+            "whiteCards": []
             }
     return deck
 
-# interactive workflow framing the addition of cards
+# interactive workflow to manually add cards
 def add_cards(deck):
-    print("Let's add some cards!")
-    color = ""
-    while color != "n":
+    color = True
+    newBlack = []
+    newWhite = []
+    while color:
         if color != "b" and color != "w":
-            color = str(input("Add (b)lack, (w)hite or (n)o cards?: ")).strip()
+            color = str(input("Add (b)lack or (w)hite cards? (Leave empty to exit.): ")).strip()
+            continue
+        print("Type in your card below or leave empty to change color.")
+        card = type_card(color)
+        if not card:
+            color = True
+            print("\n")
             continue
         if color == "b":
-            content = str(input("Type in the content of your black card below (leave empty to change color or exit):\n"))
+            cardtype = "blackCards"
+            newlist = newBlack
         else:
-            content = str(input("Type in your white card below (leave empty to change color or exit):\n"))
-        if content == "":
-            color = content
-            continue
-        content = sanitize_content(content, color)
-        if is_duplicate(content, color, deck) and skip_duplicate(content, deck):
-            continue
-        deck = add_card(content, color, deck);
-        print("Added '" + content + "'")
+            cardtype = "whiteCards"
+            newlist = newWhite
+        if (card in newlist or is_duplicate(card, color, deck)) and not add_duplicate(card):
+                continue
+        newlist.append(card)
+        print("'" + card + "' will be added.\n")
     else:
-        print("Added cards to " + deck["pack"]["name"] + "!")
+        deck["blackCards"].extend(newBlack)
+        deck["whiteCards"].extend(newWhite)
+        print(str("\n" + str(len(newBlack)) + " new black and " + str(len(newWhite)) + " new white cards will be added!\n"))
         return(deck)
 
-# interactive workflow for adding a single card
-def add_card(content, color, deck):
-    if color == "b":
-        print(content)
-        pick = 0
-        while pick < 1 or pick > 3:
-            pick = int(input("How many white cards does it take to answer the card (min: 1, max: 3)? "))
+# prompt to type in a card
+def type_card(color):
+    card = False
+    while not card:
+        card = str(input("Card content: ")).strip()
+        if not card:
+            return False
+        card = sanitize_content(card, color)
+        if not card:
             continue
-        draw = 9
-        while draw < 0 or draw > 2:
-            draw = int(input("How many white cards should be drawn after playing the card (min: 0, max: 2)? "))
-        card = {
-                "content": content,
-                "pick": pick,
-                "draw": draw
-                }
-        deck["black"].append(card)
-    else:
-        deck["white"].append(content)
-    return(deck)
+    return card
 
-# interactive workflow for importing cards from files
-def import_cards(deck):
-    print("Let's import some cards!")
-    color = "?"
-    while color != "n":
-        if color != "b" and color != "w":
-            color = str(input("Add (b)lack, (w)hite or (n)o cards?: ")).strip()
-            continue
-        path = str(input("Type in the path to the card file below:\n"))
-        with open(path) as p:
-            while True:
-                content = p.readline()
-                if not content.strip():
-                    break
-                content = sanitize_content(content, color)
-                if is_duplicate(content, color, deck) and skip_duplicate(content, deck):
-                    continue
-                deck = add_card(content, color, deck);
-        print("---")
-        color = str(input("Done! Add further (b)lack, (w)hite or (n)o cards? ")).strip()
+# import cards from files
+def import_cards(deck, color, path):
+    if color == "b":
+        cardtype = "blackCards"
     else:
-        print("Alright! Cards imported to " + deck["pack"]["name"] + "!")
+        cardtype = "whiteCards"
+    with open(path) as p:
+        while True:
+            card = p.readline()
+            if not card.strip():
+                break
+            card = sanitize_content(card, color)
+            if not card:
+                prompt = True
+                while prompt != "s" or prompt != "r":
+                    prompt = str(input("Should it be (r)ewritten or (s)kipped? ")).strip()
+                    if prompt == "s":
+                        print("Card skipped!\n")
+                        break
+                    elif prompt == "r":
+                        print("Type in your card below.")
+                        while not card:
+                            card = type_card(color)
+                        deck[cardtype].append(card)
+                        print("Imported '" + card + "'\n")
+                        break
+            else:
+                if is_duplicate(card, color, deck) and not add_duplicate(card):
+                    continue
+                deck[cardtype].append(card)
+        print("Cards imported!\n")
         return(deck)
 
 # normalize card content
 def sanitize_content(content, color):
     content = content.strip()
+    if not content:
+        return False
     if content[0].islower():
         content = content[0].upper() + content[1:]
     if color == "w":
@@ -112,170 +112,140 @@ def sanitize_content(content, color):
                 break
         if endswithchar:
             print("'" + content + "' ends with punctuation (white cards usually don't).")
-            force = "?"
-            while force != "y" and force != "n":
-                force = str(input("Keep punctuation (y/n)? ")).strip()
+            keep = ""
+            while keep != "y" and keep != "n":
+                keep = str(input("Keep punctuation (y/n)? ")).strip()
                 continue
-            if force == "n":
+            if keep == "n":
                 content = content[:-1]
+    elif color == "b":
+        if not "_" in content:
+            print("'" + content + "' does not contain a blank character ('_').\nBlack cards must include as many blanks as it takes white cards to answer them.")
+            content = False
     return content
 
 # check if card is a duplicate with a given deck
 def is_duplicate(content, color, deck):
-    is_dupe = False
-    if color == "w":
-        for card in deck["white"]:
-            if content == card:
-                is_dupe = True
-                print("White card '" + content + "' is a duplicate!")
-                break
-    elif color == "b":
-        for card in deck["black"]:
-            if content == card["content"]:
-                is_dupe = True
-                print("Black card '" + content + "' is a duplicate!")
-                break
-    return is_dupe
+    if color == "b":
+        cardType = "blackCards"
+    else:
+        cardType = "whiteCards"
+    for card in deck[cardType]:
+        if content == card:
+            return True
+    return False
 
 # ask user whether to keep or skip duplicate card
-def skip_duplicate(content, deck):
-    skip_dupe = False
-    skip = "?"
-    while skip != "y" or skip != "n":
-        skip = str(input("Add card anyway (y/n)? ")).strip()
-        if skip == "n":
-            skip_dupe = True
-            break
-        elif skip == "y":
-            skip_dupe = False
-            break
-        else:
-            continue
-    return skip_dupe
+def add_duplicate(card):
+    print("'" + card + "' is a duplicate.")
+    while True:
+        add = str(input("Add/keep it anyway (y/n)? ")).strip()
+        if add == "y":
+            return True
+        elif add == "n":
+            return False
 
 # check given deck for duplicate cards with another deck
 # interactive workflow for duplicate deletion
 def deduplicate(deck, refdeck):
-    print("Checking '" + deck["pack"]["name"] + "' for duplicates with '" + refdeck["pack"]["name"] + "' ...")
-    for blackcard in deck["black"]:
-        if is_duplicate(blackcard["content"], "b", refdeck):
-            keep = "?"
-            while keep != "y" or keep != "n":
-                keep = str(input("Keep card anyway (y/n)? ")).strip()
-                if keep == "y":
-                    break
-                elif keep == "n":
-                    deck = delete_card(blackcard["content"], "b", deck)
-                    break
-                else:
-                    continue
-    for whitecard in deck["white"]:
-        if is_duplicate(whitecard, "w", refdeck):
-            keep = "?"
-            while keep != "y" or keep != "n":
-                keep = str(input("Keep card anyway (y/n)? ")).strip()
-                if keep == "y":
-                    break
-                elif keep == "n":
-                    deck = delete_card(whitecard, "w", deck)
-                    break
-                else:
-                    continue
+    print("Checking for duplicates with '" + refdeck["packName"] + "' ...")
+    for cardType in ["blackCards", "whiteCards"]:
+        for card in deck[cardType]:
+            if card in refdeck[cardType] and not add_duplicate(card):
+                deck[cardType].remove(card)
+                print("Card deleted from " + deck["packName"] + "!")
     print("Deduplication complete!")
-    return deck
-
-# deletion of a single card in a given deck
-def delete_card(content, color, deck):
-    print("Deleting...")
-    if color == "b":
-        deck["black"][:] = [c for c in deck["black"] if c['content'] != content]
-    else:
-        deck["white"].remove(content)
     return deck
 
 # sort cards in deck alphabetically
 def sort_cards(deck):
-    print("Sorting...")
-    deck["black"] = sorted(deck["black"], key=itemgetter('content'))
-    deck["white"].sort()
-    print("Cards sorted!")
-    return deck
-
-# update the card count of a deck
-def count_cards(deck):
-    print("Counting...")
-    black = len(deck["black"])
-    white = len(deck["white"])
-    total = black + white
-    deck["quantity"]["black"] = black
-    deck["quantity"]["white"] = white
-    deck["quantity"]["total"] = total
-    txt = "Deck has {} black cards, {} white cards and thus {} cards in total!"
-    print(txt.format(black, white, total))
+    deck["blackCards"].sort()
+    deck["whiteCards"].sort()
     return deck
 
 # re-sanitize all cards of a deck
-def recommit_deck(deck):
-    print("Recommitting...")
-    for blackcard in deck["black"]:
-        blackcard["content"] = sanitize_content(blackcard["content"], "b")
-    for whitecard in deck["white"]:
-        whitecard = sanitize_content(whitecard, "w")
-    print("Recommited!")
+def revalidate_deck(deck):
+    for i in [{"color": "b", "cardtype": "blackCards", "array": []},
+            {"color": "w", "cardtype": "whiteCards", "array": []}]:
+        for card in deck[i["cardtype"]]:
+            card = sanitize_content(card, i["color"])
+            if not card:
+                prompt = True
+                while prompt != "d" or prompt != "r":
+                    prompt = str(input("Should it be (r)ewritten or (d)eleted? ")).strip()
+                    if prompt == "d":
+                        print("Card deleted!\n")
+                        break
+                    elif prompt == "r":
+                        print("Type in your card below.")
+                        while not card:
+                            card = type_card(i["color"])
+                        i["array"].append(card)
+                        print("Got it! Changed card to '" + card + "'\n")
+                        break
+            else:
+                i["array"].append(card)
+        deck[i["cardtype"]] = i["array"]
     return deck
 
 # print some deck information
-def deck_info(deck):
-    print("Name: " + deck["pack"]["name"])
-    print("ID: " + deck["pack"]["id"])
-    print("Black cards: " + str(deck["quantity"]["black"]))
-    print("White cards: " + str(deck["quantity"]["white"]))
-    print("Total cards: " + str(deck["quantity"]["total"]))
+def print_info(deck):
+    print(30 * "=" + "\n")
+    print(deck["packName"] + "\n")
+    black = len(deck["blackCards"])
+    white = len(deck["whiteCards"])
+    total = black + white
+    print("Black cards: " + str(black))
+    print("White cards: " + str(white))
+    print("Cards total: " + str(total))
+    print("Card ratio: 1:" + str(round(white / black, 2)))
+    print("\n" + 30 * "=")
 
 # write deck dictionary to json file
-def write_deck(deck):
-    outfile = "./packs/" + deck["packName"].lower().replace(" ","-") + ".json"
-    f = open(outfile, "w")
+def write_json(deck, filepath):
+    f = open(filepath, "w")
     f.write(json.dumps(deck, indent=2))
     f.close
-    print("Wrote to " + outfile)
+    print("Wrote to " + filepath)
 
 # print random cards from given decks
 def play_round(decks, hands):
     blackcards = []
     whitecards = []
     for deck in decks:
-        blackcards.extend(deck["black"])
-        whitecards.extend(deck["white"])
-    blackcard = random.choice(blackcards)
-    if blackcard["pick"] * hands > len(whitecards):
-        print("Not enough white cards available to play " + str(hands) + " hands for\n'" + blackcard["content"] + "'")
-    else:
-        print("Prompt:\n" + blackcard["content"] + "\n---")
-        for i in range(hands):
-            response = "Response " + str(i+1) + ":\n"
-            for n in range(blackcard["pick"]):
-                response += str(random.choice(whitecards)) + "\n"
-            response += "---\n"
-            print(response)
-
-def convert_deck(deck):
-    newdeck = {
-            "packName": deck["pack"]["name"],
-            "blackCards": [],
-            "whiteCards": deck["white"]
-            }
-    for card in deck["black"]:
-        newdeck["blackCards"].append(card["content"])
-    return newdeck
+        blackcards.extend(deck["blackCards"])
+        whitecards.extend(deck["whiteCards"])
+    inp = ""
+    while inp == "":
+        blackcard = random.choice(blackcards)
+        pick = blackcard.count("_")
+        if pick * hands > len(whitecards):
+            print("Not enough white cards available to play " + str(hands) + " hands for\n'" + blackcard + "'")
+        else:
+            print(20 * "=" + "\n")
+            print("Black card:\n" + blackcard + "\n")
+            already_drawn = []
+            for i in range(hands):
+                response = "Hand " + str(i+1) + ":\n"
+                for n in range(pick):
+                    whitecard = random.choice(whitecards)
+                    while whitecard in already_drawn:
+                        whitecard = random.choice(whitecards)
+                    already_drawn.append(whitecard)
+                    response += whitecard + "\n"
+                print(response)
+        print(20 * "=" + "\n")
+        inp = str(input("Press Enter for another round. Otherwise type something else + Enter!\n"))
 
 def main():
+    # establish command line arguments
+
     # main argument parser
     main_parser = argparse.ArgumentParser(
             description="Handle allbadcards custom decks in JSON format.",
             )
 
-    # parser for operation flags used in creation and editing
+    # parent parser for flags used in create and edit operations
     operations_parser = argparse.ArgumentParser(
             description="Operations for create and edit commands.",
             add_help=False
@@ -283,33 +253,33 @@ def main():
     operations_parser.add_argument(
             '-a', '--add',
             action="store_true",
-            help="add cards to deck(s) manually"
+            help="add cards to decks manually"
             )
     operations_parser.add_argument(
-            '-i', '--fileimport',
-            action="store_true",
-            help="import cards from line separated text file(s)"
+            '-b', '--blackcards',
+            type=str,
+            help="import black cards from given line separated file",
+            default=sys.stdin
             )
     operations_parser.add_argument(
-            '-r', '--recommit',
+            '-w', '--whitecards',
+            type=str,
+            help="import white cards from given line separated file",
+            default=sys.stdin
+            )
+    operations_parser.add_argument(
+            '-r', '--revalidate',
             action="store_true",
-            help="recommit existing deck(s) (encoding, capital letters, etc.)",
+            help="revalidate existing cards in decks (punctuation, capital letters, check for blanks, etc.)",
             )
     operations_parser.add_argument(
             '-s', '--sort',
             action="store_true",
             help="sort cards alphabetically"
             )
-    operations_parser.add_argument(
-            '-c', '--count',
-            action="store_true",
-            help="update card count"
-            )
 
-    # parent parser for multiple input files, used in several commands
-    # (e.g. edit, status, play, deduplicate)
+    # parent parser for commands that accept multiple input files
     infiles_parser = argparse.ArgumentParser(
-            description="Input files for edit command.",
             add_help=False
             )
     infiles_parser.add_argument(
@@ -320,6 +290,17 @@ def main():
             default=sys.stdin
             )
 
+    # parent parser for a single input file (or path to save to)
+    infile_parser = argparse.ArgumentParser(
+            add_help=False
+            )
+    infile_parser.add_argument(
+            'infile',
+            type=str,
+            help="path to a single JSON file",
+            default=sys.stdin
+            )
+
     # subparser for supported commands
     subparsers = main_parser.add_subparsers(
             dest="command",
@@ -327,43 +308,8 @@ def main():
             description="Actions to perform on a deck.",
             help='see "deck.py [command] -h" for more details'
             )
-    create_parser = subparsers.add_parser(
-            'create',
-            parents=[operations_parser],
-            help="create a new deck",
-            description="Creates a new deck and performs the actions specified by the optional arguments.",
-            )
-    edit_parser = subparsers.add_parser(
-            'edit',
-            parents=[operations_parser, infiles_parser],
-            help="modify existing deck(s)",
-            description="Modifies existing deck(s) according to the optional arguments.",
-            )
-    dupe_parser = subparsers.add_parser(
-            'deduplicate',
-            help="remove duplicates with other deck(s)",
-            description="Removes duplicates with other deck(s).",
-            )
-    # single input file (not to be confused with the one for multiple infiles!)
-    # should be made a parent parser as soon as there are other commands that require
-    # (exactly) one input file
-    dupe_parser.add_argument(
-            'infile',
-            type=str,
-            help="path to JSON file to check for duplicates",
-            default=sys.stdin
-            )
-    # multiple reference files. should be made a parent parser as soon as there are other
-    # commands requiring multiple reference files
-    dupe_parser.add_argument(
-            'reffiles',
-            type=str,
-            nargs='+',
-            help="path to JSON file(s) to check against",
-            default=sys.stdin
-            )
-    status_parser = subparsers.add_parser(
-            'status',
+    info_parser = subparsers.add_parser(
+            'info',
             parents=[infiles_parser],
             help="show deck info",
             description="Shows information about existing decks.",
@@ -372,68 +318,96 @@ def main():
             'play',
             parents=[infiles_parser],
             help="plays random cards",
-            description="Plays one black card and a number of responses from the specified deck(s)",
+            description="Plays one black card and a number of responses from the specified deck(s).",
             )
     play_parser.add_argument(
             '-n', '--number',
             type=int,
-            default=1,
+            default=3,
             help="number of hands to be played"
             )
-    convert_parser = subparsers.add_parser(
-            'convert',
-            parents=[infiles_parser],
-            help="converts from old to new json schema"
+    create_parser = subparsers.add_parser(
+            'create',
+            parents=[infile_parser, operations_parser],
+            help="create a new deck",
+            description="Creates a new deck and performs the actions specified by the optional arguments.",
+            )
+    edit_parser = subparsers.add_parser(
+            'edit',
+            parents=[operations_parser, infiles_parser],
+            help="modify existing decks",
+            description="Modifies existing decks according to the optional arguments.",
+            )
+    dupe_parser = subparsers.add_parser(
+            'deduplicate',
+            parents=[infile_parser],
+            help="remove duplicates with other decks",
+            description="Removes duplicates with other decks.",
+            )
+    dupe_parser.add_argument(
+            'reffiles',
+            type=str,
+            nargs='+',
+            help="path to JSON files to check against",
+            default=sys.stdin
             )
 
     args = main_parser.parse_args()
 
-    # create or get deck(s) to operate on
-    decks = []
+    # get all filepaths to decks for commands that need to write files
+    infiles = []
     if args.command == "create":
-        # create deck
-        decks.append(create_deck())
+        # create empty deck and save it
+        deck = create_deck()
+        write_json(deck, args.infile)
+        infiles.append(args.infile)
     elif args.command == "deduplicate":
         # only one deck is sensible here
-        decks.append(get_deck(args.infile))
+        infiles.append(args.infile)
     else:
         # multiple decks for all the other commands
-        for infile in args.infiles:
-            decks.append(get_deck(infile))
+        infiles.extend(args.infiles)
+
+    # get all the decks for non-writing commands
+    decks = []
+    for infile in infiles:
+        decks.append(get_deck(infile))
 
     if args.command == "play":
-        # put all cards in big lists and play them
+        # put all deckstogether and draw random cards
         play_round(decks, args.number)
-    else:
-        # loop through decks (even if there's just one in it)
+    elif args.command == "info":
         for deck in decks:
+            print_info(deck)
+    else:
+        # commands that write to json file
+        # loop through files, get deck, operate and save them
+        for infile in infiles:
+            print(30 * "=" + "\n")
+            deck = get_deck(infile)
+            print("Editing " + deck["packName"] + " ...\n")
             if args.command == "create" or args.command == "edit":
-                # operations only available for creation and editing
-                print("Editing " + deck["pack"]["name"] + " ...")
                 if args.add:
+                    print("Let's add some cards!\n")
                     deck = add_cards(deck)
-                if args.fileimport:
-                    deck = import_cards(deck)
-                if args.recommit:
-                    deck = recommit_deck(deck)
+                if type(args.blackcards) is str:
+                    print("Importing black cards...\n")
+                    deck = import_cards(deck, "b", args.blackcards)
+                if type(args.whitecards) is str:
+                    print("Importing white cards...\n")
+                    deck = import_cards(deck, "w", args.whitecards)
+                if args.revalidate:
+                    print("Validating...\n")
+                    deck = revalidate_deck(deck)
                 if args.sort:
+                    print("Sorting cards...\n")
                     deck = sort_cards(deck)
-                if args.count:
-                    deck = count_cards(deck)
-                write_deck(deck)
-                print("Done!\n")
             elif args.command == "deduplicate":
                 # loop through reference files for dupe check
-                for filepath in args.reffiles:
-                    deck = deduplicate(deck, get_deck(filepath))
-                write_deck(deck)
-                print("Done!\n")
-            elif args.command == "status":
-                deck_info(deck)
-            elif args.command == "convert":
-                deck = convert_deck(deck)
-                write_deck(deck)
-                print("Done!\n")
+                for reffile in args.reffiles:
+                    deck = deduplicate(deck, get_deck(reffile))
+            write_json(deck, infile)
+            print("\n" + 30 * "=")
 
 if __name__ == "__main__":
     main()

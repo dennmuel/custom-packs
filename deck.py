@@ -13,7 +13,7 @@ def get_deck(filepath):
 
 #create deck dictionary
 def create_deck():
-    name = str(input("Enter the name for the deck:\n")).strip()
+    name = str(input("Enter the name for the deck below:\n")).strip()
     deck = {
             "packName": name.title(),
             "blackCards": [],
@@ -84,7 +84,7 @@ def import_cards(deck, color, path):
                         print("Card skipped!\n")
                         break
                     elif prompt == "r":
-                        print("Type in your card below.")
+                        print("Type in your rewritten card below.")
                         while not card:
                             card = type_card(color)
                         deck[cardtype].append(card)
@@ -101,6 +101,7 @@ def import_cards(deck, color, path):
 def sanitize_content(content, color):
     content = content.strip()
     if not content:
+        print("Card is empty.")
         return False
     if content[0].islower():
         content = content[0].upper() + content[1:]
@@ -111,7 +112,8 @@ def sanitize_content(content, color):
                 endswithchar = True
                 break
         if endswithchar:
-            print("'" + content + "' ends with punctuation (white cards usually don't).")
+            print(content)
+            print("This white card ends with punctuation. White cards usually don't.")
             keep = ""
             while keep != "y" and keep != "n":
                 keep = str(input("Keep punctuation (y/n)? ")).strip()
@@ -121,7 +123,8 @@ def sanitize_content(content, color):
             print("\n")
     elif color == "b":
         if not "_" in content:
-            print("'" + content + "' does not contain a blank character ('_').\nBlack cards must include as many blanks as it takes white cards to answer them.")
+            print(content)
+            print("This black card does not contain a '_' character.\nBlack cards must include as many blanks as it takes white cards to answer them.\n")
             content = False
     return content
 
@@ -142,8 +145,10 @@ def add_duplicate(card):
     while True:
         add = str(input("Add/keep it anyway (y/n)? ")).strip()
         if add == "y":
+            print("Card added/kept!\n")
             return True
         elif add == "n":
+            print("Card deleted/skipped!\n")
             return False
 
 # check given deck for duplicate cards with another deck
@@ -178,11 +183,11 @@ def revalidate_deck(deck):
                         print("Card deleted!\n")
                         break
                     elif prompt == "r":
-                        print("Type in your card below.")
+                        print("Type in your rewritten card below.")
                         while not card:
                             card = type_card(i["color"])
                         i["array"].append(card)
-                        print("Got it! Changed card to '" + card + "'\n")
+                        print("Card changed to '" + card + "'\n")
                         break
             else:
                 i["array"].append(card)
@@ -251,7 +256,6 @@ def main():
 
     # parent parser for flags used in create and edit operations
     operations_parser = argparse.ArgumentParser(
-            description="Operations for create and edit commands.",
             add_help=False
             )
     operations_parser.add_argument(
@@ -309,26 +313,25 @@ def main():
     subparsers = main_parser.add_subparsers(
             dest="command",
             title='supported commands',
-            description="Actions to perform on a deck.",
             help='see "deck.py [command] -h" for more details'
             )
     info_parser = subparsers.add_parser(
             'info',
             parents=[infiles_parser],
             help="show deck info",
-            description="Shows information about existing decks.",
+            description="Shows information about decks.",
             )
     play_parser = subparsers.add_parser(
             'play',
             parents=[infiles_parser],
-            help="plays random cards",
+            help="play random cards",
             description="Plays one black card and a number of responses from the specified deck(s).",
             )
     play_parser.add_argument(
             '-n', '--number',
             type=int,
             default=3,
-            help="number of hands to be played"
+            help="number of responses to be played"
             )
     create_parser = subparsers.add_parser(
             'create',
@@ -346,7 +349,7 @@ def main():
             'deduplicate',
             parents=[infile_parser],
             help="remove duplicates with other decks",
-            description="Removes duplicates with other decks.",
+            description="Checks given deck for duplicates with other decks and allows deletion from said deck.",
             )
     dupe_parser.add_argument(
             'reffiles',

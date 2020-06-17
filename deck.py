@@ -118,6 +118,7 @@ def sanitize_content(content, color):
                 continue
             if keep == "n":
                 content = content[:-1]
+            print("\n")
     elif color == "b":
         if not "_" in content:
             print("'" + content + "' does not contain a blank character ('_').\nBlack cards must include as many blanks as it takes white cards to answer them.")
@@ -190,7 +191,7 @@ def revalidate_deck(deck):
 
 # print some deck information
 def print_info(deck):
-    print(30 * "=" + "\n")
+    print_separator()
     print(deck["packName"] + "\n")
     black = len(deck["blackCards"])
     white = len(deck["whiteCards"])
@@ -199,7 +200,7 @@ def print_info(deck):
     print("White cards: " + str(white))
     print("Cards total: " + str(total))
     print("Card ratio: 1:" + str(round(white / black, 2)))
-    print("\n" + 30 * "=")
+    print_separator()
 
 # write deck dictionary to json file
 def write_json(deck, filepath):
@@ -222,7 +223,7 @@ def play_round(decks, hands):
         if pick * hands > len(whitecards):
             print("Not enough white cards available to play " + str(hands) + " hands for\n'" + blackcard + "'")
         else:
-            print(20 * "=" + "\n")
+            print_separator()
             print("Black card:\n" + blackcard + "\n")
             already_drawn = []
             for i in range(hands):
@@ -234,8 +235,11 @@ def play_round(decks, hands):
                     already_drawn.append(whitecard)
                     response += whitecard + "\n"
                 print(response)
-        print(20 * "=" + "\n")
+        print_separator()
         inp = str(input("Press Enter for another round. Otherwise type something else + Enter!\n"))
+
+def print_separator():
+    print("\n" + 50 * "=" + "\n")
 
 def main():
     # establish command line arguments
@@ -383,7 +387,7 @@ def main():
         # commands that write to json file
         # loop through files, get deck, operate and save them
         for infile in infiles:
-            print(30 * "=" + "\n")
+            print_separator()
             deck = get_deck(infile)
             print("Editing " + deck["packName"] + " ...\n")
             if args.command == "create" or args.command == "edit":
@@ -407,7 +411,7 @@ def main():
                 for reffile in args.reffiles:
                     deck = deduplicate(deck, get_deck(reffile))
             write_json(deck, infile)
-            print("\n" + 30 * "=")
+            print_separator()
 
 if __name__ == "__main__":
     main()

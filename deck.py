@@ -49,7 +49,7 @@ def add_cards(deck):
     else:
         deck["blackCards"].extend(newBlack)
         deck["whiteCards"].extend(newWhite)
-        print(str("\n" + str(len(newBlack)) + " new black and " + str(len(newWhite)) + " new white cards will be added!\n"))
+        print(str("\n" + str(len(newBlack)) + " new black and " + str(len(newWhite)) + " new white cards added!\n"))
         return(deck)
 
 # prompt to type in a card

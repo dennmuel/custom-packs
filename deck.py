@@ -197,17 +197,31 @@ def revalidate_deck(deck):
     return newdeck
 
 # print some deck information
-def print_info(deck):
-    print_separator()
-    print(deck["packName"] + "\n")
-    black = len(deck["blackCards"])
-    white = len(deck["whiteCards"])
-    total = black + white
-    print("Black cards: " + str(black))
-    print("White cards: " + str(white))
-    print("Cards total: " + str(total))
-    print("Card ratio: 1:" + str(round(white / black, 2)))
-    print_separator()
+def print_info(decks):
+    black_all = 0
+    white_all = 0
+    for deck in decks:
+        print_separator()
+        print(deck["packName"] + "\n")
+        black = len(deck["blackCards"])
+        black_all += black
+        white = len(deck["whiteCards"])
+        white_all += white
+        total = black + white
+        print("Black cards: " + str(black))
+        print("White cards: " + str(white))
+        print("Cards total: " + str(total))
+        print("Card ratio: 1:" + str(round(white / black, 2)))
+        print_separator()
+    if len(decks) > 1:
+        total_all = black_all + white_all
+        print_separator
+        print("These " + str(len(decks)) + " decks together:\n")
+        print("Black cards: " + str(black_all))
+        print("White cards: " + str(white_all))
+        print("Cards total: " + str(total_all))
+        print("Card ratio: 1:" + str(round(white_all / black_all, 2)))
+        print_separator()
 
 # write deck dictionary to json file
 def write_json(deck, filepath):
@@ -386,8 +400,7 @@ def main():
         # put all deckstogether and draw random cards
         play_round(decks, args.number)
     elif args.command == "info":
-        for deck in decks:
-            print_info(deck)
+        print_info(decks)
     else:
         # commands that write to json file
         # loop through files, get deck, operate and save them

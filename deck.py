@@ -160,7 +160,7 @@ def deduplicate(deck, refdeck):
             if card in refdeck[cardType] and not add_duplicate(card):
                 deck[cardType].remove(card)
                 print("Card deleted from " + deck["packName"] + "!")
-    print("Deduplication complete!")
+    print("Deduplication complete!\n")
     return deck
 
 # sort cards in deck alphabetically
@@ -171,9 +171,11 @@ def sort_cards(deck):
 
 # re-sanitize all cards of a deck
 def revalidate_deck(deck):
+    newdeck = deck
     for i in [{"color": "b", "cardtype": "blackCards", "array": []},
             {"color": "w", "cardtype": "whiteCards", "array": []}]:
         for card in deck[i["cardtype"]]:
+            newdeck[i["cardtype"]] = i["array"]
             card = sanitize_content(card, i["color"])
             if not card:
                 prompt = True
@@ -186,13 +188,13 @@ def revalidate_deck(deck):
                         print("Type in your rewritten card below.")
                         while not card:
                             card = type_card(i["color"])
-                        i["array"].append(card)
                         print("Card changed to '" + card + "'\n")
                         break
-            else:
-                i["array"].append(card)
-        deck[i["cardtype"]] = i["array"]
-    return deck
+            if is_duplicate(card, i["color"], newdeck) and not add_duplicate(card):
+                continue
+            i["array"].append(card)
+        newdeck[i["cardtype"]] = i["array"]
+    return newdeck
 
 # print some deck information
 def print_info(deck):
@@ -278,7 +280,7 @@ def main():
     operations_parser.add_argument(
             '-r', '--revalidate',
             action="store_true",
-            help="revalidate existing cards in decks (punctuation, capital letters, check for blanks, etc.)",
+            help="revalidate existing cards in decks (punctuation, capital letters, check for blanks, duplicates)",
             )
     operations_parser.add_argument(
             '-s', '--sort',
@@ -412,7 +414,10 @@ def main():
             elif args.command == "deduplicate":
                 # loop through reference files for dupe check
                 for reffile in args.reffiles:
-                    deck = deduplicate(deck, get_deck(reffile))
+                    if infile == reffile:
+                        print("Not checking '" + deck["packName"] + "' with itself!\nUse 'deck.py edit -r " + infile + "' to do that.\n")
+                    else:
+                        deck = deduplicate(deck, get_deck(reffile))
             write_json(deck, infile)
             print_separator()
 

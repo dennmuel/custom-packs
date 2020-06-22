@@ -52,6 +52,11 @@ IT-themed expansion pack fueled by frustration.
 
 ABC pack code: ZjnhXwI-w
 
+### Chords Against Humanity
+Music-themed expansion pack.
+
+ABC pack code: OyeZBfx4j
+
 ### Farts With Frank Brutality
 Random collection deck for ideas from friends.
 

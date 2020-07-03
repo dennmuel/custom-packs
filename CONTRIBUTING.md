@@ -5,6 +5,8 @@ For problems or enhancements (be it packs or script), feel free to make an issue
 
 PR's should ideally be rebased on the current state of master.
 
+Please sort packs you edited alphabetically by using `deck.py edit -a packs/the-pack.json`.
+
 ## Writing Tips
 
 There's only one absolutely mandatory thing: Black cards must have as many blank characters (`_`) as it takes white cards to answer it.

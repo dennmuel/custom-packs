@@ -5,28 +5,28 @@
 
 Features include:
 
-- import cards from line separated textfiles
-- add cards manually in an interactive workflow
-- check look and sanity of added or already existing cards (e.g. if black cards have blanks)
-- check if added cards are duplicates
-- check a single deck for duplicates with several other decks
-- sorting cards alphabetically
-- test your deck with random drawn cards
-- show info about decks
+- create new packs or edit existing ones
+- import cards from textfiles or add them manually
+- check cards for duplicates and sanity
+- check pack for duplicates with other packs
+- play random cards
+- show card count and ratio
 
 For instructions on all supported commands and flags run `deck.py --help` and `deck.py [command] --help` respectively.
 
 ### Quickstart
 
-To create a new deck and import your black and white cards run
+Create a new deck and import your black and white cards:
 
-`deck.py create my-deck.json -b my-black-cards.txt -w my-white-cards.txt`
+`deck.py create packs/my-deck.json -b my-black-cards.txt -w my-white-cards.txt`
 
-To add cards to all your existing decks run
+Add cards to a deck and sort them alphabetically:
 
-`deck.py edit -a my-deck.json [my-other-deck.json my-foobar-deck.json]`.
+`deck.py edit -as packs/my-deck.json`.
 
-Test your packs by playing e.g. 5 random hands via `deck.py play -n 5 .my-*.json`
+The `create` and `edit` commands share the same flags, so you can also import cards to an existing deck or add them manually to a new deck.
+
+Test your pack by playing 5 random hands via `deck.py play -n 5 packs/my-deck.json`
 
 ## The Packs
 See `CONTRIBUTING.md` for writing tips.

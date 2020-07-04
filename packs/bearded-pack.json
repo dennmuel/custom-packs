@@ -1,4 +1,5 @@
 {
+  "packName": "Bearded Pack",
   "blackCards": [
     "Everyday I\u2019m _ my _.",
     "Having _ is the new _.",
@@ -68,6 +69,5 @@
     "Wizards",
     "Your dad",
     "Zeus"
-  ],
-  "packName": "Bearded Pack"
+  ]
 }

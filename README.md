@@ -47,8 +47,8 @@ Beard-themed expansion pack made by some friends and lovers of facial hair.
 
 ABC pack code: 1nMOZB6wn
 
-### Nerds With Turds
-IT-themed expansion pack fueled by frustration.
+### Code Against Humanity
+IT-themed expansion pack.
 
 ABC pack code: ZjnhXwI-w
 

@@ -157,11 +157,24 @@ def deduplicate(deck, refdeck):
     print("Checking for duplicates with '" + refdeck["packName"] + "' ...")
     for cardType in ["blackCards", "whiteCards"]:
         for card in deck[cardType]:
-            if card in refdeck[cardType] and not add_duplicate(card):
-                deck[cardType].remove(card)
-                print("Card deleted from " + deck["packName"] + "!")
+            if card in refdeck[cardType]:
+                print("'" + card + "' is a duplicate. What are we gonna do?")
+                prompt = ""
+                while prompt != "1" or prompt != "2":
+                    prompt = str(input("0) Keep card in both.\n1) Delete card from '" + deck["packName"] + "'.\n2) Delete card from '" + refdeck["packName"] + "'.\n")).strip()
+                    if prompt == "0":
+                        print("Card kept in both!\n")
+                        break
+                    elif prompt == "1":
+                        deck[cardType].remove(card)
+                        print("Card deleted from " + deck["packName"] + "!\n")
+                        break
+                    elif prompt == "2":
+                        refdeck[cardType].remove(card)
+                        print("Card deleted from " + refdeck["packName"] + "!\n")
+                        break
     print("Deduplication complete!\n")
-    return deck
+    return deck, refdeck
 
 # sort cards in deck alphabetically
 def sort_cards(deck):
@@ -430,7 +443,8 @@ def main():
                     if infile == reffile:
                         print("Not checking '" + deck["packName"] + "' with itself!\nUse 'deck.py edit -r " + infile + "' to do that.\n")
                     else:
-                        deck = deduplicate(deck, get_deck(reffile))
+                        deck, refdeck = deduplicate(deck, get_deck(reffile))
+                        write_json(refdeck, reffile)
             write_json(deck, infile)
             print_separator()
 

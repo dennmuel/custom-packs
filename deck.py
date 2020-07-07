@@ -50,7 +50,7 @@ def add_cards(deck):
         deck["blackCards"].extend(newBlack)
         deck["whiteCards"].extend(newWhite)
         print(str("\n" + str(len(newBlack)) + " new black and " + str(len(newWhite)) + " new white cards added!\n"))
-        return(deck)
+        return deck
 
 # prompt to type in a card
 def type_card(color):
@@ -95,7 +95,7 @@ def import_cards(deck, color, path):
                     continue
                 deck[cardtype].append(card)
         print("Cards imported!\n")
-        return(deck)
+        return deck
 
 # normalize card content
 def sanitize_content(content, color):
@@ -215,7 +215,7 @@ def print_info(decks):
         print_separator()
     if len(decks) > 1:
         total_all = black_all + white_all
-        print_separator
+        print_separator()
         print("These " + str(len(decks)) + " decks together:\n")
         print("Black cards: " + str(black_all))
         print("White cards: " + str(white_all))
